@@ -36,7 +36,7 @@ export default class Hero extends Component {
 
     return (
       <Wrapper>
-        <Fork to={githubUrl}>
+        <Fork href={githubUrl}>
           <img src="/fork.png" alt="Fork me at github" />
         </Fork>
         <Inner>
@@ -89,7 +89,7 @@ const Wrapper = styled.div`
   }
 `
 
-const Fork = styled(Link)`
+const Fork = styled.a`
   position: absolute;
   right: 0px;
   top: -78px;

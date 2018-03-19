@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://dataversioncontrol.com/`,
     author: `Dmitry Petrov`,
     videoId: `X8oEcNhKrZM`,
-    githubUrl: 'https://github.com/dataversioncontrol',
+    githubUrl: 'https://github.com/dataversioncontrol/dvc',
     downloadUrl: '/',
     facebook: 'dataversioncontrol',
     linkedin: 'dataversioncontrol',

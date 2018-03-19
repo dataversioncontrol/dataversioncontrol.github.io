@@ -18,7 +18,7 @@ export default ({
       <Copyright>
         <P>© 2018 Iterative, Inc.</P>
         <P>
-          <StyledLink to="mailto:info@dataversioncontrol.com">
+          <StyledLink href="mailto:info@dataversioncontrol.com">
             info@dataversioncontrol.com
           </StyledLink>
         </P>
