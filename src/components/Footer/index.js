@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 import Logo from '../Logo'
 import { container } from '../../styles'
 
-const formatTwitter = (account) => `http://twitter.com/${account}`
+const formatTwitter = account => `http://twitter.com/${account}`
 
 export default ({
   blog = 'https://blog.dataversioncontrol.com/',

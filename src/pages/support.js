@@ -5,9 +5,9 @@ import { container } from '../styles'
 import Subscribe from '../components/Subscribe'
 import Socials from '../components/Socials'
 
-
-const discuss =  'http://discuss.dataversioncontrol.com'
-const newsLetter =  'http://sweedom.us10.list-manage.com/subscribe/post?u=a08bf93caae4063c4e6a351f6&id=24c0ecc49a'
+const discuss = 'http://discuss.dataversioncontrol.com'
+const newsLetter =
+  'http://sweedom.us10.list-manage.com/subscribe/post?u=a08bf93caae4063c4e6a351f6&id=24c0ecc49a'
 
 export default ({
   data: {
@@ -26,7 +26,10 @@ export default ({
   <Container>
     <Page>
       <Title>Support</Title>
-      <Text>Stay up to date on development progress and get involved with the discussion.</Text>
+      <Text>
+        Stay up to date on development progress and get involved with the
+        discussion.
+      </Text>
       <Section>
         <SubTitle>Forums</SubTitle>
         <Description>
@@ -130,7 +133,7 @@ const ButtonLink = styled.a`
   background: transparent;
   font-size: 12px;
   font-weight: bold;
-  
+
   transition: all 0.3s;
   &:hover {
     background-color: #1b1b1b;

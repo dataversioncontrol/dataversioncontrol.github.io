@@ -5,7 +5,8 @@ import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
 import { container } from '../../styles'
 
 const links = {
-  getStarted: 'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+  getStarted:
+    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
   blog: 'https://blog.dataversioncontrol.com/',
   support: '/support',
   docs: '/docs',

@@ -42,7 +42,9 @@ const Content = styled.div`
   }
 
   @media (max-device-width: 736px) {
-    pre, ul  p, li p {
+    pre,
+    ul p,
+    li p {
       white-space: pre-wrap;
       word-wrap: break-word;
     }

@@ -21,6 +21,6 @@ const Wrapper = styled.div`
 `
 
 const Flow = styled.img`
-   width: 98%;
-   margin: 0px auto;
+  width: 98%;
+  margin: 0px auto;
 `

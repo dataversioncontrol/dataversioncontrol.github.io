@@ -10,10 +10,10 @@ export default ({
   data: {
     site: {
       siteMetadata: {
-	      downloadOSX,
-	      downloadLinux,
-	      downloadLinuxRPM,
-	      downloadWin,
+        downloadOSX,
+        downloadLinux,
+        downloadLinuxRPM,
+        downloadWin,
         twitter,
         linkedin,
         facebook
@@ -24,10 +24,10 @@ export default ({
   <Container>
     <Page>
       <DownloadPopupContent
-	      downloadOSX={downloadOSX}
-	      downloadLinux={downloadLinux}
-	      downloadLinuxRPM={downloadLinuxRPM}
-	      downloadWin={downloadWin}
+        downloadOSX={downloadOSX}
+        downloadLinux={downloadLinux}
+        downloadLinuxRPM={downloadLinuxRPM}
+        downloadWin={downloadWin}
       />
     </Page>
 
