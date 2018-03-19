@@ -79,7 +79,10 @@ const VideoWave = styled.div`
   background: url(/video_bg.png) top center no-repeat;
 
   @media (max-device-width: 736px) {
-    padding-top: 0px;
+    padding-top: 62px;
+    padding-bottom: 34px;
+    background-size: cover;
+    margin-top: -60px;
   }
 `
 
@@ -88,7 +91,7 @@ const Dots = styled.div`
   background: url(/dots_bg.png) top center no-repeat;
 
   @media (max-device-width: 736px) {
-    padding-top: 0px;
+    padding-top: 26px;
   }
 `
 

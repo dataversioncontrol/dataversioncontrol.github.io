@@ -86,6 +86,7 @@ const Wrapper = styled.div`
   @media (max-device-width: 736px) {
     padding-top: 15px;
     height: 90vh;
+    min-height: 600px;
     align-items: center;
     display: flex;
     padding-bottom: 20px;
