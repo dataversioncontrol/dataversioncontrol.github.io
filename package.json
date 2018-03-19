@@ -1,0 +1,34 @@
+{
+  "name": "website-dvc",
+  "version": "1.0.0",
+  "description": "dataversioncontrol.com source code",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "start": "cd ./public && sudo python -m SimpleHTTPServer 80",
+    "prettier": "prettier --no-semi --write './src/**/*.{js,jsx}'",
+    "precommit": "npm run prettier"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "gatsby": "^1.9.235",
+    "gatsby-link": "^1.6.39",
+    "gatsby-plugin-styled-components": "^2.0.9",
+    "react": "latest",
+    "react-youtube": "^7.5.0",
+    "styled-components": "^3.2.3",
+    "styled-normalize": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dataversioncontrol/website-dvc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dataversioncontrol/website-dvc/issues"
+  },
+  "homepage": "https://github.com/dataversioncontrol/website-dvc#readme"
+}

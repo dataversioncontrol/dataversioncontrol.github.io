@@ -1,2 +1,9 @@
-# website-dvc
-data version control web site
+# Data Version Control
+
+### Local
+
+`npm run dev`
+
+### Building
+
+`npm run build`
