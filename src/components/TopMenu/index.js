@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Burger = () => (
   <svg
@@ -27,7 +27,6 @@ const Close = () => (
 export default ({
   open,
   getStarted,
-  tutorial,
   blog,
   support,
   docs,
@@ -39,24 +38,21 @@ export default ({
       {open ? <Close /> : <Burger />}
     </MobileButton>
     <TopMenu visible={open}>
-      <Item to={getStarted}>
+      <Item href={getStarted}>
         <Label>Get Started</Label>
       </Item>
-      <Item to={tutorial}>
-        <Label>Tutorials</Label>
-      </Item>
-      <Item to={blog}>
+      <Item href={blog}>
         <Label>Blog</Label>
       </Item>
-      <Item to={support}>
+      <ItemLocal to={support}>
         <Label>Support</Label>
-      </Item>
-      <Item to={discuss}>
+      </ItemLocal>
+      <Item href={discuss}>
         <Label>Discuss</Label>
       </Item>
-      <Item to={docs} docs={true}>
+      <ItemLocal to={docs} docs={true}>
         <Label noline>Docs</Label>
-      </Item>
+      </ItemLocal>
     </TopMenu>
   </Wrapper>
 )
@@ -126,7 +122,7 @@ const Label = styled.span`
   `};
 `
 
-export const Item = styled(Link)`
+const topNavLink = css`
   font-size: 18px;
   padding: 0px 25px;
   line-height: 38px;
@@ -149,6 +145,13 @@ export const Item = styled(Link)`
     align-items: flex-start;
     width: 100%;
   }
+`
+
+export const Item = styled.a`
+  ${topNavLink};
+`
+export const ItemLocal = styled(Link)`
+  ${topNavLink};
 `
 
 const CloseButton = styled.div`

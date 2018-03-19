@@ -5,9 +5,7 @@ import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
 import { container } from '../../styles'
 
 const links = {
-  getStarted: '/getstarted',
-  tutorial:
-    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+  getStarted: 'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
   blog: 'https://blog.dataversioncontrol.com/',
   support: '/support',
   docs: '/docs',
@@ -15,27 +13,26 @@ const links = {
 }
 
 export default class Header extends Component {
-
   state = {
     open: false
   }
 
-  toggleOpen = () => this.setState(prevState => ({
-    open: !prevState.open
-  }))
+  toggleOpen = () =>
+    this.setState(prevState => ({
+      open: !prevState.open
+    }))
 
   render() {
     const { open } = this.state
     return (
-	    <Wrapper>
-		    <Inner>
-			    <Logo />
-			    <TopMenu {...links} open={open} onToggle={this.toggleOpen}/>
-		    </Inner>
-	    </Wrapper>
+      <Wrapper>
+        <Inner>
+          <Logo />
+          <TopMenu {...links} open={open} onToggle={this.toggleOpen} />
+        </Inner>
+      </Wrapper>
     )
   }
-
 }
 const Wrapper = styled.div`
   background: #1b1b1b;
@@ -49,7 +46,9 @@ const Inner = styled.div`
   padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
-  
+
+  align-items: center;
+
   @media (max-device-width: 736px) {
     justify-content: space-between;
   }
