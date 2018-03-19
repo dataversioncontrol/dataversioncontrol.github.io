@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === `production`) {
 }
 
 const {
-	siteMetadata: { title, description, keywords, preview, author, siteUrl }
+  siteMetadata: { title, description, keywords, preview, author, siteUrl }
 } = require('../gatsby-config')
 
 export default class HTML extends React.Component {
@@ -30,13 +30,10 @@ export default class HTML extends React.Component {
         <head>
           <link rel="icon" href="/favicon.ico" />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <title >{title}</title>
+          <title>{title}</title>
           <meta charSet="UTF-8" />
           <meta name="description" content={description} />
-          <meta
-            name="keywords"
-            content={keywords}
-          />
+          <meta name="keywords" content={keywords} />
           <meta name="author" content={author} />
           <meta
             name="viewport"
@@ -47,29 +44,21 @@ export default class HTML extends React.Component {
             property="og:title"
             content={title}
           />
-          <meta prefix="og: http://ogp.me/ns#" property="og:image" content={preview} />
+          <meta
+            prefix="og: http://ogp.me/ns#"
+            property="og:image"
+            content={preview}
+          />
           <meta
             prefix="og: http://ogp.me/ns#"
             property="og:url"
             content={siteUrl}
           />
-          <meta
-            property="og:title"
-            content={title}
-          />
-          <meta
-            property="og:description"
-            content={description}
-          />
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
           <meta property="og:url" content={title} />
-          <meta
-            property="og:image"
-            content={preview}
-          />
-          <meta
-            property="og:image:secure_url"
-            content={preview}
-          />
+          <meta property="og:image" content={preview} />
+          <meta property="og:image:secure_url" content={preview} />
           <meta property="og:image:type" content="image/jpeg" />
           <meta property="og:image:width" content="1900" />
           <meta property="og:image:height" content="885" />

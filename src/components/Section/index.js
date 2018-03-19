@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
-import {container} from "../../styles";
+import { container } from '../../styles'
 
 export default ({ title, children }) => (
   <Wrapper>
@@ -11,8 +11,7 @@ export default ({ title, children }) => (
 )
 
 export const Wrapper = styled.section`
-  ${container}
-  padding-top: 266px;
+  ${container} padding-top: 266px;
   padding-bottom: 100px;
 `
 

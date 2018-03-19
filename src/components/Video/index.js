@@ -35,6 +35,6 @@ const Video = styled.div`
   background: #000;
   width: 978px;
   height: 561px;
-  
+
   background: #000;
 `

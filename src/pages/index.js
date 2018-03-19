@@ -9,9 +9,12 @@ import Subscribe from '../components/Subscribe'
 
 export default ({ data }) => (
   <Page>
-    <Hero githubUrl={data.site.siteMetadata.githubUrl} downloadUrl={data.site.siteMetadata.downloadUrl}/>
+    <Hero
+      githubUrl={data.site.siteMetadata.githubUrl}
+      downloadUrl={data.site.siteMetadata.downloadUrl}
+    />
     <Tools />
-    <Video id={data.site.siteMetadata.videoId}/>
+    <Video id={data.site.siteMetadata.videoId} />
     <HowItWorks />
     <Flow />
     <Subscribe />
@@ -22,8 +25,8 @@ export const query = graphql`
   query HomeQuery {
     site {
       siteMetadata {
-        videoId,
-        githubUrl,
+        videoId
+        githubUrl
         downloadUrl
       }
     }

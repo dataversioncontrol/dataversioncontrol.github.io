@@ -33,7 +33,8 @@ export const TopMenu = styled.div`
 `
 
 const Label = styled.span`
-  ${props => !props.noline &&
+  ${props =>
+    !props.noline &&
     `
   border-bottom: 1px dashed #fff;
   `};

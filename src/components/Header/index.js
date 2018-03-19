@@ -21,8 +21,7 @@ const Header = styled.div`
 `
 
 const Inner = styled.div`
-  ${container} 
-  padding-top: 10px;
+  ${container} padding-top: 10px;
   padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
