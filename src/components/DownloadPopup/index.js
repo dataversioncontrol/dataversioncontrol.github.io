@@ -4,14 +4,25 @@ import Close, { Wrapper as CloseButton } from '../Close'
 import DownloadPopupContent from '../DownloadPopupContent'
 import { container } from '../../styles'
 
-export default ({ onClose }) => (
+export default ({
+  onClose,
+  downloadOSX,
+  downloadLinux,
+  downloadLinuxRPM,
+  downloadWin
+}) => (
   <DownloadPopup>
     <Box>
       <Inner>
         <Content>
           <Close onClick={onClose} />
 
-          <DownloadPopupContent />
+          <DownloadPopupContent
+            downloadOSX={downloadOSX}
+            downloadLinux={downloadLinux}
+            downloadLinuxRPM={downloadLinuxRPM}
+            downloadWin={downloadWin}
+          />
         </Content>
       </Inner>
     </Box>

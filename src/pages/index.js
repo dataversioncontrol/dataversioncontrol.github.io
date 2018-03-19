@@ -13,17 +13,28 @@ export default ({
     site: {
       siteMetadata: {
         githubUrl,
-        downloadUrl,
+
         videoId,
         twitter,
         linkedin,
-        facebook
+        facebook,
+
+        downloadOSX,
+        downloadLinux,
+        downloadLinuxRPM,
+        downloadWin
       }
     }
   }
 }) => (
   <Page>
-    <Hero githubUrl={githubUrl} downloadUrl={downloadUrl} />
+    <Hero
+      githubUrl={githubUrl}
+      downloadOSX={downloadOSX}
+      downloadLinux={downloadLinux}
+      downloadLinuxRPM={downloadLinuxRPM}
+      downloadWin={downloadWin}
+    />
     <Tools />
     <VideoWave>
       <Video id={videoId} />
@@ -47,10 +58,13 @@ export const query = graphql`
       siteMetadata {
         videoId
         githubUrl
-        downloadUrl
         twitter
         linkedin
         facebook
+        downloadOSX
+        downloadLinux
+        downloadLinuxRPM
+        downloadWin
       }
     }
   }

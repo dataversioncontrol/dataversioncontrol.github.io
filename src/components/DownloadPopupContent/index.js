@@ -22,7 +22,12 @@ const Item = ({ id, link, icon, renderDownload, text, onClick }) => (
   </Os>
 )
 
-export default ({ onClose }) => (
+export default ({
+  downloadOSX,
+  downloadLinux,
+  downloadLinuxRPM,
+  downloadWin
+}) => (
   <Container>
     <Title>Please select your operating system</Title>
 
@@ -30,35 +35,35 @@ export default ({ onClose }) => (
       <Item
         onClick={handleClick}
         id={OSX}
-        link={''}
+        link={downloadOSX}
         icon={'osx'}
         text={`OS X`}
       />
       <Item
         onClick={handleClick}
         id={LINUX}
-        link={''}
+        link={downloadLinux}
         icon={'linux'}
         text={`Linux DEB`}
       />
       <Item
         onClick={handleClick}
         id={LINUX_RPM}
-        link={''}
+        link={downloadLinuxRPM}
         icon={'linux_rpm'}
         text={`Linux RPM`}
       />
       <Item
         onClick={handleClick}
         id={WIN}
-        link={''}
+        link={downloadWin}
         icon={'windows'}
         text={`Windows`}
       />
       <Item
         onClick={handleClick}
         id={PIP}
-        link={''}
+        link={'#'}
         icon={'pip'}
         renderDownload={() => <Text>$ pip install dvc</Text>}
       />

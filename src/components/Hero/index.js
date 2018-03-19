@@ -17,16 +17,22 @@ export default class Hero extends Component {
     }))
 
   download = () => {
-  	if (isMobile) {
-  		window.location.href = '/download'
-	  } else {
-  	  this.toggleDownloadPopup()
-	  }
+    if (isMobile()) {
+      window.location.href = '/download'
+    } else {
+      this.toggleDownloadPopup()
+    }
   }
 
   render() {
     const { downloadPopup } = this.state
-    const { githubUrl, downloadUrl } = this.props
+    const { githubUrl } = this.props
+    const {
+      downloadOSX,
+      downloadLinux,
+      downloadLinuxRPM,
+      downloadWin
+    } = this.props
 
     return (
       <Wrapper>
@@ -49,7 +55,15 @@ export default class Hero extends Component {
             </GithubButton>
           </Buttons>
         </Inner>
-	      {downloadPopup && <DownloadPopup onClose={this.toggleDownloadPopup}/>}
+        {downloadPopup && (
+          <DownloadPopup
+            downloadOSX={downloadOSX}
+            downloadLinux={downloadLinux}
+            downloadLinuxRPM={downloadLinuxRPM}
+            downloadWin={downloadWin}
+            onClose={this.toggleDownloadPopup}
+          />
+        )}
       </Wrapper>
     )
   }

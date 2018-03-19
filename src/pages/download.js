@@ -10,9 +10,10 @@ export default ({
   data: {
     site: {
       siteMetadata: {
-        githubUrl,
-        downloadUrl,
-        videoId,
+	      downloadOSX,
+	      downloadLinux,
+	      downloadLinuxRPM,
+	      downloadWin,
         twitter,
         linkedin,
         facebook
@@ -22,7 +23,12 @@ export default ({
 }) => (
   <Container>
     <Page>
-      <DownloadPopupContent />
+      <DownloadPopupContent
+	      downloadOSX={downloadOSX}
+	      downloadLinux={downloadLinux}
+	      downloadLinuxRPM={downloadLinuxRPM}
+	      downloadWin={downloadWin}
+      />
     </Page>
 
     <Hills>
@@ -36,12 +42,13 @@ export const query = graphql`
   query DownloadQuery {
     site {
       siteMetadata {
-        videoId
-        githubUrl
-        downloadUrl
         twitter
         linkedin
         facebook
+        downloadOSX
+        downloadLinux
+        downloadLinuxRPM
+        downloadWin
       }
     }
   }
