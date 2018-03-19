@@ -3,7 +3,7 @@ module.exports = {
     title: `Data Version Control - Make your data science projects reproducible and shareable.`,
     description: `Read more about dataversioncontrol. Git for data science projects.`,
     keywords: `DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL`,
-    preview: `preview.jpg`,
+    preview: `https://dataversioncontrol.com/preview.jpg`,
     siteUrl: `https://dataversioncontrol.com/`,
     author: `Dmitry Petrov`,
     videoId: `X8oEcNhKrZM`,
