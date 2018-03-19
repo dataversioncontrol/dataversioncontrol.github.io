@@ -39,7 +39,5 @@ const Video = styled.div`
   @media screen and (max-width: 768px) {
     width: 384px;
     height: 320px;
-
-    background: red;
   }
 `

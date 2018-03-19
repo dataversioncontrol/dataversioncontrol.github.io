@@ -57,8 +57,9 @@ export default ({
 const Wrapper = styled.div``
 
 const MobileButton = styled.button`
-  display: none;
+  background: transparent;
   border: none;
+
   background: transparent @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
