@@ -6,18 +6,30 @@ import Video from '../components/Video'
 import HowItWorks from '../components/HowItWorks'
 import Flow from '../components/Flow'
 import Subscribe from '../components/Subscribe'
+import Socials from '../components/Socials'
 
-export default ({ data }) => (
+export default ({
+  data: {
+    site: {
+      siteMetadata: {
+        githubUrl,
+        downloadUrl,
+        videoId,
+        twitter,
+        linkedin,
+        facebook
+      }
+    }
+  }
+}) => (
   <Page>
-    <Hero
-      githubUrl={data.site.siteMetadata.githubUrl}
-      downloadUrl={data.site.siteMetadata.downloadUrl}
-    />
+    <Hero githubUrl={githubUrl} downloadUrl={downloadUrl} />
     <Tools />
-    <Video id={data.site.siteMetadata.videoId} />
+    <Video id={videoId} />
     <HowItWorks />
     <Flow />
     <Subscribe />
+    <Socials twitter={twitter} linkedin={linkedin} facebook={facebook} />
   </Page>
 )
 
@@ -28,6 +40,9 @@ export const query = graphql`
         videoId
         githubUrl
         downloadUrl
+        twitter
+        linkedin
+        facebook
       }
     }
   }
