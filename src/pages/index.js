@@ -77,11 +77,19 @@ const VideoWave = styled.div`
   padding-bottom: 134px;
   margin-top: 64px;
   background: url(/video_bg.png) top center no-repeat;
+
+  @media (max-device-width: 736px) {
+    padding-top: 0px;
+  }
 `
 
 const Dots = styled.div`
   padding-top: 96px;
   background: url(/dots_bg.png) top center no-repeat;
+
+  @media (max-device-width: 736px) {
+    padding-top: 0px;
+  }
 `
 
 const FlowWave = styled.div`
@@ -89,6 +97,13 @@ const FlowWave = styled.div`
   padding-top: 102px;
   padding-bottom: 148px;
   background: url(/flow_bg.png) top center no-repeat;
+
+  @media (max-device-width: 736px) {
+    margin-top: 32px;
+    padding-top: 32px;
+
+    background-size: cover;
+  }
 `
 
 const Hills = styled.div`
@@ -98,6 +113,9 @@ const Hills = styled.div`
   background: url(/hills.png) top center no-repeat;
 
   @media (max-device-width: 736px) {
-    background-size: cover;
+    margin-top: 0px;
+    padding-top: 0px;
+    background-size: contain;
+    background-position-y: bottom;
   }
 `
