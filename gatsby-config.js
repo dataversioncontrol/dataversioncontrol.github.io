@@ -3,16 +3,42 @@ module.exports = {
     title: `Data Version Control - Make your data science projects reproducible and shareable.`,
     description: `Read more about dataversioncontrol. Git for data science projects.`,
     keywords: `DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL`,
-    preview: `https://content.linkedin.com/content/dam/developer/global/en_US/site/logos/techcrunch.png`,
+    preview: `https://dataversioncontrol.com/preview.jpg`,
     siteUrl: `https://dataversioncontrol.com/`,
     author: `Dmitry Petrov`,
     videoId: `X8oEcNhKrZM`,
-	  githubUrl: 'https://github.com/dataversioncontrol',
-	  downloadUrl: '/',
-	  facebook: 'dataversioncontrol',
-	  linkedin: 'dataversioncontrol',
-	  twitter: 'dataversioncontrol',
-    email: 'info@dataversioncontrol.com'
+    githubUrl: 'https://github.com/dataversioncontrol/dvc',
+    downloadUrl: '/',
+    facebook: 'dataversioncontrol',
+    linkedin: 'dataversioncontrol',
+    twitter: 'dataversioncontrol',
+    email: 'info@dataversioncontrol.com',
+    downloadOSX: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.pkg',
+    downloadLinux: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc_0.9.0_amd64.deb',
+    downloadLinuxRPM: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0-1.x86_64.rpm',
+    downloadWin: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.exe'
   },
-  plugins: [`gatsby-plugin-styled-components`]
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/documentation`,
+        name: 'markdown-pages'
+      }
+    },
+    `gatsby-transformer-remark`,
+	  {
+		  resolve: `gatsby-plugin-google-analytics`,
+		  options: {
+			  trackingId: "UA-97468780-1",
+			  // Puts tracking script in the head instead of the body
+			  head: false,
+			  // Setting this parameter is optional
+			  anonymize: true,
+			  // Setting this parameter is also optional
+			  respectDNT: true,
+		  },
+	  }
+  ]
 }

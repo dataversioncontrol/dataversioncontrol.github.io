@@ -1,33 +1,75 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import Logo from '../Logo'
-import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
+import DownloadPopup from '../DownloadPopup'
 import { container } from '../../styles'
 
-export default ({ githubUrl, downloadUrl }) => (
-  <Hero>
-    <Fork to={githubUrl}>
-      <img src="/fork.png" alt="Fork me at github" />
-    </Fork>
-    <Inner>
-      <Heading>Data Version Control</Heading>
-      <SubHeading>Best engineering practices for data scientists</SubHeading>
-      <Buttons>
-        <DowloadButton to={downloadUrl} primary>
-          <Title>Download</Title>
-          <SubTitle>Mac OS X, Linux Deb/RPM, Windows</SubTitle>
-        </DowloadButton>
-        <GithubButton to={githubUrl}>
-          <Title>Github</Title>
-          <SubTitle>Check repository</SubTitle>
-        </GithubButton>
-      </Buttons>
-    </Inner>
-  </Hero>
-)
+const isMobile = () => window.outerWidth <= 736
 
-const Hero = styled.div`
+export default class Hero extends Component {
+  state = {
+    downloadPopup: false
+  }
+
+  toggleDownloadPopup = () =>
+    this.setState(prevState => ({
+      downloadPopup: !prevState.downloadPopup
+    }))
+
+  download = () => {
+    if (isMobile()) {
+      window.location.href = '/download'
+    } else {
+      this.toggleDownloadPopup()
+    }
+  }
+
+  render() {
+    const { downloadPopup } = this.state
+    const { githubUrl } = this.props
+    const {
+      downloadOSX,
+      downloadLinux,
+      downloadLinuxRPM,
+      downloadWin
+    } = this.props
+
+    return (
+      <Wrapper>
+        <Fork href={githubUrl}>
+          <img src="/fork.png" alt="Fork me at github" />
+        </Fork>
+        <Inner>
+          <Heading>Data Version Control</Heading>
+          <SubHeading>
+            Best engineering practices for data scientists
+          </SubHeading>
+          <Buttons>
+            <DownloadButton onClick={this.download} primary>
+              <Title>Download</Title>
+              <SubTitle>Mac OS X, Linux Deb/RPM, Windows</SubTitle>
+            </DownloadButton>
+            <GithubButton onClick={() => (window.location = githubUrl)}>
+              <Title>Github</Title>
+              <SubTitle>Check repository</SubTitle>
+            </GithubButton>
+          </Buttons>
+        </Inner>
+        {downloadPopup && (
+          <DownloadPopup
+            downloadOSX={downloadOSX}
+            downloadLinux={downloadLinux}
+            downloadLinuxRPM={downloadLinuxRPM}
+            downloadWin={downloadWin}
+            onClose={this.toggleDownloadPopup}
+          />
+        )}
+      </Wrapper>
+    )
+  }
+}
+
+const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   min-height: 360px;
@@ -41,13 +83,17 @@ const Hero = styled.div`
   background: #e93c23 url('/hero.png') center center no-repeat;
   background-size: cover;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     padding-top: 15px;
-    padding-bottom: 15px;
+    height: 90vh;
+    min-height: 600px;
+    align-items: center;
+    display: flex;
+    padding-bottom: 20px;
   }
 `
 
-const Fork = styled(Link)`
+const Fork = styled.a`
   position: absolute;
   right: 0px;
   top: -78px;
@@ -63,7 +109,7 @@ const Heading = styled.h1`
   font-size: 60px;
   font-weight: bold;
   color: #fff;
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     line-height: 64px;
   }
 `
@@ -74,7 +120,7 @@ const SubHeading = styled.h2`
   font-weight: normal;
   color: #fff;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     margin-top: 25px;
     margin-bottom: 4px;
   }
@@ -85,12 +131,12 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: row;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `
 
-const Button = styled(Link)`
+const Button = styled.button`
   width: 270px;
   height: 74px;
   display: flex;
@@ -101,6 +147,8 @@ const Button = styled(Link)`
   border: 2px solid #fff;
   border-radius: 44px;
   text-decoration: none;
+  outline: none;
+  cursor: pointer;
 
   ${props =>
     props.primary &&
@@ -108,7 +156,7 @@ const Button = styled(Link)`
     background-color: #003965;
   `};
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -116,8 +164,8 @@ const Button = styled(Link)`
 const Title = styled.div`
   font-weight: bold;
   font-size: 24px;
-  line-height: 20px;
-  margin-top: 10px;
+  line-height: 24px;
+  margin-top: 4px;
 `
 
 const SubTitle = styled.div`
@@ -125,11 +173,13 @@ const SubTitle = styled.div`
   font-size: 12px;
 `
 
-const DowloadButton = Button.extend``
+const DownloadButton = Button.extend``
+
 const GithubButton = Button.extend`
+  background: transparent;
   margin-left: 30px;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     margin-left: 0px;
     margin-top: 15px;
   }

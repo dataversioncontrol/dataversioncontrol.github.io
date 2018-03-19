@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
+import Close from '../Close'
 
 const Burger = () => (
   <svg
@@ -17,13 +18,6 @@ const Burger = () => (
   </svg>
 )
 
-const Close = () => (
-  <CloseButton>
-    <ArrowLeft />
-    <ArrowRight />
-  </CloseButton>
-)
-
 export default ({
   open,
   getStarted,
@@ -38,19 +32,22 @@ export default ({
       {open ? <Close /> : <Burger />}
     </MobileButton>
     <TopMenu visible={open}>
-      <Item href={getStarted}>
+      <ItemLocal to={'/'} onClick={() => onToggle()}>
+        <Label>Home</Label>
+      </ItemLocal>
+      <Item href={getStarted} onClick={() => onToggle()}>
         <Label>Get Started</Label>
       </Item>
-      <Item href={blog}>
+      <Item href={blog} onClick={() => onToggle()}>
         <Label>Blog</Label>
       </Item>
-      <ItemLocal to={support}>
+      <ItemLocal to={support} onClick={() => onToggle()}>
         <Label>Support</Label>
       </ItemLocal>
-      <Item href={discuss}>
+      <Item href={discuss} onClick={() => onToggle()}>
         <Label>Discuss</Label>
       </Item>
-      <ItemLocal to={docs} docs={true}>
+      <ItemLocal to={docs} docs={true} onClick={() => onToggle()}>
         <Label noline>Docs</Label>
       </ItemLocal>
     </TopMenu>
@@ -59,10 +56,11 @@ export default ({
 
 const Wrapper = styled.div``
 
-const MobileButton = styled.button`
-  display: none;
+const MobileButton = styled.div`
+  background: transparent;
+  border: none;
 
-  @media (max-device-width: 736px) {
+  background: transparent @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     right: 15px;
@@ -79,7 +77,7 @@ export const TopMenu = styled.div`
 
   padding-bottom: 10px;
 
-  @media (max-device-width: 736px) {
+  @media screen and (max-width: 768px) {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -137,7 +135,7 @@ const topNavLink = css`
     border-radius: 24px;
   `};
 
-  @media (max-device-width: 736px) {
+  @media screen and (max-width: 768px) {
     color: #000;
     line-height: 60px;
     margin-left: 0px;
@@ -152,27 +150,4 @@ export const Item = styled.a`
 `
 export const ItemLocal = styled(Link)`
   ${topNavLink};
-`
-
-const CloseButton = styled.div`
-  width: 24px;
-  height: 18px;
-  position: relative;
-`
-
-const ArrowLeft = styled.div`
-  content: '';
-  position: absolute;
-  background: #6772e5;
-  border-radius: 1px;
-  left: 0px;
-  right: 0px;
-  top: 13px;
-  height: 2px;
-  transform: rotate(45deg);
-  transition: background 0.1s;
-`
-
-const ArrowRight = ArrowLeft.extend`
-  transform: rotate(-45deg);
 `

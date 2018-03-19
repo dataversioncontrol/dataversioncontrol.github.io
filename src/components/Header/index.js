@@ -5,7 +5,8 @@ import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
 import { container } from '../../styles'
 
 const links = {
-  getStarted: 'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+  getStarted:
+    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
   blog: 'https://blog.dataversioncontrol.com/',
   support: '/support',
   docs: '/docs',
@@ -36,6 +37,9 @@ export default class Header extends Component {
 }
 const Wrapper = styled.div`
   background: #1b1b1b;
+  height: 105px;
+
+  padding-top: 10px;
 
   ${MenuWrapper} {
   }
@@ -49,7 +53,7 @@ const Inner = styled.div`
 
   align-items: center;
 
-  @media (max-device-width: 736px) {
+  @media screen and (max-width: 768px) {
     justify-content: space-between;
   }
 `

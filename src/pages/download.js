@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { container } from '../styles'
 
+import DownloadPopupContent from '../components/DownloadPopupContent'
 import Subscribe from '../components/Subscribe'
 import Socials from '../components/Socials'
 
@@ -9,9 +10,10 @@ export default ({
   data: {
     site: {
       siteMetadata: {
-        githubUrl,
-        downloadUrl,
-        videoId,
+        downloadOSX,
+        downloadLinux,
+        downloadLinuxRPM,
+        downloadWin,
         twitter,
         linkedin,
         facebook
@@ -21,8 +23,14 @@ export default ({
 }) => (
   <Container>
     <Page>
-      <h1>Docs</h1>
+      <DownloadPopupContent
+        downloadOSX={downloadOSX}
+        downloadLinux={downloadLinux}
+        downloadLinuxRPM={downloadLinuxRPM}
+        downloadWin={downloadWin}
+      />
     </Page>
+
     <Hills>
       <Subscribe />
       <Socials twitter={twitter} linkedin={linkedin} facebook={facebook} />
@@ -31,15 +39,16 @@ export default ({
 )
 
 export const query = graphql`
-  query DocsQuery {
+  query DownloadQuery {
     site {
       siteMetadata {
-        videoId
-        githubUrl
-        downloadUrl
         twitter
         linkedin
         facebook
+        downloadOSX
+        downloadLinux
+        downloadLinuxRPM
+        downloadWin
       }
     }
   }
@@ -48,6 +57,8 @@ export const query = graphql`
 const Container = styled.div``
 const Page = styled.div`
   ${container};
+  margin-top: 40px;
+  margin-bottom: 20px;
 `
 
 const Hills = styled.div`
@@ -56,7 +67,7 @@ const Hills = styled.div`
   padding-bottom: 50px;
   background: url(/hills.png) top center no-repeat;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     background-size: cover;
   }
 `

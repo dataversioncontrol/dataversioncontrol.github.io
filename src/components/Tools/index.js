@@ -63,6 +63,7 @@ const Wrapper = styled.div`
      
       ${ToolWrapper} {
         flex-basis: 100%;
+        margin-bottom: 5em;
       }  
     }
   }

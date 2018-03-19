@@ -5,17 +5,22 @@
   "main": "index.js",
   "scripts": {
     "dev": "gatsby develop",
+    "prebuild": "npm run clean",
     "build": "gatsby build",
     "postbuild": "mv ./public/* ./docs",
     "start": "cd ./docs && sudo python -m SimpleHTTPServer 80",
     "prettier": "prettier --no-semi --write './src/**/*.{js,jsx}'",
+    "clean": "rm -rf ./docs/*",
     "precommit": "npm run prettier"
   },
   "devDependencies": {},
   "dependencies": {
     "gatsby": "^1.9.235",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-google-analytics": "^1.0.24",
     "gatsby-plugin-styled-components": "^2.0.9",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-remark": "^1.7.37",
     "react": "latest",
     "react-youtube": "^7.5.0",
     "styled-components": "^3.2.3",

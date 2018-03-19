@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 import Logo from '../Logo'
 import { container } from '../../styles'
 
+const formatTwitter = account => `http://twitter.com/${account}`
+
 export default ({
   blog = 'https://blog.dataversioncontrol.com/',
   twitter = `FullStackML`
@@ -16,17 +18,17 @@ export default ({
       <Copyright>
         <P>© 2018 Iterative, Inc.</P>
         <P>
-          <StyledLink to="mailto:info@dataversioncontrol.com">
+          <StyledLink href="mailto:info@dataversioncontrol.com">
             info@dataversioncontrol.com
           </StyledLink>
         </P>
       </Copyright>
       <Links>
         <P>
-          <StyledLink to={blog}>Blog</StyledLink>
+          <StyledLink href={blog}>Blog</StyledLink>
         </P>
         <P>
-          <StyledLink to={twitter}>
+          <StyledLink href={formatTwitter(twitter)}>
             <TwitterIcon src="twitter.png" />@FullStackML
           </StyledLink>
         </P>
@@ -63,7 +65,7 @@ const Inner = styled.div`
   ${container} display: flex;
   justify-content: space-between;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 `
@@ -78,7 +80,7 @@ const Copyright = styled.div`
   ${verticalCentered} flex-basis: 370px;
   text-align: center;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     align-items: flex-start;
     text-align: left;
     flex-basis: auto;
@@ -89,13 +91,13 @@ const Links = styled.div`
   ${verticalCentered} flex-basis: 170px;
   align-items: flex-end;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     align-items: flex-start;
     flex-basis: auto;
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: #49b9f3;
 
   &:hover {
