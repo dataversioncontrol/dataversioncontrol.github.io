@@ -55,4 +55,6 @@ const Command = styled.div`
 
 const Line = styled.div`
   font-family: monospace, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 `
