@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { container } from '../../styles'
 
-const FACEBOOK_SHARE_URL = `https://www.facebook.com/sharer/sharer.php?u=https://dataversioncontrol.com&t=DVC`;
-const TWITTER_SHARE_URL = `https://twitter.com/share?url=https://dataversioncontrol.com&via=DataVersionCtrl&text=DataVersionCtrl`;
-const LINKEDIN_SHARE_URL = `https://www.linkedin.com/shareArticle?mini=true&url=https://dataversioncontrol.com&title=DVC&summary=summary&source=source`;
+const FACEBOOK_SHARE_URL = `https://www.facebook.com/sharer/sharer.php?u=https://dataversioncontrol.com&t=DVC`
+const TWITTER_SHARE_URL = `https://twitter.com/share?url=https://dataversioncontrol.com&via=DataVersionCtrl&text=DataVersionCtrl`
+const LINKEDIN_SHARE_URL = `https://www.linkedin.com/shareArticle?mini=true&url=https://dataversioncontrol.com&title=DVC&summary=summary&source=source`
 
 export default ({ twitter, linkedin, facebook }) => (
   <Wrapper>
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     ${container};
     margin-top: 40px;
     justify-content: space-evenly;

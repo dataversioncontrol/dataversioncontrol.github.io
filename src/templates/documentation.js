@@ -41,7 +41,7 @@ const Content = styled.div`
     padding-left: 2em;
   }
 
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     pre,
     ul p,
     li p {

@@ -12,9 +12,11 @@ export default ({
   downloadWin
 }) => (
   <DownloadPopup onClick={onClose}>
-    <Box onClick={(e) => {
-      e.stopPropagation()
-    }}>
+    <Box
+      onClick={e => {
+        e.stopPropagation()
+      }}
+    >
       <Inner>
         <Content>
           <Close onClick={onClose} />
@@ -50,7 +52,7 @@ const Box = styled.div`
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     position: absolute;
     top: 12px;
     left: 0px;
@@ -66,7 +68,7 @@ const Inner = styled.div`
   position: relative;
   max-height: 570px;
 
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     max-height: none;
     overflow: scroll;
   }

@@ -53,4 +53,6 @@ const Command = styled.div`
   line-height: 24px;
 `
 
-const Line = styled.div``
+const Line = styled.div`
+  font-family: monospace, monospace;
+`

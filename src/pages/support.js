@@ -87,7 +87,7 @@ const Hills = styled.div`
   padding-bottom: 50px;
   background: url(/hills.png) top center no-repeat;
 
- @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     background-size: cover;
   }
 `

@@ -59,8 +59,10 @@ const Wrapper = styled.div``
 const MobileButton = styled.div`
   background: transparent;
   border: none;
+  display: none;
+  background: transparent;
 
-  background: transparent @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     right: 15px;
