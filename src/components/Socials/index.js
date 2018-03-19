@@ -22,6 +22,7 @@ export default ({ twitter, linkedin, facebook }) => (
 const Wrapper = styled.div`
   max-width: 370px;
   margin: 0px auto;
+  padding-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
