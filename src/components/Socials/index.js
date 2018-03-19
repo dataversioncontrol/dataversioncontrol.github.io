@@ -2,19 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 import { container } from '../../styles'
 
-// const FACEBOOK_SHARE_URL = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl.baseUrl}&t=${shareUrl.facebook.title}`;
-// const TWITTER_SHARE_URL = `https://twitter.com/share?url=${shareUrl.baseUrl}&via=${shareUrl.twitter.via}&text=${shareUrl.twitter.via}`;
-// const LINKEDIN_SHARE_URL = `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl.baseUrl}&title=${shareUrl.linkedin.title}&summary=${shareUrl.linkedin.summary}&source=${shareUrl.linkedin.source}`;
+const FACEBOOK_SHARE_URL = `https://www.facebook.com/sharer/sharer.php?u=https://dataversioncontrol.com&t=DVC`;
+const TWITTER_SHARE_URL = `https://twitter.com/share?url=https://dataversioncontrol.com&via=DataVersionCtrl&text=DataVersionCtrl`;
+const LINKEDIN_SHARE_URL = `https://www.linkedin.com/shareArticle?mini=true&url=https://dataversioncontrol.com&title=DVC&summary=summary&source=source`;
 
 export default ({ twitter, linkedin, facebook }) => (
   <Wrapper>
-    <Social href={twitter}>
+    <Social href={TWITTER_SHARE_URL}>
       <img src="/twitter.png" alt="Twitter" />
     </Social>
-    <Social href={linkedin}>
+    <Social href={LINKEDIN_SHARE_URL}>
       <img src="/linkedin.png" alt="Linkedin" />
     </Social>
-    <Social href={facebook}>
+    <Social href={FACEBOOK_SHARE_URL}>
       <img src="/facebook.png" alt="Facebook" />
     </Social>
   </Wrapper>
