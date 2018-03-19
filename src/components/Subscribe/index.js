@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Section from '../../components/Section'
+import Section, { Inner as SectionInner } from '../../components/Section'
 import SubscribeForm from '../../components/SubscribeForm'
 
 export default ({ title, children }) => (
@@ -11,4 +11,11 @@ export default ({ title, children }) => (
   </Wrapper>
 )
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  ${SectionInner} {
+    max-width: 570px;
+    margin: 0px auto;
+  }
+`
+
+
