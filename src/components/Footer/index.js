@@ -1,13 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
 import Logo from '../Logo'
 import { container } from '../../styles'
 
-const blog = 'https://blog.dataversioncontrol.com/'
-const twitter = `FullStackML`
-
-export default ({ blog, twitter }) => (
+export default ({
+  blog = 'https://blog.dataversioncontrol.com/',
+  twitter = `FullStackML`
+}) => (
   <Footer>
     <Inner>
       <Anchor>
@@ -34,6 +34,12 @@ export default ({ blog, twitter }) => (
     </Inner>
   </Footer>
 )
+
+const verticalCentered = css`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`
 
 const P = styled.p`
   margin: 0px;
@@ -65,12 +71,12 @@ const Anchor = styled.div`
 `
 
 const Copyright = styled.div`
-  flex-basis: 370px;
+  ${verticalCentered} flex-basis: 370px;
   text-align: center;
 `
 
 const Links = styled.div`
-  flex-basis: 170px;
+  ${verticalCentered} flex-basis: 170px;
   text-align: right;
 `
 
