@@ -100,7 +100,7 @@ export const TopMenu = styled.div`
     transition-property: transform, opacity;
     transition-duration: 0.25s;
 
-    z-index: 888888;
+    z-index: -10;
 
     align-items: start;
 
@@ -110,6 +110,7 @@ export const TopMenu = styled.div`
     ${props =>
       props.visible &&
       `
+         z-index: 888888;
     transform: none;
     opacity: 1;
     pointer-events: auto;
@@ -151,8 +152,8 @@ export const Item = styled(Link)`
 `
 
 const CloseButton = styled.div`
-  width: 34px;
-  height: 28px;
+  width: 24px;
+  height: 18px;
   position: relative;
 `
 
