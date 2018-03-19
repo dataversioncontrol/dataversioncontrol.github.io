@@ -80,5 +80,6 @@ const FlowWave = styled.div`
 const Hills = styled.div`
   margin-top: -72px;
   padding-top: 132px;
+  padding-bottom: 50px;
   background: url(/hills.png) top center no-repeat;
 `

@@ -77,7 +77,7 @@ const Copyright = styled.div`
 
 const Links = styled.div`
   ${verticalCentered} flex-basis: 170px;
-  text-align: right;
+  align-items: flex-end;
 `
 
 const StyledLink = styled(Link)`
