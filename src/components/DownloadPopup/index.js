@@ -11,8 +11,11 @@ export default ({
   downloadLinuxRPM,
   downloadWin
 }) => (
-  <DownloadPopup>
-    <Box>
+  <DownloadPopup onClick={onClose}>
+    <Box onClick={(e) => {
+      e.stopPropagation()
+      e.preventDefault()
+    }}>
       <Inner>
         <Content>
           <Close onClick={onClose} />
