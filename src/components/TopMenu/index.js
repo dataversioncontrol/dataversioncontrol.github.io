@@ -2,24 +2,24 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-export default () => (
+export default ({ getStarted, tutorial, blog, support, docs, discuss }) => (
   <TopMenu>
-    <Item href="/#">
+    <Item to={getStarted}>
       <Label>Get Started</Label>
     </Item>
-    <Item href="/#">
+    <Item to={tutorial}>
       <Label>Tutorials</Label>
     </Item>
-    <Item href="/#">
+    <Item to={blog}>
       <Label>Blog</Label>
     </Item>
-    <Item href="/#">
+    <Item to={support}>
       <Label>Support</Label>
     </Item>
-    <Item href="/#">
+    <Item to={discuss}>
       <Label>Discuss</Label>
     </Item>
-    <Item href="/#" docs={true}>
+    <Item to={docs} docs={true}>
       <Label noline>Docs</Label>
     </Item>
   </TopMenu>

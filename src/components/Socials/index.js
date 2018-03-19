@@ -5,16 +5,16 @@ import styled from 'styled-components'
 // const TWITTER_SHARE_URL = `https://twitter.com/share?url=${shareUrl.baseUrl}&via=${shareUrl.twitter.via}&text=${shareUrl.twitter.via}`;
 // const LINKEDIN_SHARE_URL = `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl.baseUrl}&title=${shareUrl.linkedin.title}&summary=${shareUrl.linkedin.summary}&source=${shareUrl.linkedin.source}`;
 
-export default ({twitter, linkedin, facebook}) => (
+export default ({ twitter, linkedin, facebook }) => (
   <Wrapper>
-	  <Social href={twitter}>
-		  <img src="twitter.png" alt="Twitter"/>
+    <Social href={twitter}>
+      <img src="twitter.png" alt="Twitter" />
     </Social>
-	  <Social href={linkedin}>
-		  <img src="linkedin.png" alt="Linkedin"/>
+    <Social href={linkedin}>
+      <img src="linkedin.png" alt="Linkedin" />
     </Social>
-	  <Social href={facebook}>
-		  <img src="facebook.png" alt="Facebook"/>
+    <Social href={facebook}>
+      <img src="facebook.png" alt="Facebook" />
     </Social>
   </Wrapper>
 )

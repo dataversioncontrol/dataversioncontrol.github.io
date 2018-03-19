@@ -12,7 +12,7 @@ module.exports = {
 	  facebook: 'dataversioncontrol',
 	  linkedin: 'dataversioncontrol',
 	  twitter: 'dataversioncontrol',
-    email: 'info@dataversioncontrol.com '
+    email: 'info@dataversioncontrol.com'
   },
   plugins: [`gatsby-plugin-styled-components`]
 }
