@@ -59,7 +59,7 @@ const Wrapper = styled.div``
 const MobileButton = styled.button`
   display: none;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     right: 15px;
@@ -76,7 +76,7 @@ export const TopMenu = styled.div`
 
   padding-bottom: 10px;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     position: absolute;
     right: 5px;
     top: 5px;
@@ -134,7 +134,7 @@ const topNavLink = css`
     border-radius: 24px;
   `};
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     color: #000;
     line-height: 60px;
     margin-left: 0px;

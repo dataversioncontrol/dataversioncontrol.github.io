@@ -41,7 +41,7 @@ const Content = styled.div`
     padding-left: 2em;
   }
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     pre,
     ul p,
     li p {

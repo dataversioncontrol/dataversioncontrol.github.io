@@ -37,6 +37,7 @@ export default class Header extends Component {
 }
 const Wrapper = styled.div`
   background: #1b1b1b;
+  height: 105px;
 
   ${MenuWrapper} {
   }
@@ -50,7 +51,7 @@ const Inner = styled.div`
 
   align-items: center;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     justify-content: space-between;
   }
 `

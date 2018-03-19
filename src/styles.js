@@ -6,7 +6,7 @@ export const container = css`
   max-width: ${maxWidth}px;
   margin: 0px auto;
 
-  @media (max-device-width: 736px) {
+ @media screen and (max-width: 768px) {
     padding: 0px 15px;
   }
 `
