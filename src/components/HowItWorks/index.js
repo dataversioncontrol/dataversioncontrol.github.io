@@ -6,7 +6,7 @@ const Item = ({ title, command, index = 0, lines = [] }) => (
   <Step odd={index % 2 === 0}>
     <Title>{title}</Title>
     <In>
-      <Commands>{lines.map((line, i) => <Line key={i}>{line}</Line>)}</Commands>
+      <Commands>{lines.map((line, i) => <Line key={i}>{'$ '}{line}</Line>)}</Commands>
       <Index light={index % 2 === 0}>{index}</Index>
     </In>
   </Step>
@@ -57,12 +57,14 @@ const Wrapper = styled.div``
 const Title = styled.div`
   ${verticalCentered} padding-left: 100px;
   padding-right: 20px;
-  flex-basis: 290px;
+  width: 290px;
 `
 
 const Commands = styled.div`
-  ${verticalCentered} flex-direction: column;
+  display: flex;
+  flex-direction: column;
   padding-left: 130px;
+  justify-content: center;
 
   background: url('/flow_arrow.png') left center no-repeat transparent;
 `
@@ -72,6 +74,7 @@ const Line = styled.div``
 const Index = styled.div`
   ${verticalCentered} padding-right: 70px;
   font-size: 90px;
+  line-height: 100px;
   color: #ffffff;
 
   ${props =>
@@ -82,8 +85,8 @@ const Index = styled.div`
 `
 
 const Step = styled.div`
-  margin-bottom: 4px;
   display: flow;
+  margin-bottom: 4px;
   background-color: #e5f1ff;
   min-height: 100px;
   border-radius: 8px;
@@ -95,6 +98,7 @@ const Step = styled.div`
 `
 
 const In = styled.div`
-  ${verticalCentered} display: flex;
+  display: flex;
+  flex-grow: 1;
   justify-content: space-between;
 `
