@@ -26,8 +26,25 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  margin: 25px 0px;
+  margin: 25px 0px 0px 0px;
 `
+
 const Content = styled.div`
   padding: 25px 0px;
+
+  pre {
+    margin: 40px 0px;
+  }
+
+  ul,
+  ol {
+    padding-left: 2em;
+  }
+
+  @media (max-device-width: 736px) {
+    pre, ul  p, li p {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
 `
