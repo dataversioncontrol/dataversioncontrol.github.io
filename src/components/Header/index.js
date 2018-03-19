@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
 import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
@@ -14,16 +14,30 @@ const links = {
   discuss: 'http://discuss.dataversioncontrol.com/'
 }
 
-export default () => (
-  <Header>
-    <Inner>
-      <Logo />
-      <TopMenu {...links} />
-    </Inner>
-  </Header>
-)
+export default class Header extends Component {
 
-const Header = styled.div`
+  state = {
+    open: false
+  }
+
+  toggleOpen = () => this.setState(prevState => ({
+    open: !prevState.open
+  }))
+
+  render() {
+    const { open } = this.state
+    return (
+	    <Wrapper>
+		    <Inner>
+			    <Logo />
+			    <TopMenu {...links} open={open} onToggle={this.toggleOpen}/>
+		    </Inner>
+	    </Wrapper>
+    )
+  }
+
+}
+const Wrapper = styled.div`
   background: #1b1b1b;
 
   ${MenuWrapper} {
