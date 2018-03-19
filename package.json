@@ -7,7 +7,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "postbuild": "mv ./public/* ./docs",
-    "start": "cd ./public && sudo python -m SimpleHTTPServer 80",
+    "start": "cd ./docs && sudo python -m SimpleHTTPServer 80",
     "prettier": "prettier --no-semi --write './src/**/*.{js,jsx}'",
     "precommit": "npm run prettier"
   },
