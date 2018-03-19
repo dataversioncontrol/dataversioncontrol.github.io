@@ -6,7 +6,14 @@ const Item = ({ title, command, index = 0, lines = [] }) => (
   <Step odd={index % 2 === 0}>
     <Title>{title}</Title>
     <In>
-      <Commands>{lines.map((line, i) => <Line key={i}>{'$ '}{line}</Line>)}</Commands>
+      <Commands>
+        {lines.map((line, i) => (
+          <Line key={i}>
+            {'$ '}
+            {line}
+          </Line>
+        ))}
+      </Commands>
       <Index light={index % 2 === 0}>{index}</Index>
     </In>
   </Step>
@@ -58,6 +65,11 @@ const Title = styled.div`
   ${verticalCentered} padding-left: 100px;
   padding-right: 20px;
   width: 290px;
+  
+  @media (max-device-width: 736px) {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 `
 
 const Commands = styled.div`
@@ -67,6 +79,12 @@ const Commands = styled.div`
   justify-content: center;
 
   background: url('/flow_arrow.png') left center no-repeat transparent;
+  
+  
+  @media (max-device-width: 736px) {
+    padding-left: 0px;
+    background: transparent;
+  }
 `
 
 const Line = styled.div``
@@ -90,6 +108,11 @@ const Step = styled.div`
   background-color: #e5f1ff;
   min-height: 100px;
   border-radius: 8px;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
+
   ${props =>
     props.odd &&
     `

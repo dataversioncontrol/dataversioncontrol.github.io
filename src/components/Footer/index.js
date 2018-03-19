@@ -52,7 +52,7 @@ const TwitterIcon = styled.img`
 `
 
 const Footer = styled.div`
-  height: 96px;
+  min-height: 96px;
   background: #1b1b1b;
   padding-top: 12px;
   padding-bottom: 16px;
@@ -62,6 +62,10 @@ const Footer = styled.div`
 const Inner = styled.div`
   ${container} display: flex;
   justify-content: space-between;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
 `
 
 const Anchor = styled.div`
@@ -73,11 +77,22 @@ const Anchor = styled.div`
 const Copyright = styled.div`
   ${verticalCentered} flex-basis: 370px;
   text-align: center;
+
+  @media (max-device-width: 736px) {
+    align-items: flex-start;
+    text-align: left;
+    flex-basis: auto;
+  }
 `
 
 const Links = styled.div`
   ${verticalCentered} flex-basis: 170px;
   align-items: flex-end;
+
+  @media (max-device-width: 736px) {
+    align-items: flex-start;
+    flex-basis: auto;
+  }
 `
 
 const StyledLink = styled(Link)`

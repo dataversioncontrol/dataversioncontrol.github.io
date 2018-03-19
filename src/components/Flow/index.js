@@ -15,9 +15,10 @@ export default ({ title, children }) => (
 const Wrapper = styled.div`
   ${SectionInner} {
     text-align: center;
+    max-width: 916px;
   }
 `
 
 const Flow = styled.img`
-  max-width: 906px;
+   width: 98%;
 `

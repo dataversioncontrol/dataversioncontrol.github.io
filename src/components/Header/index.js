@@ -35,4 +35,8 @@ const Inner = styled.div`
   padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
+  
+  @media (max-device-width: 736px) {
+    justify-content: space-between;
+  }
 `

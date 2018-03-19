@@ -30,6 +30,11 @@ export const TopMenu = styled.div`
   align-items: center;
 
   padding-bottom: 10px;
+  
+  @media (max-device-width: 736px) {
+    position: absolute;
+    flex-direction: column;
+  }
 `
 
 const Label = styled.span`

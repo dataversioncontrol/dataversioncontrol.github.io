@@ -30,7 +30,7 @@ export default ({ githubUrl, downloadUrl }) => (
 const Hero = styled.div`
   position: relative;
   overflow: hidden;
-  height: 360px;
+  min-height: 360px;
   background: linear-gradient(
     45deg,
     #e93c23 0%,
@@ -71,6 +71,10 @@ const Buttons = styled.div`
   margin-top: 40px;
   display: flex;
   flex-direction: row;
+  
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
 `
 
 const Button = styled(Link)`
@@ -90,6 +94,11 @@ const Button = styled(Link)`
     `
     background-color: #003965;
   `};
+  
+  @media (max-device-width: 736px) {
+    width: 100%;
+    margin: 0px;
+  }
 `
 
 const Title = styled.div`

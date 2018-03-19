@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Section, {
   Wrapper as SectionWrapper,
@@ -46,12 +45,17 @@ export default ({ title, children }) => (
 const Wrapper = styled.div`
   ${SectionWrapper} {
     padding-top: 100px;
+   
   }
   
   ${SectionInner} {
     display: flex;
     justify-content: space-between
     flex-direction: row;
+    
+    @media (max-device-width : 736px) {
+      flex-direction: column;  
+    }
    
     ${ToolWrapper} {
       flex-basis: 360px;
