@@ -8,7 +8,11 @@ module.exports = {
     author: `Dmitry Petrov`,
     videoId: `X8oEcNhKrZM`,
 	  githubUrl: 'https://github.com/dataversioncontrol',
-	  downloadUrl: '/'
+	  downloadUrl: '/',
+	  facebook: 'dataversioncontrol',
+	  linkedin: 'dataversioncontrol',
+	  twitter: 'dataversioncontrol',
+    email: 'info@dataversioncontrol.com'
   },
   plugins: [`gatsby-plugin-styled-components`]
 }

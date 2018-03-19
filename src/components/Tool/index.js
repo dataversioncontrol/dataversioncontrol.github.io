@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Section, { Wrapper as SectionWrapper } from '../../components/Section'
 
-export default ({ title, icon, lines=[] }) => (
+export default ({ title, icon, lines = [] }) => (
   <Wrapper>
     <Icon>
       <img src={icon} alt="" />
@@ -47,10 +47,10 @@ const Command = styled.div`
   margin-top: 40px;
   font-weight: normal;
   white-space: pre;
-  
+  text-align: left;
+
   font-size: 22px;
   line-height: 24px;
 `
-
 
 const Line = styled.div``

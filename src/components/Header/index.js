@@ -4,11 +4,21 @@ import Logo from '../Logo'
 import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
 import { container } from '../../styles'
 
+const links = {
+  getStarted: '/getstarted',
+  tutorial:
+    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+  blog: 'https://blog.dataversioncontrol.com/',
+  support: '/support',
+  docs: '/docs',
+  discuss: 'http://discuss.dataversioncontrol.com/'
+}
+
 export default () => (
   <Header>
     <Inner>
       <Logo />
-      <TopMenu />
+      <TopMenu {...links} />
     </Inner>
   </Header>
 )
@@ -21,9 +31,12 @@ const Header = styled.div`
 `
 
 const Inner = styled.div`
-  ${container} 
-  padding-top: 10px;
+  ${container} padding-top: 10px;
   padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
+  
+  @media (max-device-width: 736px) {
+    justify-content: space-between;
+  }
 `

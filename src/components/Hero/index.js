@@ -7,19 +7,18 @@ import { container } from '../../styles'
 
 export default ({ githubUrl, downloadUrl }) => (
   <Hero>
-    <Background />
-    <Fork href={githubUrl}>
+    <Fork to={githubUrl}>
       <img src="/fork.png" alt="Fork me at github" />
     </Fork>
     <Inner>
       <Heading>Data Version Control</Heading>
       <SubHeading>Best engineering practices for data scientists</SubHeading>
       <Buttons>
-        <DowloadButton href={downloadUrl} primary>
+        <DowloadButton to={downloadUrl} primary>
           <Title>Download</Title>
           <SubTitle>Mac OS X, Linux Deb/RPM, Windows</SubTitle>
         </DowloadButton>
-        <GithubButton href={githubUrl}>
+        <GithubButton to={githubUrl}>
           <Title>Github</Title>
           <SubTitle>Check repository</SubTitle>
         </GithubButton>
@@ -29,10 +28,9 @@ export default ({ githubUrl, downloadUrl }) => (
 )
 
 const Hero = styled.div`
-  z-index: -1;
   position: relative;
-  height: 360px;
-  background-color: #e93c23;
+  overflow: hidden;
+  min-height: 360px;
   background: linear-gradient(
     45deg,
     #e93c23 0%,
@@ -40,6 +38,13 @@ const Hero = styled.div`
     #922175 90%,
     #922175 100%
   );
+  background: #e93c23 url('/hero.png') center center no-repeat;
+  background-size: cover;
+
+  @media (max-device-width: 736px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 `
 
 const Fork = styled(Link)`
@@ -48,21 +53,8 @@ const Fork = styled(Link)`
   top: -78px;
 `
 
-const Background = styled.div`
-  position: absolute;
-  z-index: -1;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-
-  background: transparent url('/hero.png') center center no-repeat;
-  background-size: cover;
-`
-
 const Inner = styled.div`
   ${container} padding-top: 54px;
-  z-index: 3;
 `
 
 const Heading = styled.h1`
@@ -71,6 +63,9 @@ const Heading = styled.h1`
   font-size: 60px;
   font-weight: bold;
   color: #fff;
+  @media (max-device-width: 736px) {
+    line-height: 64px;
+  }
 `
 
 const SubHeading = styled.h2`
@@ -78,12 +73,21 @@ const SubHeading = styled.h2`
   padding: 0px;
   font-weight: normal;
   color: #fff;
+
+  @media (max-device-width: 736px) {
+    margin-top: 25px;
+    margin-bottom: 4px;
+  }
 `
 
 const Buttons = styled.div`
-  margin-top: 12px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
 `
 
 const Button = styled(Link)`
@@ -103,6 +107,10 @@ const Button = styled(Link)`
     `
     background-color: #003965;
   `};
+
+  @media (max-device-width: 736px) {
+    width: 100%;
+  }
 `
 
 const Title = styled.div`
@@ -120,4 +128,9 @@ const SubTitle = styled.div`
 const DowloadButton = Button.extend``
 const GithubButton = Button.extend`
   margin-left: 30px;
+
+  @media (max-device-width: 736px) {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
 `

@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Section, {
   Wrapper as SectionWrapper,
@@ -17,7 +16,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula.png`}
-        lines={[`$ dvc run -d images\\`, `python train.py`]}
+        lines={[`$ dvc run -d images\\`, `          python train.py`]}
       />
       <Tool
         title={
@@ -27,7 +26,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula_2.png`}
-        lines={[`vi train.ру`, `dvc repro`]}
+        lines={[`$ vi train.ру`, `$ dvc repro`]}
       />
       <Tool
         title={
@@ -37,7 +36,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula_3.png`}
-        lines={[`git push`, `dvc push`]}
+        lines={[`$ git push`, `$ dvc push`]}
       />
     </Section>
   </Wrapper>
@@ -46,15 +45,25 @@ export default ({ title, children }) => (
 const Wrapper = styled.div`
   ${SectionWrapper} {
     padding-top: 100px;
+   
   }
   
   ${SectionInner} {
     display: flex;
     justify-content: space-between
     flex-direction: row;
-   
+    
+    
     ${ToolWrapper} {
       flex-basis: 360px;
+    }
+    
+    @media (max-device-width : 736px) {
+      flex-direction: column;
+     
+      ${ToolWrapper} {
+        flex-basis: 100%;
+      }  
     }
   }
 `

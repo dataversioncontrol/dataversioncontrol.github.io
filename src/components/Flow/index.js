@@ -7,7 +7,7 @@ import Section, { Inner as SectionInner } from '../../components/Section'
 export default ({ title, children }) => (
   <Wrapper>
     <Section title={`DVC Data File Transport Commands?`}>
-      <Flow src="/flow.png"/>
+      <Flow src="/flow.png" />
     </Section>
   </Wrapper>
 )
@@ -15,9 +15,12 @@ export default ({ title, children }) => (
 const Wrapper = styled.div`
   ${SectionInner} {
     text-align: center;
+    max-width: 916px;
+    margin: 0px auto;
   }
 `
 
 const Flow = styled.img`
-  max-width: 906px;
+   width: 98%;
+   margin: 0px auto;
 `

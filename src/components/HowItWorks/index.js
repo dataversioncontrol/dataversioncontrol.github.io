@@ -6,7 +6,14 @@ const Item = ({ title, command, index = 0, lines = [] }) => (
   <Step odd={index % 2 === 0}>
     <Title>{title}</Title>
     <In>
-      <Commands>{lines.map((line, i) => <Line key={i}>{line}</Line>)}</Commands>
+      <Commands>
+        {lines.map((line, i) => (
+          <Line key={i}>
+            {'$ '}
+            {line}
+          </Line>
+        ))}
+      </Commands>
       <Index light={index % 2 === 0}>{index}</Index>
     </In>
   </Step>
@@ -52,19 +59,35 @@ const verticalCentered = css`
   align-items: center;
 `
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  overflow: hidden;
+`
 
 const Title = styled.div`
   ${verticalCentered} padding-left: 100px;
   padding-right: 20px;
-  flex-basis: 290px;
+  width: 290px;
+  font-weight: bold;
+
+  @media (max-device-width: 736px) {
+    width: auto;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 `
 
 const Commands = styled.div`
-  ${verticalCentered} flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 130px;
 
   background: url('/flow_arrow.png') left center no-repeat transparent;
+
+  @media (max-device-width: 736px) {
+    padding-left: 0px;
+    background: transparent;
+  }
 `
 
 const Line = styled.div``
@@ -72,6 +95,7 @@ const Line = styled.div``
 const Index = styled.div`
   ${verticalCentered} padding-right: 70px;
   font-size: 90px;
+  line-height: 100px;
   color: #ffffff;
 
   ${props =>
@@ -79,14 +103,36 @@ const Index = styled.div`
     `
     color: #e5f1ff;
   `};
+
+  @media (max-device-width: 736px) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-right: 0px;
+    justify-content: center;
+    width: 84px;
+  }
 `
 
 const Step = styled.div`
+  display: flex;
   margin-bottom: 4px;
-  display: flow;
   background-color: #e5f1ff;
   min-height: 100px;
   border-radius: 8px;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+    padding-left: 84px;
+    position: relative;
+
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-bottom: 24px;
+  }
+
   ${props =>
     props.odd &&
     `
@@ -95,6 +141,11 @@ const Step = styled.div`
 `
 
 const In = styled.div`
-  ${verticalCentered} display: flex;
+  display: flex;
+  flex-grow: 1;
   justify-content: space-between;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
 `
