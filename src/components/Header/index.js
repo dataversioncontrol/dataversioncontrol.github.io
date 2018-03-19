@@ -1,29 +1,40 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
 import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
 import { container } from '../../styles'
 
 const links = {
-  getStarted: '/getstarted',
-  tutorial:
-    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+  getStarted: 'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
   blog: 'https://blog.dataversioncontrol.com/',
   support: '/support',
   docs: '/docs',
   discuss: 'http://discuss.dataversioncontrol.com/'
 }
 
-export default () => (
-  <Header>
-    <Inner>
-      <Logo />
-      <TopMenu {...links} />
-    </Inner>
-  </Header>
-)
+export default class Header extends Component {
+  state = {
+    open: false
+  }
 
-const Header = styled.div`
+  toggleOpen = () =>
+    this.setState(prevState => ({
+      open: !prevState.open
+    }))
+
+  render() {
+    const { open } = this.state
+    return (
+      <Wrapper>
+        <Inner>
+          <Logo />
+          <TopMenu {...links} open={open} onToggle={this.toggleOpen} />
+        </Inner>
+      </Wrapper>
+    )
+  }
+}
+const Wrapper = styled.div`
   background: #1b1b1b;
 
   ${MenuWrapper} {
@@ -35,7 +46,9 @@ const Inner = styled.div`
   padding-bottom: 2px;
   display: flex;
   justify-content: space-between;
-  
+
+  align-items: center;
+
   @media (max-device-width: 736px) {
     justify-content: space-between;
   }
