@@ -47,6 +47,7 @@ const Command = styled.div`
   margin-top: 40px;
   font-weight: normal;
   white-space: pre;
+  text-align: left;
 
   font-size: 22px;
   line-height: 24px;

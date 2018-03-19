@@ -32,6 +32,7 @@ const Wrapper = styled.div`
 
 const Video = styled.div`
   border-radius: 12px;
+  overflow: hidden;
   background: #000;
   width: 978px;
   height: 561px;

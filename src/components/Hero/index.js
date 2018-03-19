@@ -68,7 +68,7 @@ const SubHeading = styled.h2`
 `
 
 const Buttons = styled.div`
-  margin-top: 12px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
 `

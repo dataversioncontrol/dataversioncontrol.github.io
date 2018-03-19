@@ -59,29 +59,26 @@ export const query = graphql`
 const Page = styled.div``
 
 const VideoWave = styled.div`
-  padding-top: 153px;
-  padding-bottom: 48px;
+  padding-top: 76px;
+  padding-bottom: 134px;
+  margin-top: 64px;
   background: url(/video_bg.png) top center no-repeat;
-  background-size: cover;
 `
 
 const Dots = styled.div`
-  padding-top: 153px;
-  padding-bottom: 48px;
+  padding-top: 96px;
   background: url(/dots_bg.png) top center no-repeat;
-  background-size: cover;
 `
 
 const FlowWave = styled.div`
-  padding-top: 153px;
-  padding-bottom: 48px;
+  margin-top: 152px;
+  padding-top: 102px;
+  padding-bottom: 148px;
   background: url(/flow_bg.png) top center no-repeat;
-  background-size: cover;
 `
 
 const Hills = styled.div`
-  padding-top: 153px;
-  padding-bottom: 48px;
+  margin-top: -72px;
+  padding-top: 132px;
   background: url(/hills.png) top center no-repeat;
-  background-size: cover;
 `

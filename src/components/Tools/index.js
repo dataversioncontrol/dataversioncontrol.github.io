@@ -17,7 +17,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula.png`}
-        lines={[`$ dvc run -d images\\`, `python train.py`]}
+        lines={[`$ dvc run -d images\\`, `          python train.py`]}
       />
       <Tool
         title={
@@ -27,7 +27,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula_2.png`}
-        lines={[`vi train.ру`, `dvc repro`]}
+        lines={[`$ vi train.ру`, `$ dvc repro`]}
       />
       <Tool
         title={
@@ -37,7 +37,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula_3.png`}
-        lines={[`git push`, `dvc push`]}
+        lines={[`$ git push`, `$ dvc push`]}
       />
     </Section>
   </Wrapper>
