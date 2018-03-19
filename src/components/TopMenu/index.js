@@ -56,7 +56,7 @@ export default ({
 
 const Wrapper = styled.div``
 
-const MobileButton = styled.button`
+const MobileButton = styled.div`
   background: transparent;
   border: none;
 
