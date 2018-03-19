@@ -11,8 +11,7 @@ export default ({ title, children }) => (
 )
 
 export const Wrapper = styled.section`
-  ${container} padding-top: 266px;
-  padding-bottom: 100px;
+  ${container};
 `
 
 const Title = styled.div`

@@ -25,11 +25,19 @@ export default ({
   <Page>
     <Hero githubUrl={githubUrl} downloadUrl={downloadUrl} />
     <Tools />
-    <Video id={videoId} />
-    <HowItWorks />
-    <Flow />
-    <Subscribe />
-    <Socials twitter={twitter} linkedin={linkedin} facebook={facebook} />
+    <VideoWave>
+      <Video id={videoId} />
+    </VideoWave>
+    <Dots>
+      <HowItWorks />
+    </Dots>
+    <FlowWave>
+      <Flow />
+    </FlowWave>
+    <Hills>
+      <Subscribe />
+      <Socials twitter={twitter} linkedin={linkedin} facebook={facebook} />
+    </Hills>
   </Page>
 )
 
@@ -49,3 +57,31 @@ export const query = graphql`
 `
 
 const Page = styled.div``
+
+const VideoWave = styled.div`
+  padding-top: 153px;
+  padding-bottom: 48px;
+  background: url(/video_bg.png) top center no-repeat;
+  background-size: cover;
+`
+
+const Dots = styled.div`
+  padding-top: 153px;
+  padding-bottom: 48px;
+  background: url(/dots_bg.png) top center no-repeat;
+  background-size: cover;
+`
+
+const FlowWave = styled.div`
+  padding-top: 153px;
+  padding-bottom: 48px;
+  background: url(/flow_bg.png) top center no-repeat;
+  background-size: cover;
+`
+
+const Hills = styled.div`
+  padding-top: 153px;
+  padding-bottom: 48px;
+  background: url(/hills.png) top center no-repeat;
+  background-size: cover;
+`
