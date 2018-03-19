@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 import Logo from '../Logo'
 import { container } from '../../styles'
 
+const formatTwitter = (account) => `http://twitter.com/${account}`
+
 export default ({
   blog = 'https://blog.dataversioncontrol.com/',
   twitter = `FullStackML`
@@ -26,7 +28,7 @@ export default ({
           <StyledLink href={blog}>Blog</StyledLink>
         </P>
         <P>
-          <StyledLink href={twitter}>
+          <StyledLink href={formatTwitter(twitter)}>
             <TwitterIcon src="twitter.png" />@FullStackML
           </StyledLink>
         </P>
