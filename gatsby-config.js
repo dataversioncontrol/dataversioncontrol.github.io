@@ -13,10 +13,10 @@ module.exports = {
     linkedin: 'dataversioncontrol',
     twitter: 'dataversioncontrol',
     email: 'info@dataversioncontrol.com',
-    downloadOSX: 'https://s3-us-west-2.amazonaws.com/dataversioncontrol/dist/dvc-v0.7-macos.pkg',
-    downloadLinux: 'https://s3-us-west-2.amazonaws.com/dataversioncontrol/dist/dvc-v0.7-linux.bin',
-    downloadLinuxRPM: 'https://s3-us-west-2.amazonaws.com/dataversioncontrol/dist/dvc-v0.7-linux.bin',
-    downloadWin: 'https://s3-us-west-2.amazonaws.com/dvc-share/dist/dvc-0.8.1.exe'
+    downloadOSX: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.pkg',
+    downloadLinux: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc_0.9.0_amd64.deb',
+    downloadLinuxRPM: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0-1.x86_64.rpm',
+    downloadWin: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.exe'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
