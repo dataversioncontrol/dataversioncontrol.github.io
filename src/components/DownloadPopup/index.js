@@ -14,7 +14,6 @@ export default ({
   <DownloadPopup onClick={onClose}>
     <Box onClick={(e) => {
       e.stopPropagation()
-      e.preventDefault()
     }}>
       <Inner>
         <Content>
