@@ -59,14 +59,18 @@ const verticalCentered = css`
   align-items: center;
 `
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  overflow: hidden;
+`
 
 const Title = styled.div`
   ${verticalCentered} padding-left: 100px;
   padding-right: 20px;
   width: 290px;
-  
+  font-weight: bold;
+
   @media (max-device-width: 736px) {
+    width: auto;
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -75,12 +79,11 @@ const Title = styled.div`
 const Commands = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 130px;
   justify-content: center;
+  padding-left: 130px;
 
   background: url('/flow_arrow.png') left center no-repeat transparent;
-  
-  
+
   @media (max-device-width: 736px) {
     padding-left: 0px;
     background: transparent;
@@ -100,10 +103,19 @@ const Index = styled.div`
     `
     color: #e5f1ff;
   `};
+
+  @media (max-device-width: 736px) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding-right: 0px;
+    justify-content: center;
+    width: 84px;
+  }
 `
 
 const Step = styled.div`
-  display: flow;
+  display: flex;
   margin-bottom: 4px;
   background-color: #e5f1ff;
   min-height: 100px;
@@ -111,6 +123,14 @@ const Step = styled.div`
 
   @media (max-device-width: 736px) {
     flex-direction: column;
+    padding-left: 84px;
+    position: relative;
+
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-bottom: 24px;
   }
 
   ${props =>
@@ -124,4 +144,8 @@ const In = styled.div`
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
+
+  @media (max-device-width: 736px) {
+    flex-direction: column;
+  }
 `

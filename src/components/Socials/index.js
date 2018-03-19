@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { container } from '../../styles'
 
 // const FACEBOOK_SHARE_URL = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl.baseUrl}&t=${shareUrl.facebook.title}`;
 // const TWITTER_SHARE_URL = `https://twitter.com/share?url=${shareUrl.baseUrl}&via=${shareUrl.twitter.via}&text=${shareUrl.twitter.via}`;
@@ -26,6 +27,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-device-width: 736px) {
+    ${container};
+    margin-top: 40px;
+    justify-content: space-evenly;
+  }
 `
 
 const Social = styled.a`

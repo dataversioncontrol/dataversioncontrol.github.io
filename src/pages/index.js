@@ -82,4 +82,8 @@ const Hills = styled.div`
   padding-top: 132px;
   padding-bottom: 50px;
   background: url(/hills.png) top center no-repeat;
+
+  @media (max-device-width: 736px) {
+    background-size: cover;
+  }
 `

@@ -40,6 +40,11 @@ const Hero = styled.div`
   );
   background: #e93c23 url('/hero.png') center center no-repeat;
   background-size: cover;
+
+  @media (max-device-width: 736px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 `
 
 const Fork = styled(Link)`
@@ -58,6 +63,9 @@ const Heading = styled.h1`
   font-size: 60px;
   font-weight: bold;
   color: #fff;
+  @media (max-device-width: 736px) {
+    line-height: 64px;
+  }
 `
 
 const SubHeading = styled.h2`
@@ -65,13 +73,18 @@ const SubHeading = styled.h2`
   padding: 0px;
   font-weight: normal;
   color: #fff;
+
+  @media (max-device-width: 736px) {
+    margin-top: 25px;
+    margin-bottom: 4px;
+  }
 `
 
 const Buttons = styled.div`
   margin-top: 40px;
   display: flex;
   flex-direction: row;
-  
+
   @media (max-device-width: 736px) {
     flex-direction: column;
   }
@@ -94,10 +107,9 @@ const Button = styled(Link)`
     `
     background-color: #003965;
   `};
-  
+
   @media (max-device-width: 736px) {
     width: 100%;
-    margin: 0px;
   }
 `
 
@@ -116,4 +128,9 @@ const SubTitle = styled.div`
 const DowloadButton = Button.extend``
 const GithubButton = Button.extend`
   margin-left: 30px;
+
+  @media (max-device-width: 736px) {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
 `

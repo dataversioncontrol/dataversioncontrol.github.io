@@ -53,12 +53,17 @@ const Wrapper = styled.div`
     justify-content: space-between
     flex-direction: row;
     
-    @media (max-device-width : 736px) {
-      flex-direction: column;  
-    }
-   
+    
     ${ToolWrapper} {
       flex-basis: 360px;
+    }
+    
+    @media (max-device-width : 736px) {
+      flex-direction: column;
+     
+      ${ToolWrapper} {
+        flex-basis: 100%;
+      }  
     }
   }
 `
