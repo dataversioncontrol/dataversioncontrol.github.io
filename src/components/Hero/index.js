@@ -4,9 +4,11 @@ import Link from 'gatsby-link'
 import DownloadPopup from '../DownloadPopup'
 import { container } from '../../styles'
 
+const isMobile = () => window.outerWidth <= 736
+
 export default class Hero extends Component {
   state = {
-    downloadPopup: true
+    downloadPopup: false
   }
 
   toggleDownloadPopup = () =>
@@ -14,7 +16,13 @@ export default class Hero extends Component {
       downloadPopup: !prevState.downloadPopup
     }))
 
-  download = () => this.toggleDownloadPopup()
+  download = () => {
+  	if (isMobile) {
+  		window.location.href = '/download'
+	  } else {
+  	  this.toggleDownloadPopup()
+	  }
+  }
 
   render() {
     const { downloadPopup } = this.state
@@ -22,7 +30,6 @@ export default class Hero extends Component {
 
     return (
       <Wrapper>
-        {downloadPopup && <DownloadPopup onClose={this.toggleDownloadPopup}/>}
         <Fork to={githubUrl}>
           <img src="/fork.png" alt="Fork me at github" />
         </Fork>
@@ -42,6 +49,7 @@ export default class Hero extends Component {
             </GithubButton>
           </Buttons>
         </Inner>
+	      {downloadPopup && <DownloadPopup onClose={this.toggleDownloadPopup}/>}
       </Wrapper>
     )
   }

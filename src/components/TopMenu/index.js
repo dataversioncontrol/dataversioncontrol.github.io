@@ -32,19 +32,22 @@ export default ({
       {open ? <Close /> : <Burger />}
     </MobileButton>
     <TopMenu visible={open}>
-      <Item href={getStarted}>
+      <ItemLocal to={'/'} onClick={() => onToggle()}>
+        <Label>Home</Label>
+      </ItemLocal>
+      <Item href={getStarted} onClick={() => onToggle()}>
         <Label>Get Started</Label>
       </Item>
-      <Item href={blog}>
+      <Item href={blog} onClick={() => onToggle()}>
         <Label>Blog</Label>
       </Item>
-      <ItemLocal to={support}>
+      <ItemLocal to={support} onClick={() => onToggle()}>
         <Label>Support</Label>
       </ItemLocal>
-      <Item href={discuss}>
+      <Item href={discuss} onClick={() => onToggle()}>
         <Label>Discuss</Label>
       </Item>
-      <ItemLocal to={docs} docs={true}>
+      <ItemLocal to={docs} docs={true} onClick={() => onToggle()}>
         <Label noline>Docs</Label>
       </ItemLocal>
     </TopMenu>
