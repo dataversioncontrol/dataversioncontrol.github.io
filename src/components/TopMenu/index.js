@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
+import Close from '../Close'
 
 const Burger = () => (
   <svg
@@ -15,13 +16,6 @@ const Burger = () => (
       d="M11.41 9H.59C0 9 0 8.59 0 8c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zm0-4H.59C0 5 0 4.59 0 4c0-.59 0-1 .59-1H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1h.01zM.59 11H11.4c.59 0 .59.41.59 1 0 .59 0 1-.59 1H.59C0 13 0 12.59 0 12c0-.59 0-1 .59-1z"
     />
   </svg>
-)
-
-const Close = () => (
-  <CloseButton>
-    <ArrowLeft />
-    <ArrowRight />
-  </CloseButton>
 )
 
 export default ({
@@ -152,27 +146,4 @@ export const Item = styled.a`
 `
 export const ItemLocal = styled(Link)`
   ${topNavLink};
-`
-
-const CloseButton = styled.div`
-  width: 24px;
-  height: 18px;
-  position: relative;
-`
-
-const ArrowLeft = styled.div`
-  content: '';
-  position: absolute;
-  background: #6772e5;
-  border-radius: 1px;
-  left: 0px;
-  right: 0px;
-  top: 13px;
-  height: 2px;
-  transform: rotate(45deg);
-  transition: background 0.1s;
-`
-
-const ArrowRight = ArrowLeft.extend`
-  transform: rotate(-45deg);
 `

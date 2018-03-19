@@ -23,10 +23,10 @@ export default ({
       </Copyright>
       <Links>
         <P>
-          <StyledLink to={blog}>Blog</StyledLink>
+          <StyledLink href={blog}>Blog</StyledLink>
         </P>
         <P>
-          <StyledLink to={twitter}>
+          <StyledLink href={twitter}>
             <TwitterIcon src="twitter.png" />@FullStackML
           </StyledLink>
         </P>
@@ -95,7 +95,7 @@ const Links = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: #49b9f3;
 
   &:hover {

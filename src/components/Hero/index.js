@@ -1,33 +1,53 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import Logo from '../Logo'
-import TopMenu, { TopMenu as MenuWrapper } from '../TopMenu'
+import DownloadPopup from '../DownloadPopup'
 import { container } from '../../styles'
 
-export default ({ githubUrl, downloadUrl }) => (
-  <Hero>
-    <Fork to={githubUrl}>
-      <img src="/fork.png" alt="Fork me at github" />
-    </Fork>
-    <Inner>
-      <Heading>Data Version Control</Heading>
-      <SubHeading>Best engineering practices for data scientists</SubHeading>
-      <Buttons>
-        <DowloadButton to={downloadUrl} primary>
-          <Title>Download</Title>
-          <SubTitle>Mac OS X, Linux Deb/RPM, Windows</SubTitle>
-        </DowloadButton>
-        <GithubButton to={githubUrl}>
-          <Title>Github</Title>
-          <SubTitle>Check repository</SubTitle>
-        </GithubButton>
-      </Buttons>
-    </Inner>
-  </Hero>
-)
+export default class Hero extends Component {
+  state = {
+    downloadPopup: true
+  }
 
-const Hero = styled.div`
+  toggleDownloadPopup = () =>
+    this.setState(prevState => ({
+      downloadPopup: !prevState.downloadPopup
+    }))
+
+  download = () => this.toggleDownloadPopup()
+
+  render() {
+    const { downloadPopup } = this.state
+    const { githubUrl, downloadUrl } = this.props
+
+    return (
+      <Wrapper>
+        {downloadPopup && <DownloadPopup onClose={this.toggleDownloadPopup}/>}
+        <Fork to={githubUrl}>
+          <img src="/fork.png" alt="Fork me at github" />
+        </Fork>
+        <Inner>
+          <Heading>Data Version Control</Heading>
+          <SubHeading>
+            Best engineering practices for data scientists
+          </SubHeading>
+          <Buttons>
+            <DownloadButton onClick={this.download} primary>
+              <Title>Download</Title>
+              <SubTitle>Mac OS X, Linux Deb/RPM, Windows</SubTitle>
+            </DownloadButton>
+            <GithubButton onClick={() => (window.location = githubUrl)}>
+              <Title>Github</Title>
+              <SubTitle>Check repository</SubTitle>
+            </GithubButton>
+          </Buttons>
+        </Inner>
+      </Wrapper>
+    )
+  }
+}
+
+const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
   min-height: 360px;
@@ -90,7 +110,7 @@ const Buttons = styled.div`
   }
 `
 
-const Button = styled(Link)`
+const Button = styled.button`
   width: 270px;
   height: 74px;
   display: flex;
@@ -101,6 +121,8 @@ const Button = styled(Link)`
   border: 2px solid #fff;
   border-radius: 44px;
   text-decoration: none;
+  outline: none;
+  cursor: pointer;
 
   ${props =>
     props.primary &&
@@ -116,8 +138,8 @@ const Button = styled(Link)`
 const Title = styled.div`
   font-weight: bold;
   font-size: 24px;
-  line-height: 20px;
-  margin-top: 10px;
+  line-height: 24px;
+  margin-top: 4px;
 `
 
 const SubTitle = styled.div`
@@ -125,8 +147,10 @@ const SubTitle = styled.div`
   font-size: 12px;
 `
 
-const DowloadButton = Button.extend``
+const DownloadButton = Button.extend``
+
 const GithubButton = Button.extend`
+  background: transparent;
   margin-left: 30px;
 
   @media (max-device-width: 736px) {
