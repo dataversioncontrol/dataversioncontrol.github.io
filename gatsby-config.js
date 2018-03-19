@@ -7,12 +7,22 @@ module.exports = {
     siteUrl: `https://dataversioncontrol.com/`,
     author: `Dmitry Petrov`,
     videoId: `X8oEcNhKrZM`,
-	  githubUrl: 'https://github.com/dataversioncontrol',
-	  downloadUrl: '/',
-	  facebook: 'dataversioncontrol',
-	  linkedin: 'dataversioncontrol',
-	  twitter: 'dataversioncontrol',
+    githubUrl: 'https://github.com/dataversioncontrol',
+    downloadUrl: '/',
+    facebook: 'dataversioncontrol',
+    linkedin: 'dataversioncontrol',
+    twitter: 'dataversioncontrol',
     email: 'info@dataversioncontrol.com'
   },
-  plugins: [`gatsby-plugin-styled-components`]
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/documentation`,
+        name: 'markdown-pages'
+      }
+    },
+    `gatsby-transformer-remark`
+  ]
 }
