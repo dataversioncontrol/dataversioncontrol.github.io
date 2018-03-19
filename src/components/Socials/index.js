@@ -9,13 +9,13 @@ import { container } from '../../styles'
 export default ({ twitter, linkedin, facebook }) => (
   <Wrapper>
     <Social href={twitter}>
-      <img src="twitter.png" alt="Twitter" />
+      <img src="/twitter.png" alt="Twitter" />
     </Social>
     <Social href={linkedin}>
-      <img src="linkedin.png" alt="Linkedin" />
+      <img src="/linkedin.png" alt="Linkedin" />
     </Social>
     <Social href={facebook}>
-      <img src="facebook.png" alt="Facebook" />
+      <img src="/facebook.png" alt="Facebook" />
     </Social>
   </Wrapper>
 )
