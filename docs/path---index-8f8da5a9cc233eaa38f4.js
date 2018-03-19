@@ -1,0 +1,2 @@
+webpackJsonp([0x81b8806e4260],{358:function(t,o){t.exports={data:{site:{siteMetadata:{videoId:"X8oEcNhKrZM",githubUrl:"https://github.com/dataversioncontrol",downloadUrl:"/"}}},pathContext:{}}}});
+//# sourceMappingURL=path---index-8f8da5a9cc233eaa38f4.js.map
