@@ -10,7 +10,7 @@ const PIP = 'pip'
 const handleClick = () => {}
 
 const Item = ({ id, link, icon, renderDownload, text, onClick }) => (
-  <Os href={link} target="_blank">
+  <Os href={link} target="_blank" onClick={(e) => link === '#' && e.preventDefault()}>
     <Icon src={`/icons/${icon}.png`} type={id} />
     <Download>
       {renderDownload ? (
