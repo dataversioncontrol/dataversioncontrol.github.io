@@ -1,7 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
-import Section, { Wrapper as SectionWrapper } from '../../components/Section'
+
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { style as codeStyle } from 'react-syntax-highlighter/styles/prism'
+
+const Code = ({ source }) => (
+  <CodeBlock language="bash" style={codeStyle}>
+    {source}
+  </CodeBlock>
+)
 
 export default ({ title, icon, lines = [] }) => (
   <Wrapper>
@@ -51,10 +58,25 @@ const Command = styled.div`
 
   font-size: 22px;
   line-height: 24px;
+
+  border-radius: 12px;
+  padding: 0em;
+  overflow: hidden;
 `
 
-const Line = styled.div`
+const Line = styled(SyntaxHighlighter)`
   font-family: monospace, monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+
+  background: rgba(240, 240, 240, 0.48) !important;
+  code {
+    font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace;
+    padding: 0;
+    font-size: 80%;
+    font-variant: none;
+    -webkit-font-feature-settings: 'clig' 0, 'calt' 0;
+    font-feature-settings: 'clig' 0, 'calt' 0;
+  }
 `

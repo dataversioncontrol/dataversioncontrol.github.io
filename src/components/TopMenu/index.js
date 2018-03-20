@@ -36,7 +36,7 @@ export default ({
         <Label>Home</Label>
       </ItemLocal>
       <Item href={getStarted} onClick={() => onToggle()}>
-        <Label>Get Started</Label>
+        <Label>Tutorial</Label>
       </Item>
       <Item href={blog} onClick={() => onToggle()}>
         <Label>Blog</Label>
