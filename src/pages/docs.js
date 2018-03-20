@@ -38,13 +38,6 @@ export default ({
           <SubHeading>Notes</SubHeading>
 
           <SectionLinks>
-            <SectionLink
-              level={1}
-              underlined
-              href={'#getting_started'}
-            >
-              Getting Started with DVC
-            </SectionLink>
             <SectionLink level={1} href={'#collaboration'}>
               Collaboration issues in data science
             </SectionLink>
@@ -160,120 +153,14 @@ export default ({
         </Sections>
         <Content>
           <Parts>
-	          <PartTitle name="getting_started">
-		          <a href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}>
-                Getting Started with DVC <i
-			          className="fas fa-share-square"/>
+            <PartTitle name="getting_started">
+              <a
+                href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}
+              >
+                Getting Started with DVC <i className="fas fa-share-square" />
               </a>
-	          </PartTitle>
-	          <Paragraph>
-		          To show DVC in action, let's play with an actual machine learning
-		          scenario. Let's explore the natural language processing (NLP)
-		          problem of predicting tags for a given StackOverflow question. For
-		          example, we want one classifier which can predict a post that is
-		          about the Java language by tagging it "Java".
-	          </Paragraph>
-	          <Paragraph>
-		          First, let's download the model code and set up the Git
-		          repository::
-	          </Paragraph>
-	          <Code
-		          source={`
-	$ mkdir myrepo
-	$ cd myrepo
-	$ mkdir code
-	$ wget -nv -P code/ https://s3-us-west-2.amazonaws.com/dvc-share/so/code/featurization.py \
-        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/evaluate.py \
-        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/train_model.py \
-        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/split_train_test.py \
-        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/xml_to_tsv.py \
-        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/requirements.txt
-	$ pip install -U -r code/requirements.txt
-	$ git init
-	$ git add code/
-	$ git commit -m 'Download code'
-`}
-	          />
-	          <Paragraph>
-		          The full pipeline can be built by running the code below::
-	          </Paragraph>
-	          <Code
-		          source={`
-	$ # Initialize DVC repository (in your Git repository)
-	$ dvc init
-
-	$ # Download a file and put it into the data/ directory.
-	$ dvc import https://s3-us-west-2.amazonaws.com/dvc-share/so/25K/Posts.xml.tgz data/
-
-	$ # Extract XML from the archive.
-	$ dvc run tar zxf data/Posts.xml.tgz -C data/
-
-	$ # Prepare the data.
-	$ dvc run python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python
-
-	$ # Split training and testing dataset. Two output files.
-	$ # 0.33 is the test dataset split ratio. 20170426 is a seed for randomization.
-	$ dvc run python code/split_train_test.py data/Posts.tsv 0.33 20170426 data/Posts-train.tsv data/Posts-test.tsv
-
-	$ # Extract features from the data. Two TSV as inputs with two pickle matrices as outputs.
-	$ dvc run python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p
-
-	$ # Train ML model on the training dataset. 20170426 is another seed value.
-	$ dvc run python code/train_model.py data/matrix-train.p 20170426 data/model.p
-
-	# Evaluate the model on the test dataset.
-	$ dvc run python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt
-
-	$ # The result.
-	$ cat data/evaluation.txt
-	AUC: 0.596182
-`}
-	          />
-	          <Paragraph>
-		          Your code can be easily reproduced after some minor modification::
-		          <Code
-			          source={`
-
-	$ # Improve feature extraction step.
-	$ vi code/featurization.py
-
-	$ # Commit all the changes.
-	$ git commit -am "Add bigram features"
-	[master 50b5a2a] Add bigram features
-	1 file changed, 5 insertion(+), 2 deletion(-)
-
-	$ # Reproduce all required steps to get our target metrics file.
-	$ dvc repro data/evaluation.txt
-	Reproducing run command for data item data/matrix-train.p. Args: python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p
-	Reproducing run command for data item data/model.p. Args: python code/train_model.py data/matrix-train.p 20170426 data/model.p
-	Reproducing run command for data item data/evaluation.txt. Args: python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt
-	Data item "data/evaluation.txt" was reproduced.
-
-	$ # Take a look at the target metric improvement.
-	$ cat data/evaluation.txt
-	AUC: 0.627196
-
-`}
-		          />
-	          </Paragraph>
-	          <Paragraph>
-		          It's easy to integrate DVC into your existing ML
-		          pipeline/processes without any significant effort to re-implement
-		          your code/application.
-	          </Paragraph>
-	          <Paragraph>
-		          The key step to note is that DVC automatically derives the
-		          dependencies between the experiment steps and builds the
-		          dependency graph (DAG) transparently.
-	          </Paragraph>
-	          <Paragraph>
-		          Not only can DVC streamline your work into a single, reproducible
-		          environment, it also makes it easy to share this environment by
-		          Git including the dependencies  —  an exciting collaboration
-		          feature which gives the ability to reproduce the research easily
-		          in a myriad of environments.
-	          </Paragraph>
-	          {/*
+            </PartTitle>
+            {/*
             */}
             <PartTitle name="collaboration">
               Collaboration issues in data science
@@ -682,7 +569,6 @@ export default ({
             1. DVC is a command line tool that works on top of Git::
             <Code
               source={`
-
 	$ cd my_git_repo
 	$ dvc init
 `}
@@ -691,35 +577,29 @@ export default ({
             commands and dependencies in a Git repository::
             <Code
               source={`
-
 	$ dvc run -d input.csv -o results.csv python cnn_train.py --seed 20180227 --epoch 20 input.csv result.csv
 	$ git add results.csv.dvc
 	$ git commit -m 'Train CNN. 20 epochs.'
-
 `}
             />
             3. DVC is programming language agnostic. R command example::
             <Code
               source={`
-
 	$ dvc run -d result.csv -o plots.jpg Rscript plot.R result.csv plots.jpg
 	$ git add plots.jpg.dvc
 	$ git commit -m 'CNN plots'
-
 `}
             />
             4. DVC can reproduce a pipeline with respect to the pipeline's
             dependencies::
             <Code
               source={`
-
 	# The input dataset was changed
 	$ dvc repro plots.jpg.dvc
 	Reproducing 'output.p':
 	    python cnn_train.py --seed 20180227 --epoch 20 input.csv output.p
 	Reproducing 'plots.jpg':
 	    Rscript plot.R result.csv plots.jpg
-
 `}
             />
             5. DVC introduces the concept of data files to Git repositories. DVC
@@ -727,14 +607,12 @@ export default ({
             in Git::
             <Code
               source={`
-
 	$ git checkout a03_normbatch_vgg16 # checkout code and DVC meta data
 	$ dvc checkout # checkout data files from the local cache (not Git)
 	$ ls -l data/ # These LARGE files were copied from DVC cache, not from Git
 	total 1017488
 	-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv
 	-r--------  2 501  staff    12G Jan 27 03:48 Posts-train.tsv
-
 `}
             />
             6. DVC makes repositories reproducible. DVC metadata can be easily
@@ -742,7 +620,6 @@ export default ({
             easily reproduced::
             <Code
               source={`
-
 	$ git clone https://github.com/dataversioncontrol/myrepo.git
 	$ cd myrepo
 	# Reproduce data files
@@ -751,14 +628,12 @@ export default ({
 	    python cnn_train.py --seed 20180227 --epoch 20 input.csv output.p
 	Reproducing 'plots.jpg':
 	    Rscript plot.R result.csv plots.jpg
-
 `}
             />
             7. DVC's local cache can be transferred to your colleagues and
             partners through AWS S3 or GCP Storage::
             <Code
               source={`
-
 	$ git push
 	$ dvc push # push the data cache to your cloud bucket
 
@@ -770,17 +645,14 @@ export default ({
 	$ ls -l data/ # You just got gigabytes of data through Git and DVC:
 	total 1017488
 	-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv
-
 `}
             />
             8. DVC works on Mac, Linux ,and Windows. A Windows example::
             <Code
               source={`
-
 	$ dir
 	?????
 	????
-
 `}
             />
             <PartTitle name="installation">Installation</PartTitle>
@@ -809,22 +681,23 @@ export default ({
               Another option is to use the standard Python pip package::
               <Code
                 source={`
-
 	$ pip install dvc
-
 `}
               />
             </Paragraph>
             <Note>
-              Note: if you use <Definition>Anaconda</Definition>, it will work in <Definition>Anaconda’s</Definition>
+              Note: if you use <Definition>Anaconda</Definition>, it will work
+              in <Definition>Anaconda’s</Definition>
               command prompt tool. At the moment, DVC does not provide a special
-              installation package for the native <Definition>Anaconda</Definition> package manager
+              installation package for the native{' '}
+              <Definition>Anaconda</Definition> package manager
               <Definition>conda</Definition>.
             </Note>
             <PartTitle name="installation_homebrew" small>
               Homebrew Cask
             </PartTitle>
-            Mac OS users can install DVC by using the <Definition>brew</Definition> command::
+            Mac OS users can install DVC by using the{' '}
+            <Definition>brew</Definition> command::
             <Code
               source={`
 
@@ -839,9 +712,7 @@ export default ({
             following::
             <Code
               source={`
-
 	$ pip install git+git://github.com/dataversioncontrol/dvc
-
 `}
             />
             <Note>
@@ -862,27 +733,32 @@ export default ({
               <ul>
                 <li>
                   {' '}
-                  <Definition>.dvc/config</Definition> - This is a configuration file. The config
-                  file can be edited directly using command <Definition>dvc config NAME
-                  VALUE</Definition>.{' '}
+                  <Definition>.dvc/config</Definition> - This is a configuration
+                  file. The config file can be edited directly using command{' '}
+                  <Definition>dvc config NAME VALUE</Definition>.{' '}
                 </li>
 
                 <li>
-                  <Definition>.dvc/cache</Definition> - the cache directory will contain your data
-                  files (the data directories of DVC repositories will only
-                  contain hardlinks to the data files in the global cache).
+                  <Definition>.dvc/cache</Definition> - the cache directory will
+                  contain your data files (the data directories of DVC
+                  repositories will only contain hardlinks to the data files in
+                  the global cache).
                 </li>
 
                 <li>
-                  <Note>Note: DVC includes the cache directory to <Definition>.gitignore</Definition>
-                  file during the initialization. And no data files (with actual
-                  content) will ever be pushed to Git repository, only dvc-files
-                    are needed to reproduce them.</Note>
+                  <Note>
+                    Note: DVC includes the cache directory to{' '}
+                    <Definition>.gitignore</Definition>
+                    file during the initialization. And no data files (with
+                    actual content) will ever be pushed to Git repository, only
+                    dvc-files are needed to reproduce them.
+                  </Note>
                 </li>
 
                 <li>
-                  <Definition>.dvc/state</Definition> - this file is created for optimization. The
-                  file contains data files checksum, timestamps, inodes, etc.
+                  <Definition>.dvc/state</Definition> - this file is created for
+                  optimization. The file contains data files checksum,
+                  timestamps, inodes, etc.
                 </li>
               </ul>
             </Paragraph>
@@ -944,13 +820,11 @@ export default ({
             </Paragraph>
             <Code
               source={`
-
 	$ dvc config Global.Cloud AWS # This step is not needed for new DVC repositories
 	$ dvc config AWS.StoragePath /mybucket/dvc/tag_classifier
 	$ dvc config AWS.CredentialPath ~/.aws/credentials # Not needed if AWS CLI is installed to default path
 	$ dvc config AWS.CredentialSection default # Not needed if you have only one AWS account
 	$ git commit -am "Change cloud to AWS"
-
 `}
             />
             <Paragraph>
@@ -985,12 +859,10 @@ export default ({
               </ul>
               <Code
                 source={`
-
 	$ dvc config Global.Cloud GCP
 	$ dvc config GCP.StoragePath /mybucket/dvc/tag_classifier
 	$ dvc config GCP.ProjectName MyCloud
 	$ git commit -am "Change cloud to AWS"
-
 `}
               />
             </Paragraph>
@@ -1180,7 +1052,9 @@ export default ({
 	 create mode 100644 .dvc/config
 `}
             />
-            <PartTitle name="commands_command_reference_add" small>add</PartTitle>
+            <PartTitle name="commands_command_reference_add" small>
+              add
+            </PartTitle>
             <Paragraph>
               Converts files and directories to DVC data files. The command does
               the conversion from a <Definition>regular file</Definition> to{' '}
@@ -1225,7 +1099,6 @@ export default ({
             <Paragraph>Examples: Convert files into data files::</Paragraph>
             <Code
               source={`
-
 	$ mkdir raw
 	$ cp ~/Downloads/dataset/* raw
 	$ ls raw
@@ -1234,7 +1107,6 @@ export default ({
 	$ ls raw
 	Badges.xml          PostLinks.xml           Votes.xml
 	Badges.xml.dvc      PostLinks.xml.dvc       Votes.xml.dvc
-
 `}
             />
             <Paragraph>Note, DVC files are created.</Paragraph>
@@ -1300,14 +1172,17 @@ export default ({
             />
             {/*
             */}
-            <PartTitle name="commands_command_reference_run" small>run</PartTitle>
+            <PartTitle name="commands_command_reference_run" small>
+              run
+            </PartTitle>
             <Paragraph>
               Generate a stage file from a given command and execute the
               command. The command dependencies and outputs should be specified.
-              By default, stage file name is <Definition>{'<file>.dvc'}</Definition> where{' '}
-              <Definition>{'<file>'}</Definition> is file name of the first output. For example,
-              launch Python with a given python script and arguments. Or R
-              script by Rscript command.
+              By default, stage file name is{' '}
+              <Definition>{'<file>.dvc'}</Definition> where{' '}
+              <Definition>{'<file>'}</Definition> is file name of the first
+              output. For example, launch Python with a given python script and
+              arguments. Or R script by Rscript command.
             </Paragraph>
             <Code
               source={`
@@ -1363,7 +1238,9 @@ export default ({
 	$ dvc run -d Posts.xml.tgz -o data/Posts.xml tar zxf Posts.xml.tgz -C data/
 `}
             />
-            <PartTitle name="commands_command_reference_push" small>push</PartTitle>
+            <PartTitle name="commands_command_reference_push" small>
+              push
+            </PartTitle>
             <Paragraph>
               This command pushes all data file caches related to the current
               Git branch to cloud storage. Cloud storage settings need to be
@@ -1404,7 +1281,9 @@ export default ({
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_pull" small>pull</PartTitle>
+            <PartTitle name="commands_command_reference_pull" small>
+              pull
+            </PartTitle>
             <Paragraph>
               This command pulls all data file caches from cloud storage. Cloud
               storage settings need to be configured.
@@ -1464,13 +1343,13 @@ export default ({
             <Paragraph>Examples: Show statuses::</Paragraph>
             <Code
               source={`
-
 	$ dvc status
 	        new file:   /Users/dmitry/src/myrepo_1/.dvc/cache/62f8c2ba93cfe5a6501136078f0336f9
-
 `}
             />
-            <PartTitle name="commands_command_reference_repro" small>repro</PartTitle>
+            <PartTitle name="commands_command_reference_repro" small>
+              repro
+            </PartTitle>
             <Paragraph>
               Reproduce DVC file and all stages the file depends on
               (recursively). Default file name is{' '}
@@ -1500,7 +1379,6 @@ export default ({
             <Paragraph>Examples: Reproduce default stage file::</Paragraph>
             <Code
               source={`
-
 	$ dvc repro
 	Verifying data sources in 'data/Posts.xml.tgz.dvc'
 	Reproducing 'Posts.xml.dvc':
@@ -1521,7 +1399,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 	        tar zxf data/Posts.xml.tgz -C data/
 	Reproducing 'Posts.tsv.dvc':
 	        python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python
-
 `}
             />
             {/*
@@ -1534,7 +1411,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             <Paragraph>Remove data file or data directory.</Paragraph>
             <Code
               source={`
-
 .. code-block:: shell
 	:linenos:
 
@@ -1547,7 +1423,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 		-h, --help            show this help message and exit
 		-q, --quiet           Be quiet.
 		-v, --verbose         Be verbose.
-
 `}
             />
             <Paragraph>Examples: Remove *matrix-train.p* data file::</Paragraph>
@@ -1560,7 +1435,9 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_gc" small>gc</PartTitle>
+            <PartTitle name="commands_command_reference_gc" small>
+              gc
+            </PartTitle>
             <Paragraph>
               This command collects the garbage, removing unused cache files
               based on the current Git branch. If a data file was created in a
@@ -1569,7 +1446,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               caches except the current one will be removed.
               <Code
                 source={`
-
 .. code-block:: shell
 	:linenos:
 
@@ -1579,7 +1455,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 		-h, --help            show this help message and exit
 		-q, --quiet           Be quiet.
 		-v, --verbose         Be verbose.
-
 `}
               />
             </Paragraph>
@@ -1587,7 +1462,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               Clean up example::
               <Code
                 source={`
-
 	$ du -sh .dvc/cache/
 	7.4G    .dvc/cache/
 	$ dvc gc
@@ -1602,7 +1476,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 	'.dvc/cache/f64d65d4ccef9ff9d37ea4cf70b18700' was removed
 	$ du -sh .dvc/cache/
 	3.1G    .dvc/cache/
-
 `}
               />
             </Paragraph>
@@ -1614,10 +1487,9 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             </PartTitle>
             <Paragraph>
               Get or set config options. This command reads and overwrites the
-              DVC config file {'*.dvc/config*'}.
+              DVC config file <Definition>{'.dvc/config'}</Definition>.
               <Code
                 source={`
-
 .. code-block:: shell
 	:linenos:
 
@@ -1632,7 +1504,6 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 		-q, --quiet           Be quiet.
 		-v, --verbose         Be verbose.
 		-u, --unset           Unset option
-
 `}
               />
             </Paragraph>
@@ -1641,33 +1512,32 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               config file::
               <Code
                 source={`
-
 	$ dvc config config Global.Cloud
 	AWS
-
 `}
               />
             </Paragraph>
             {/**/}
-            <Paragraph>Overwrite the value::</Paragraph>
-            <Code
-              source={`
-
+            <Paragraph>
+              Overwrite the value::
+              <Code
+                source={`
 	$ dvc config Global.Cloud GCP
 	$ git add .dvc/config
 	$ git commit -m 'Change cloud to GCP'
 	[input_100K a4c985f] Change cloud to GCP
 	 1 file changed, 1 insertion(+), 1 deletion(-)
-
 `}
-            />
+              />
+            </Paragraph>
             {/**/}
-            <PartTitle name="commands_command_reference_show" small>show</PartTitle>
+            <PartTitle name="commands_command_reference_show" small>
+              show
+            </PartTitle>
             <Paragraph>
               Generate pipeline image for your current project.
               <Code
                 source={`
-
 .. code-block:: shell
 	:linenos:
 
@@ -1688,14 +1558,14 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               Examples: Show the pipeline image::
               <Code
                 source={`
-
 	$ dvc show pipeline
-
 `}
               />
             </Paragraph>
             {/**/}
-            <PartTitle name="commands_command_reference_fsck" small>fsck</PartTitle>
+            <PartTitle name="commands_command_reference_fsck" small>
+              fsck
+            </PartTitle>
             <Paragraph>
               Data file consistency check. By default the commands outputs
               statuses of all corrupted data files (if any). Use{' '}
@@ -1713,7 +1583,8 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 
                 <li>
                   The actual recomputed checksum. This is a computation heavy
-                  command for large data files. Enabled only by <Definition>--physical</Definition>
+                  command for large data files. Enabled only by{' '}
+                  <Definition>--physical</Definition>
                   option. Data file is considered to be corrupted if one of the
                   checksums does not match all others.
                 </li>
@@ -1739,9 +1610,8 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             />
             <Paragraph>
               Examples. Check list of corrupted data files::
-            </Paragraph>
-            <Code
-              source={`
+              <Code
+                source={`
 	\\$ dvc fsck --physical
 	File data/matrix-test.p:
 	    Error status:           Checksum missmatch!!!
@@ -1758,7 +1628,8 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 	        Type:               Output
 	        Use cache:          true
 `}
-            />
+              />
+            </Paragraph>
             {/**/}
             <PartTitle name="common_arguments">Common Arguments</PartTitle>
             <PartTitle name="common_arguments_options" small>
@@ -1770,14 +1641,12 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             </Paragraph>
             <Code
               source={`
-
 .. code-block:: shell
 	:linenos:
 
 	-h, --help            show this help message and exit
 	-q, --quiet           Be quiet.
 	-v, --verbose         Be verbose.
-
 `}
             />
             <Paragraph>
@@ -1872,7 +1741,7 @@ const SubHeading = styled.h2`
     padding-bottom: 1em;
     font-size: 20px;
   `};
-  
+
   a {
     text-decoration: none;
     color: rgb(27, 27, 27);
@@ -1970,9 +1839,24 @@ const SubSectionTitle = styled.h4`
 `
 
 const CodeBlock = styled(SyntaxHighlighter)`
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+  background: #fcf6f0 !important;
+  border-radius: 12px;
+  padding: 0em 1em;
+  background-color: hsla(0, 0%, 0%, 0.04);
+
+  code {
+    font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas,
+      Liberation Mono, Courier New, monospace;
+    padding: 0;
+    background: #fcf6f0;
+    font-size: 80%;
+    font-variant: none;
+    -webkit-font-feature-settings: 'clig' 0, 'calt' 0;
+    font-feature-settings: 'clig' 0, 'calt' 0;
+  }
 `
 
 const Definition = styled.b`
