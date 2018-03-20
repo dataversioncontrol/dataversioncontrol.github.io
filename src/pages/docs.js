@@ -10,9 +10,9 @@ import SyntaxHighlighter from 'react-syntax-highlighter/light'
 const Code = ({ source }) => <CodeBlock language="bash">{source}</CodeBlock>
 
 const PartTitle = ({ name, children, small }) => (
-  <a id={name}>
+  <PartTitleLink id={name} href={`#${name}`}>
     <SubHeading small={small}>{children}</SubHeading>
-  </a>
+  </PartTitleLink>
 )
 
 export default ({
@@ -1696,6 +1696,11 @@ const Hills = styled.div`
 
 const Title = styled.h1`
   color: rgb(27, 27, 27);
+`
+
+const PartTitleLink = styled.a`
+  color: rgb(27, 27, 27);
+  text-decoration: none;
 `
 
 const SubHeading = styled.h2`
