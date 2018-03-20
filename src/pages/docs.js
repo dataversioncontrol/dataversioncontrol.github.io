@@ -44,103 +44,106 @@ export default ({
             <SectionLink level={1} href={'#tools'}>
               Tools for data scientists
             </SectionLink>
-            <SectionLink level={2} href={'#existing_tools'}>
+            <SectionLink level={2} href={'#tools_existing'}>
               Existing engineering tools
             </SectionLink>
-            <SectionLink level={2} href={'#experiment'}>
+            <SectionLink level={2} href={'#tools_expirimental'}>
               Experiment management software
             </SectionLink>
             <SectionLink level={1} href={'#what_is_dvc'}>
               What is DVC?
             </SectionLink>
-            <SectionLink level={1} href={'#core'}>
+            <SectionLink level={1} href={'#core_features'}>
               Core features
             </SectionLink>
             <SectionLink level={1} href={'#related'}>
               Related technologies
             </SectionLink>
-            <SectionLink level={1} href={'#how_it_works'}>
+            <SectionLink level={1} href={'#how_does_it_work'}>
               How does it work?
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#getting_started'}>
               Getting Started with DVC
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#installation'}>
               Installation
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#installation_os_packages'}>
               OS packages
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#installation_pip'}>
               Python pip
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#installation_homebrew'}>
               Homebrew Cask
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#installation_dev'}>
               Development Version
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#configuration'}>
               Configuration
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
-              DVC Files and Directories
+            <SectionLink level={2} href={'#configuration_structure'}>
+	            DVC Files and Directories
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#configuration_cloud'}>
               Working with Cloud Data Storages
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#commands'}>
               Using DVC Commands
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={2} href={'#commands_cheat_sheet'}>
               DVC Commands Cheat Sheet
             </SectionLink>
-            <SectionLink level={1} href={'#'}>
+            <SectionLink level={1} href={'#commands_command_reference'}>
               DVC Command Reference
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_init'}>
               init
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_add'}>
               add
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_checkout'}>
               checkout
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_run'}>
               run
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_push'}>
               push
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_pull'}>
               pull
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_status'}>
               status
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_repro'}>
               repro
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_remove'}>
               remove
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_gc'}>
               gc
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_config'}>
               config
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_show'}>
               show
             </SectionLink>
-            <SectionLink level={2} href={'#'}>
+            <SectionLink level={2} href={'#commands_command_reference_fsck'}>
               fsck
             </SectionLink>
-            <SectionLink level={2} href={'#common_arguments'}>
+            <SectionLink level={1} href={'#common_arguments'}>
               Common Arguments
             </SectionLink>
-            <SectionLink level={2} href={'#number_dvc_jobs'}>
+            <SectionLink level={2} href={'#common_arguments_options'}>
+	            Common Options
+            </SectionLink>
+            <SectionLink level={2} href={'#common_arguments_number_of_dvc_jobs'}>
               Number of DVC Jobs
             </SectionLink>
           </SectionLinks>
@@ -712,7 +715,7 @@ export default ({
             </Paragraph>
             {/*
             */}
-            <PartTitle name="installation_os_packages">OS packages</PartTitle>
+            <PartTitle name="installation_os_packages" small>OS packages</PartTitle>
             <Paragraph>
               DVC installation packages are available for Mac OS, Linux, and
               Windows. You can download the packages{' '}
@@ -722,7 +725,7 @@ export default ({
             </Paragraph>
             {/*
             */}
-            <PartTitle name="installation_pip">Python pip</PartTitle>
+            <PartTitle name="installation_pip" small>Python pip</PartTitle>
             <Paragraph>
               Another option is to use the standard Python pip package::
               <Code
@@ -739,7 +742,7 @@ export default ({
               installation package for the native *Anaconda* package manager
               *conda*.
             </Note>
-            <PartTitle name="installation_homebrew">Homebrew Cask</PartTitle>
+            <PartTitle name="installation_homebrew" small>Homebrew Cask</PartTitle>
             Mac OS users can install DVC by using the **brew** command::
             <Code
               source={`
@@ -1001,7 +1004,7 @@ export default ({
             <PartTitle name="commands_command_reference">
               DVC Command Reference
             </PartTitle>
-            <PartTitle name="commands_command_reference_init">init</PartTitle>
+            <PartTitle name="commands_command_reference_init" small>init</PartTitle>
             <Paragraph>
               This command initializes a DVC environment in a current Git
               repository.
