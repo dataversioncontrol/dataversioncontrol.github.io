@@ -1,0 +1,2 @@
+webpackJsonp([0x80d86216b26d],{557:function(t,o){t.exports={data:{site:{siteMetadata:{videoId:"X8oEcNhKrZM",githubUrl:"https://github.com/dataversioncontrol/dvc",downloadUrl:"/",twitter:"dataversioncontrol",linkedin:"dataversioncontrol",facebook:"dataversioncontrol"}}},pathContext:{}}}});
+//# sourceMappingURL=path---support-0f8851f705c51fdc3eb9.js.map
