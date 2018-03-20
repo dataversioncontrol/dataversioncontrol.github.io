@@ -58,5 +58,7 @@ typings/
 .env
 
 .idea
+.public/*
 ./public
+.cache/*
 ./cache
