@@ -160,14 +160,13 @@ export default ({
         </Sections>
         <Content>
           <Parts>
-            <PartTitle name="tutorial">
-
-	            DVC Tutorial
-            </PartTitle>
+            <PartTitle name="tutorial">DVC Tutorial</PartTitle>
             <Paragraph>
-	            <a
-		            href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}
-	            > Tutorial <i className="fas fa-share-square" />
+              <a
+                href={`https://blog.dataversioncontrol.com/data-version-control-tutorial-9146715eda46`}
+              >
+                {' '}
+                Tutorial <i className="fas fa-share-square" />
               </a>
             </Paragraph>
             {/*
