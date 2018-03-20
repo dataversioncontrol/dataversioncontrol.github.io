@@ -1786,7 +1786,14 @@ const SectionLink = styled.a`
 	`};
 `
 
-const Parts = styled.article``
+const Parts = styled.article`
+
+  >ul, 
+  >ol {
+    padding-left: 1em;
+  }
+  
+`
 
 const SubSectionTitle = styled.h4`
   font-weight: normal;
