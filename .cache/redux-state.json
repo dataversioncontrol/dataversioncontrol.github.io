@@ -1,0 +1,955 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "path": "/dev-404-page/",
+      "id": "SitePage /dev-404-page/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f91d29e10ba680b413138cf9ed86e655",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin dev-404-page": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "Plugin dev-404-page",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "15a91c02c7377922e4bcd7d75f45217d",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-page-creator": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "id": "Plugin component-page-creator",
+      "name": "component-page-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/component-page-creator",
+      "packageJson": {
+        "name": "component-page-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/pages",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "840d328b272ba91c17a45bb354b17541",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin component-layout-creator": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "id": "Plugin component-layout-creator",
+      "name": "component-layout-creator",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createLayouts"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/component-layout-creator",
+      "packageJson": {
+        "name": "component-layout-creator",
+        "description": "An internal Gatsby plugin that creates pages from component files in src/layouts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "598267d13eb1de81108102b9bd8d28f8",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin internal-data-bridge": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "Plugin internal-data-bridge",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "28ed0c6dff449413c8b75a59d206137a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin prod-404": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "Plugin prod-404",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "c3da39cd6ef36cefaec40a7471a4682a",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin query-runner": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "Plugin query-runner",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage",
+        "onCreateLayout"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "a0f8fa67b7af6fc2088a0bea27ed7c1c",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-styled-components": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-plugin-styled-components",
+      "id": "Plugin gatsby-plugin-styled-components",
+      "name": "gatsby-plugin-styled-components",
+      "version": "2.0.9",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "replaceRenderer"
+      ],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-plugin-styled-components",
+      "packageJson": {
+        "name": "gatsby-plugin-styled-components",
+        "description": "Gatsby plugin to add support for styled components",
+        "version": "2.0.9",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "styled-components"
+        ],
+        "author": {
+          "name": "Guten Ye",
+          "email": "ywzhaifei@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "styled-components",
+            "version": ">= 2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "5dd69264d241d7db8136239ddf129407",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-source-filesystem": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-source-filesystem",
+      "id": "Plugin gatsby-source-filesystem",
+      "name": "gatsby-source-filesystem",
+      "version": "1.5.27",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation",
+        "name": "markdown-pages"
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-source-filesystem",
+      "packageJson": {
+        "name": "gatsby-source-filesystem",
+        "description": "Gatsby plugin which parses files within a directory for further parsing by other plugins",
+        "version": "1.5.27",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "^1.7.0"
+          },
+          {
+            "name": "fs-extra",
+            "version": "^4.0.1"
+          },
+          {
+            "name": "got",
+            "version": "^7.1.0"
+          },
+          {
+            "name": "md5-file",
+            "version": "^3.1.1"
+          },
+          {
+            "name": "mime",
+            "version": "^1.3.6"
+          },
+          {
+            "name": "pretty-bytes",
+            "version": "^4.0.2"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "valid-url",
+            "version": "^1.0.9"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "f64fc5e9ac71dda1b83dbbec43b5cfea",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-transformer-remark": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-transformer-remark",
+      "id": "Plugin gatsby-transformer-remark",
+      "name": "gatsby-transformer-remark",
+      "version": "1.7.37",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateNode",
+        "setFieldsOnGraphQLNodeType"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-transformer-remark",
+      "packageJson": {
+        "name": "gatsby-transformer-remark",
+        "description": "Gatsby transformer plugin for Markdown using the Remark library and ecosystem",
+        "version": "1.7.37",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "markdown",
+          "remark"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "graphql-type-json",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "gray-matter",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "hast-util-raw",
+            "version": "^2.0.2"
+          },
+          {
+            "name": "hast-util-to-html",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.4"
+          },
+          {
+            "name": "mdast-util-to-hast",
+            "version": "^2.4.0"
+          },
+          {
+            "name": "mdast-util-toc",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "remark",
+            "version": "^7.0.1"
+          },
+          {
+            "name": "remark-parse",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "remark-retext",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "remark-stringify",
+            "version": "^4.0.0"
+          },
+          {
+            "name": "retext-english",
+            "version": "^3.0.0"
+          },
+          {
+            "name": "sanitize-html",
+            "version": "^1.14.1"
+          },
+          {
+            "name": "underscore.string",
+            "version": "^3.3.4"
+          },
+          {
+            "name": "unified",
+            "version": "^6.1.5"
+          },
+          {
+            "name": "unist-util-remove-position",
+            "version": "^1.1.1"
+          },
+          {
+            "name": "unist-util-select",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "unist-util-visit",
+            "version": "^1.1.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "babel-plugin-transform-object-rest-spread",
+            "version": "^6.20.2"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "ca7b7150215ca7816e35b1ba245e00a7",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin gatsby-plugin-google-analytics": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-plugin-google-analytics",
+      "id": "Plugin gatsby-plugin-google-analytics",
+      "name": "gatsby-plugin-google-analytics",
+      "version": "1.0.24",
+      "pluginOptions": {
+        "plugins": [],
+        "trackingId": "UA-97468780-1",
+        "head": false,
+        "anonymize": true,
+        "respectDNT": true
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [
+        "onRouteUpdate"
+      ],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/node_modules/gatsby-plugin-google-analytics",
+      "packageJson": {
+        "name": "gatsby-plugin-google-analytics",
+        "description": "Gatsby plugin to add google analytics onto a site",
+        "version": "1.0.24",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "google analytics"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "babel-runtime",
+            "version": "^6.26.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "babel-cli",
+            "version": "^6.26.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "d2611c18b5cb61d1664d502dea57fb3f",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Plugin default-site-plugin": {
+      "resolve": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io",
+      "id": "Plugin default-site-plugin",
+      "name": "default-site-plugin",
+      "version": "f4b4c531b8b88c336f09054bd5fabc80",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io",
+      "packageJson": {
+        "name": "website-dvc",
+        "description": "dataversioncontrol.com source code",
+        "version": "1.0.0",
+        "main": "index.js",
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "dependencies": [
+          {
+            "name": "gatsby",
+            "version": "^1.9.235"
+          },
+          {
+            "name": "gatsby-link",
+            "version": "^1.6.39"
+          },
+          {
+            "name": "gatsby-plugin-google-analytics",
+            "version": "^1.0.24"
+          },
+          {
+            "name": "gatsby-plugin-styled-components",
+            "version": "^2.0.9"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^1.5.27"
+          },
+          {
+            "name": "gatsby-transformer-remark",
+            "version": "^1.7.37"
+          },
+          {
+            "name": "react",
+            "version": "latest"
+          },
+          {
+            "name": "react-sticky-el",
+            "version": "^1.0.16"
+          },
+          {
+            "name": "react-syntax-highlighter",
+            "version": "^7.0.2"
+          },
+          {
+            "name": "react-youtube",
+            "version": "^7.5.0"
+          },
+          {
+            "name": "styled-components",
+            "version": "^3.2.3"
+          },
+          {
+            "name": "styled-normalize",
+            "version": "^4.0.0"
+          }
+        ],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "a5f154d99116e272dd62c70593c7cfcd",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title": "Data Version Control - Make your data science projects reproducible and shareable.",
+        "description": "Read more about dataversioncontrol. Git for data science projects.",
+        "keywords": "DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL",
+        "preview": "https://dataversioncontrol.com/preview.jpg",
+        "siteUrl": "https://dataversioncontrol.com/",
+        "author": "Dmitry Petrov",
+        "videoId": "X8oEcNhKrZM",
+        "githubUrl": "https://github.com/dataversioncontrol/dvc",
+        "downloadUrl": "/",
+        "facebook": "dataversioncontrol",
+        "linkedin": "dataversioncontrol",
+        "twitter": "dataversioncontrol",
+        "email": "info@dataversioncontrol.com",
+        "downloadOSX": "https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.pkg",
+        "downloadLinux": "https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc_0.9.0_amd64.deb",
+        "downloadLinuxRPM": "https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0-1.x86_64.rpm",
+        "downloadWin": "https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.exe"
+      },
+      "pathPrefix": "",
+      "polyfill": true,
+      "buildTime": "2018-03-20T20:58:28.419Z",
+      "id": "Site",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "contentDigest": "cba287b8e74b486237b46d5e345672bb",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation absPath of file": {
+      "id": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation absPath of file",
+      "children": [],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "3ffbb42ff15771d92a60fcafed0731ac",
+        "type": "Directory",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation",
+      "relativePath": "",
+      "extension": "",
+      "size": 96,
+      "prettySize": "96 B",
+      "modifiedTime": "2018-03-20T20:51:37.203Z",
+      "accessTime": "2018-03-20T20:58:31.269Z",
+      "changeTime": "2018-03-20T20:51:37.203Z",
+      "birthTime": "2018-03-20T20:51:37.203Z",
+      "root": "/",
+      "dir": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io",
+      "base": "documentation",
+      "ext": "",
+      "name": "documentation",
+      "relativeDirectory": "..",
+      "dev": 16777222,
+      "mode": 16877,
+      "nlink": 3,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 8597192981,
+      "blocks": 0,
+      "atimeMs": 1521579511269.0383,
+      "mtimeMs": 1521579097202.7036,
+      "ctimeMs": 1521579097202.7036,
+      "birthtimeMs": 1521579097202.58,
+      "atime": "2018-03-20T20:58:31.269Z",
+      "mtime": "2018-03-20T20:51:37.203Z",
+      "ctime": "2018-03-20T20:51:37.203Z",
+      "birthtime": "2018-03-20T20:51:37.203Z"
+    },
+    "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file": {
+      "id": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file",
+      "children": [
+        "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file >>> MarkdownRemark"
+      ],
+      "parent": "___SOURCE___",
+      "internal": {
+        "contentDigest": "911c023d5e4599e1d8767c11c51de201",
+        "mediaType": "text/markdown",
+        "type": "File",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "markdown-pages",
+      "absolutePath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md",
+      "relativePath": "index.md",
+      "extension": "md",
+      "size": 41078,
+      "prettySize": "41.1 kB",
+      "modifiedTime": "2018-03-20T20:51:37.203Z",
+      "accessTime": "2018-03-20T20:57:28.462Z",
+      "changeTime": "2018-03-20T20:51:37.203Z",
+      "birthTime": "2018-03-20T20:51:37.203Z",
+      "root": "/",
+      "dir": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation",
+      "base": "index.md",
+      "ext": ".md",
+      "name": "index",
+      "relativeDirectory": "",
+      "dev": 16777222,
+      "mode": 33188,
+      "nlink": 1,
+      "uid": 501,
+      "gid": 20,
+      "rdev": 0,
+      "blksize": 4194304,
+      "ino": 8597192982,
+      "blocks": 88,
+      "atimeMs": 1521579448462.4785,
+      "mtimeMs": 1521579097203.101,
+      "ctimeMs": 1521579097203.101,
+      "birthtimeMs": 1521579097202.6934,
+      "atime": "2018-03-20T20:57:28.462Z",
+      "mtime": "2018-03-20T20:51:37.203Z",
+      "ctime": "2018-03-20T20:51:37.203Z",
+      "birthtime": "2018-03-20T20:51:37.203Z"
+    },
+    "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file >>> MarkdownRemark": {
+      "id": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file >>> MarkdownRemark",
+      "children": [],
+      "parent": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file",
+      "internal": {
+        "content": "---\npath: \"/docs\"\ntitle: \"Intro?\"\n---\n\n====================================\nCollaboration issues in data science\n====================================\n\nEven with all the successes today in machine learning (ML), specifically deep learning and its applications in business, the data science community is still lacking good practices for organizing their projects and effectively collaborating across their varied ML projects.\nThis is a massive challenge for the community and the industry now, when ML algorithms and methods are no longer simply \"tribal knowledge\" but are still difficult to implement, reuse, and manage.\n\nTo make progress in this challenge, many areas of the ML experimentation process need to be formalized. Many common questions need to be answered in an unified, principled way:\n\n1. Source code and data versioning.\n\n- How do you avoid any discrepancies between versions of the source code and versions of the data files when the data cannot fit into a repository?\n\n2. Experiment time log.\n\n- How do you track which of the hyperparameter changes contributed the most to producing your target metric? How do you monitor the extent of each change?\n\n3. Navigating through experiments.\n\n- How do you recover a model from last week without wasting time waiting for the model to re-train?\n\n- How do you quickly switch between the large data source and a small data subset without modifying source code?\n\n4. Reproducibility.\n\n- How do you rerun a model's evaluation without re-training the model and preprocessing a raw dataset?\n\n5. Managing and sharing large data files.\n\n- How do you share models trained in a GPU environment with colleagues who do not have access to a GPU?\n\n- How do you share the entire 147Gb of your project, with all of its data sources, intermediate data files, and models?\n\n\nSome of these questions are easy to answer individually.\nAny data scientist, engineer, or manager knows or could easily find answers to some of them.\nHowever, the variety of answers and approaches makes data science collaboration a nightmare.\n**A systematic approach is required.**\n\n=========================\nTools for data scientists\n=========================\n\nExisting engineering tools\n__________________________\n\nThere is one common opinion regarding data science tooling.\nData scientists as engineers are supposed to use the best practices and collaboration software from software engineering.\nSource code version control system (Git), continuous integration services (CI), and unit test frameworks are all expected to be utilized in the data science pipeline.\n\nBut a comprehensive look at data science processes shows that the software engineering toolset does not cover data science needs. Try to answer all the questions from the above using only engineering tools, and you are likely to be left wanting for more.\n\nExperiment management software\n______________________________\n\nTo solve data scientists collaboration issues a new type of software was created - **experiment management software**.\nThis software aims to cover the gap between data scientist needs and the existing toolset.\n\nThe experimentation software is usually **user interface (UI) based in contrast to the existing command line engineering tools**.\nThe UI is a bridge to a **separate cloud based environment**.\nThe cloud environment is usually not so fixible as local data scientists environement.\nAnd the cloud environment is not fully integrated with the local environment.\n\nThe separation of the local data scientist environment and the experimentation cloud environment creates another discrepancy issue and the environment synchronization requires addition work.\nAlso, this style of software usually require external services, typically accompanied with a monthly bill.\nThis might be a good solution for a particular companies or groups of data scientists.\nHowever a more accessible, free tool is needed for a wider audience.\n\n============\nWhat is DVC?\n============\n\nData Version Control, or DVC, is **a new type of experiment management software** that has been built **on top of the existing engineering toolset** and particularly on a source code version control system (currently - Git).\nDVC reduces the gap between the existing tools and the data scientist needs.\nThis gives an ability to **use the advantages of the experimentation software while reusing existing skills and intuition**.\n\nThe underlying source code control system **eliminates the need to use external services**.\nData science experiment sharing and data scientist collaboration can be done through regular Git tools (commit messages, merges, pull requests, code comments), the same way it works for software engineers.\n\nDVC implements a **Git experimentation methodology** where each experiment exists with its code as well as data, and can be represented as a separate Git branch or commit.\n\nDVC uses a few core concepts:\n\n- **Experiment** is equivalent to a Git branch. Each experiment (extract new features, change model hyperparameters, data cleaning, add a new data source) should be performed in a separate branch and then merged into the master branch only if the experiment is successful. DVC allows experiments to be integrated into a project's history and NEVER needs to recompute the results after a successful merge.\n\n- **Experiment state** or state is equivalent to a Git snapshot (all committed files). Git checksum, branch name, or tag can be used as a reference to a experiment state.\n\n- **Reproducibility** - an action to reproduce an experiment state. This action generates output files based on a set of input files and source code. This action usually changes experiment state.\n\n- **Pipeline** - directed acyclic graph (DAG) of commands to reproduce an experiment state. The commands are connected by input and output files. Pipeline is defined by special **dvc-files** (which act like Makefiles).\n\n- **Workflow** - set of experiments and relationships among them. Workflow corresponds to the entire Git repository.\n\n- **Data files** - cached files (for large files). For data files the file content is stored outside of the Git repository on a local hard drive, but data file metadata is stored in Git for DVC needs (to maintain pipelines and reproducibility).\n\n- **Data cache** - directory with all data files on a local hard drive or in cloud storage, but not in the Git repository.\n\n- **Cloud storage** support is a compliment to the core DVC features. This is how a data scientist transfers large data files or shares a trained on GPU model to whom who does not have GPU.\n\n\n=============\nCore features\n=============\n\n1. DVC works **on top of Git repositories** and has a similar command line interface and Git workflow.\n\n2. It makes data science projects **reproducible** by creating lightweight pipelines of DAGs.\n\n3. **Large data file versioning** works by creating pointers in your Git repository to the data cache on a local hard drive.\n\n4. **Programming language agnostic**: Python, R, Julia, shell scripts, etc. ML library agnostic: Keras, Tensorflow, PyTorch, scipy, etc.\n\n5. **Open-sourced** and **Self-served**. DVC is free and does not require any additional services.\n\n6. DVC supports cloud storage (AWS S3 and GCP storage) for **data sources and pre-trained models sharing**.\n\n\n====================\nRelated technologies\n====================\n\nDue to the the novelty of this approach, DVC can be better understood in comparison to existing technologies and ideas.\n\nDVC combines a number of existing technologies and ideas into a single product with the goal of bringing the best engineering practices into the data science process.\n\n1. **Git**. The difference is:\n\n   - DVC extends Git by introducing the concept of *data files* - large files that should NOT be stored in a Git repository but still need to be tracked and versioned.\n\n2. **Workflow management tools** (pipelines and DAGs): Apache Airflow, Luigi and etc. The differences are:\n\n   - DVC is focused on data science and modeling. As a result, DVC pipelines are lightweight, easy to create and modify. However, DVC lacks pipeline execution features like execution monitoring, execution error handling, and recovering.\n\n   - DVC is purely a command line tool that does not have a user interface and does not run any servers. Nevertheless, DVC can generate images with pipeline and experiment workflow visualization.\n\n3. **Experiment management** software today is mostly designed for enterprise usage. An open-sourced experimentation tool example: http://studio.ml/. The differences are:\n\n   - DVC uses Git as the underlying platform for experiment tracking instead of a web application.\n\n   - DVC does not need to run any services. No user interface as a result, but we expect some UI services will be created on top of DVC.\n\n   - DVC has transparent design: DVC-files, meta files, state file, cache dirs have a simple format and can be easily reused by external tools.\n\n4. **Git workflows** and Git usage methodologies such as Gitflow. The differences are:\n\n   - DVC supports a new experimentation methodology that integrates easily with a Git workflow. A separate branch should be created for each experiment, with a subsequent merge of this branch if it was successful.\n\n   - DVC innovates by allowing experimenters the ability to easily navigate through past experiments without recomputing them.\n\n\n5. **Makefile** (and it's analogues). The differences are:\n\n   - DVC utilizes a DAG:\n\n     - The DAG is defined by dvc-files with filenames *Dvcfile* or *<filename>.dvc*.\n\n     - One dvc-file defines one node in the DAG. All dvc-files in a repository make up a single pipeline (think a single Makefile). All dvc-files (and corresponding pipeline commands) are implicitly combined through their inputs and outputs, to simplify conflict resolving during merges.\n\n     - DVC provides a simple command *dvc run CMD* to generate a dvc-file automatically based on the provided command, dependencies, and outputs.\n\n   - File tracking:\n\n     - DVC tracks files based on checksum (md5) instead of file timestamps. This helps avoid running into heavy processes like model re-training when you checkout a previous, trained version of a modeling code (Makefile will retrain the model).\n\n     - DVC uses the files timestamps and inodes for optimization. This allows DVC to avoid recomputing all dependency files checksum, which would be highly problematic when working with large files (10Gb+).\n\n\n6. **Git-annex**. The differences are:\n\n   - DVC uses the idea of storing the content of large files (that you don't want to see in your Git repository) in a local key-value store and use file symlinks instead of the actual files.\n\n   - DVC uses hardlinks instead of symlinks to make user experience better.\n\n   - DVC optimizes checksum calculation.\n\n   - DVC stores data file metadata in Git repository *.dvc/*, not in the Git tree *.git/annex/*. As a result, all metadata can be shared through any Git server like Github (Git-annex loses all metadata when shared by Git server).\n\n7. **Git-LFS** (Large File Storage). The differences are:\n\n   - DVC is fully compatible with Git. It does not require special Git servers like Git-LFS demands.\n\n   - DVC does not add any hooks to Git by default. To checkout data files, the *dvc checkout* command has to be run after each *git checkout* and *git clone* command.\n\n   - DVC creates hardlinks instead and changes data file permissions to read only. The *dvc checkout* command does not actually copy data files from cache to the working tree, as copying files is a heavy operation for large files (30Gb+).\n\n\n=================\nHow does it work?\n=================\n\n1. DVC is a command line tool that works on top of Git::\n\n\t$ cd my_git_repo\n\t$ dvc init\n\n2. DVC helps define pipelines of your commands, and keeps all the commands and dependencies in a Git repository::\n\n\t$ dvc run -d input.csv -o results.csv python cnn_train.py --seed 20180227 --epoch 20 input.csv result.csv\n\t$ git add results.csv.dvc\n\t$ git commit -m 'Train CNN. 20 epochs.'\n\n3. DVC is programming language agnostic. R command example::\n\n\t$ dvc run -d result.csv -o plots.jpg Rscript plot.R result.csv plots.jpg\n\t$ git add plots.jpg.dvc\n\t$ git commit -m 'CNN plots'\n\n4. DVC can reproduce a pipeline with respect to the pipeline's dependencies::\n\n\t# The input dataset was changed\n\t$ dvc repro plots.jpg.dvc\n\tReproducing 'output.p':\n\t    python cnn_train.py --seed 20180227 --epoch 20 input.csv output.p\n\tReproducing 'plots.jpg':\n\t    Rscript plot.R result.csv plots.jpg\n\n5. DVC introduces the concept of data files to Git repositories. DVC keeps data files outside of the repository but retains the metadata in Git::\n\n\t$ git checkout a03_normbatch_vgg16 # checkout code and DVC meta data\n\t$ dvc checkout # checkout data files from the local cache (not Git)\n\t$ ls -l data/ # These LARGE files were copied from DVC cache, not from Git\n\ttotal 1017488\n\t-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv\n\t-r--------  2 501  staff    12G Jan 27 03:48 Posts-train.tsv\n\n\n6. DVC makes repositories reproducible. DVC metadata can be easily shared through any Git server, and allows for experiments to be easily reproduced::\n\n\t$ git clone https://github.com/dataversioncontrol/myrepo.git\n\t$ cd myrepo\n\t# Reproduce data files\n\t$ dvc repro\n\tReproducing 'output.p':\n\t    python cnn_train.py --seed 20180227 --epoch 20 input.csv output.p\n\tReproducing 'plots.jpg':\n\t    Rscript plot.R result.csv plots.jpg\n\n7. DVC's local cache can be transferred to your colleagues and partners through AWS S3 or GCP Storage::\n\n\t$ git push\n\t$ dvc push # push the data cache to your cloud bucket\n\n\t# On a colleague machine:\n\t$ git clone https://github.com/dataversioncontrol/myrepo.git\n\t$ cd myrepo\n\t$ git pull # get the data cache from cloud\n\t$ dvc checkout # checkout data files\n\t$ ls -l data/ # You just got gigabytes of data through Git and DVC:\n\ttotal 1017488\n\t-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv\n\n8. DVC works on Mac, Linux ,and Windows. A Windows example::\n\n\t$ dir\n\t?????\n\t????\n\n\n==============================\nGetting Started with DVC\n==============================\n\nTo show DVC in action, let's play with an actual machine learning scenario.\nLet's explore the natural language processing (NLP) problem of predicting tags for a given\n    StackOverflow question.\nFor example, we want one classifier which can predict a post that is about the Java language by tagging it \"Java\".\n\nFirst, let's download the model code and set up the Git repository::\n\n\t$ mkdir myrepo\n\t$ cd myrepo\n\t$ mkdir code\n\t$ wget -nv -P code/ https://s3-us-west-2.amazonaws.com/dvc-share/so/code/featurization.py \\\n        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/evaluate.py \\\n        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/train_model.py \\\n        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/split_train_test.py \\\n        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/xml_to_tsv.py \\\n        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/requirements.txt\n\t$ pip install -U -r code/requirements.txt\n\t$ git init\n\t$ git add code/\n\t$ git commit -m 'Download code'\n\nThe full pipeline can be built by running the code below::\n\n\t$ # Initialize DVC repository (in your Git repository)\n\t$ dvc init\n\n\t$ # Download a file and put it into the data/ directory.\n\t$ dvc import https://s3-us-west-2.amazonaws.com/dvc-share/so/25K/Posts.xml.tgz data/\n\n\t$ # Extract XML from the archive.\n\t$ dvc run tar zxf data/Posts.xml.tgz -C data/\n\n\t$ # Prepare the data.\n\t$ dvc run python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python\n\n\t$ # Split training and testing dataset. Two output files.\n\t$ # 0.33 is the test dataset split ratio. 20170426 is a seed for randomization.\n\t$ dvc run python code/split_train_test.py data/Posts.tsv 0.33 20170426 data/Posts-train.tsv data/Posts-test.tsv\n\n\t$ # Extract features from the data. Two TSV as inputs with two pickle matrices as outputs.\n\t$ dvc run python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p\n\n\t$ # Train ML model on the training dataset. 20170426 is another seed value.\n\t$ dvc run python code/train_model.py data/matrix-train.p 20170426 data/model.p\n\n\t# Evaluate the model on the test dataset.\n\t$ dvc run python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt\n\n\t$ # The result.\n\t$ cat data/evaluation.txt\n\tAUC: 0.596182\n\nYour code can be easily reproduced after some minor modification::\n\n\t$ # Improve feature extraction step.\n\t$ vi code/featurization.py\n\n\t$ # Commit all the changes.\n\t$ git commit -am \"Add bigram features\"\n\t[master 50b5a2a] Add bigram features\n\t1 file changed, 5 insertion(+), 2 deletion(-)\n\n\t$ # Reproduce all required steps to get our target metrics file.\n\t$ dvc repro data/evaluation.txt\n\tReproducing run command for data item data/matrix-train.p. Args: python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p\n\tReproducing run command for data item data/model.p. Args: python code/train_model.py data/matrix-train.p 20170426 data/model.p\n\tReproducing run command for data item data/evaluation.txt. Args: python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt\n\tData item \"data/evaluation.txt\" was reproduced.\n\n\t$ # Take a look at the target metric improvement.\n\t$ cat data/evaluation.txt\n\tAUC: 0.627196\n\nIt's easy to integrate DVC into your existing ML pipeline/processes without any significant effort to re-implement your code/application.\n\nThe key step to note is that DVC automatically derives the dependencies between the experiment steps and builds the dependency graph (DAG) transparently.\n\nNot only can DVC streamline your work into a single, reproducible environment, it also makes it easy to share this environment by Git including the dependencies  —  an exciting collaboration feature which gives the ability to reproduce the research easily in a myriad of environments.\n\n\n============\nInstallation\n============\n\nOperating system dependent packages are the recommended way to install DVC.\nSome other methods of installation are available.\n\nOS packages\n===========\n\nDVC installation packages are available for Mac OS, Linux, and Windows.\nYou can download the packages here at https://github.com/dataversioncontrol/dvc/releases/\n\nPython pip\n==========\n\nAnother option is to use the standard Python pip package::\n\n\t$ pip install dvc\n\n**Note:** if you use *Anaconda*, it will work in *Anaconda’s* command prompt tool.\nAt the moment, DVC does not provide a special installation package for the native *Anaconda* package manager *conda*.\n\nHomebrew Cask\n=============\n\nMac OS users can install DVC by using the **brew** command::\n\n\t$ brew cask install dataversioncontrol/homebrew-dvc/dvc\n\nDevelopment Version\n===================\n\nIf you would like to pull the latest version of DVC, you can do the following::\n\n\t$ pip install git+git://github.com/dataversioncontrol/dvc\n\nNote: this will automatically upgrade your DVC version to the latest version.\n\n\n=============\nConfiguration\n=============\n\nOnce you install DVC, you will be able to start using it (in its local setup) immediately.\n\nHowever, you can proceed to configure DVC (especially if you intend to use it in a *cloud-based* scenario).\n\nDVC Files and Directories\n=========================\n\nOnce installed, DVC will populate its installation folder (hereafter referred to as .dvc)\n\n* **.dvc/config** - This is a configuration file.\n  The config file can be edited directly using command **dvc config NAME VALUE**.\n* **.dvc/cache** - the cache directory will contain your data files (the data directories of DVC repositories will only contain hardlinks to the data files in the global cache).\n  **Note:** DVC includes the cache directory to **.gitignore** file during the initialization. And no data files (with actual content) will ever be pushed to Git repository,\n  only dvc-files are needed to reproduce them.\n* **.dvc/state** - this file is created for optimization. The file contains data files checksum, timestamps, inodes, etc.\n\n\nWorking with Cloud Data Storages\n======================================================\n\nUsing DVC with Cloud-based data storage is optional.\nBy default, DVC is configured to use a local data storage only (.dvc/cache directory),\n  which enables basic DVC usage scenarios out of the box.\n\nDVC can use cloud storage as a common file storage.\nWith cloud storage, you might use models and data files which were created by your team members\n  without spending time and resources to re-build models and re-process data files.\n\nAs of this version, DVC supports two types of cloud-based storage providers:\n\n* **AWS** - Amazon Web Services\n* **GCP** - Google Cloud Platform\n\nThe subsections below explain how to configure DVC to use each of them.\n\nUsing AWS\n---------------\n\nTo use AWS as cloud storage for your DVC repositories, you should update these **.dvc/config** options\n\n* **Cloud = AWS** in *Global* section.\n* **StoragePath = /mybucket/dvc/tag_classifier** in **AWS** section - path to a cloud storage bucket and directory in the bucket.\n* **CredentialPath = ~/aws/credentials** in **AWS** section - path to AWS credentials in your local machine (AWS cli command line tools creates this directory).\n  In Mac, default value is *~/.aws/credentials*, and it is *%USERPATH%/.aws/credentials* in Windows\n\n\n**Important:** do not forget to commit the config file change to Git: **git commit -am \"Change cloud to AWS\"**\n\nInstead of manual file modification, we recommend you run the following commands::\n\n\t$ dvc config Global.Cloud AWS # This step is not needed for new DVC repositories\n\t$ dvc config AWS.StoragePath /mybucket/dvc/tag_classifier\n\t$ dvc config AWS.CredentialPath ~/.aws/credentials # Not needed if AWS CLI is installed to default path\n\t$ dvc config AWS.CredentialSection default # Not needed if you have only one AWS account\n\t$ git commit -am \"Change cloud to AWS\"\n\n\nUsing Google Cloud\n------------------\n\nFor using GCP (Google Cloud Platform) as cloud storage for your DVC repositories, you should update these **.dvc/config** options\n\n*  **Cloud = GCP** in *Global* section.\n* **StoragePath = /mybucket/dvc/tag_classifier** in GCP section - Run **dvc config GCP.StoragePath /my/path/to/a/bucket**\n* **ProjectName = MyCloud** - a GCP specific project name.\n\n**Important:** do not forget to commit the config file change to Git: **git commit -am \"Change cloud to GCP\"**\n\nInstead of manual file modification, we recommend you run the following commands::\n\n\t$ dvc config Global.Cloud GCP\n\t$ dvc config GCP.StoragePath /mybucket/dvc/tag_classifier\n\t$ dvc config GCP.ProjectName MyCloud\n\t$ git commit -am \"Change cloud to AWS\"\n\n\n==================\nUsing DVC Commands\n==================\n\nDVC is a command-line tool.\nThe typical use case for DVC goes as follows\n\n* In an existing Git repository, initialize a DVC repository with **dvc init**.\n* Copy source files for modeling into the repository and convert the files into DVC data files with **dvc add** command.\n* Process source data files through your data processing and modeling code using the **dvc run** command.\n* Use **--outs** option to specify **dvc run** command outputs which will be converted to DVC data files after the code runs.\n* Clone a git repo with the code of your ML application pipeline. However, this will not copy your DVC cache. Use cloud storage settings and **dvc push** to share the cache (data).\n* Use **dvc repro** to quickly reproduce your pipeline on a new iteration, after your data item files or source code of your ML application are modified.\n\n========================\nDVC Commands Cheat Sheet\n========================\n\nBelow is the quick summary of the most important commands\n\n* **dvc -h** - Show how to use DVC and show the list of commands.\n* **dvc CMD -h** - Display help to use a specific DVC command (CMD).\n* **dvc init** - Initialize a new DVC repository.\n* **dvc add** - Add data file or data directory. The command converts regular files to DVC data files.\n* **dvc checkout** - Checkout data files and dirs into the working tree. The command should be executed after **git checkout** or cloning a repository.\n* **dvc run** - Generate a DVC file from a given command and execute the command. The command dependencies and outputs should be specified.\n* **dvc pull** - Pull data files from the cloud. Cloud settings for your DVC environment should be already configured prior to using this command.\n* **dvc push** - Push data files to the cloud. Cloud settings should be already configured.\n* **dvc status** - Show status of a data file in the DVC repository.\n* **dvc repro** - Reproduce a stage of pipeline. Default stage file is **Dvcfile**.\n* **dvc remove** - Remove data file (files or/and folders).\n* **dvc gc** - Collect garbage by cleaning DVC cache.\n* **dvc config** - Get or set configuration settings (as specified in dvc.conf).\n* **dvc show** - Show graphs.\n* **dvc fsck** - Data file consistency check.\n\n=====================\nDVC Command Reference\n=====================\n\ninit\n====\n\nThis command initializes a DVC environment in a current Git repository.\n\n.. code-block:: shell\n   :linenos:\n\n\tusage: dvc init [-h] [-q] [-v]\n\toptional arguments:\n\t  -h, --help     show this help message and exit\n\t  -q, --quiet    Be quiet.\n\t  -v, --verbose  Be verbose.\n\nExample. Creating a new DVC repository::\n\n\t$ mkdir tag_classifier\n\t$ cd tag_classifier\n\n\t$ git init\n\tInitialized empty Git repository in /Users/dmitry/src/tag_classifier/.git/\n\n\t$ dvc init\n\t$ git status\n\tOn branch master\n\n\tInitial commit\n\n\tChanges to be committed:\n\n\t  (use \"git rm --cached <file>...\" to unstage)\n\n\t        new file:   .dvc/.gitignore\n\t        new file:   .dvc/config\n\n\t$ git commit -m 'Init DVC'\n\t[master (root-commit) 2db4618] Init DVC\n\t 2 files changed, 41 insertions(+)\n\t create mode 100644 .dvc/.gitignore\n\t create mode 100644 .dvc/config\n\n\nadd\n====\n\nConverts files and directories to DVC data files.\n\nThe command does the conversion from a *regular file* to *DVC data file* in a few steps:\n\n1. Calculate the file checksum.\n2. Create a cache file in the cache dir *.dvc/cache*.\n3. Create a corresponding DVC file.\n4. Replace the file with a hardlink to the cache file.\n\nDVC stores the file's last modification timestamp, inode, and the checksum into a global state file *.dvc/state* to reduce time recomputing checksums later.\n\nNote, this command does NOT copy any file contents and will run quickly even for a large files.\nStep (2) from the above is also made by hardlinks movement, not file content.\nThe only heavy step is (1),  which requires checksum calculation.\n\nFor directories, the command does the same steps for each file recursively.\nTo retain information about the directory structure, a corresponding directory will be created in *.dvc/cache*.\n\n.. code-block:: shell\n   :linenos:\n\n\tusage: dvc add [-h] [-q] [-v] targets [targets ...]\n\n\toptional arguments:\n\t  -h, --help            show this help message and exit\n\t  -q, --quiet           Be quiet.\n\t  -v, --verbose         Be verbose.\n\nExamples:\n\nConvert files into data files::\n\n\t$ mkdir raw\n\t$ cp ~/Downloads/dataset/* raw\n\t$ ls raw\n\tBadges.xml          PostLinks.xml           Votes.xml\n\t$ dvc add raw/Badges.tsv raw/PostLinks.tsv raw/Votes.tsv\n\t$ ls raw\n\tBadges.xml          PostLinks.xml           Votes.xml\n\tBadges.xml.dvc      PostLinks.xml.dvc       Votes.xml.dvc\n\nNote, DVC files are created.\n\n\ncheckout\n========\n\nCheckout data files from cache.\nThis command has to be called after *git checkout* since Git does not handle DVC data files.\n\nThe command restores data files from cache to the working tree and removes data files that are no longer on the working tree.\n\nNote, this command does NOT copy any files - DVC uses hardlinks to perform data file restoration.\nThis is crucial for large files where checking out as a 50Gb file might take a few minutes.\nFor DVC, it will take less than a second to restore a 50Gb data file.\n\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc checkout [-h] [-q] [-v]\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\nExamples.\n\nChecking out a branch example::\n\n\t$ git checkout input_100K\n\t$ dvc checkout\n\t$ Remove 'data/model.p'\n\t$ Remove 'data/matrix-train.p'\n\t$ 'data/Posts-train.tsv': cache file not found\n\nDVC does not report in the output which data files were restored.\nHowever, it reports removed files and files that DVC was unable to restore due to missing cache.\nTo restore a file with a missing cache, the reproduction command should be called or the cache can be pulled from the cloud.\n\nIt might be convenient to assign Git hook to *git checkout*::\n\n\t$ echo 'dvc checkout' > .git/hooks/post-checkout\n\t$ chmod +x .git/hooks/post-checkout\n\t$ git checkout input_100K  # dvc checkout is not needed anymore\n\t$ Remove 'data/model.p'\n\t$ Remove 'data/matrix-train.p'\n\t$ 'data/Posts-train.tsv': cache file not found\n\nrun\n===\n\nGenerate a stage file from a given command and execute the command.\nThe command dependencies and outputs should be specified.\n\nBy default, stage file name is **<file>.dvc** where **<file>** is file name of the first output.\n\nFor example, launch Python with a given python script and arguments. Or R script by Rscript command.\n\n.. code-block:: shell\n   :linenos:\n\n\tusage: dvc run [-h] [-q] [-v] [-d DEPS] [-o OUTS] [-O OUTS_NO_CACHE] [-f FILE]\n\t               [-c CWD] [--no-exec]\n\t               ...\n\n\tpositional arguments:\n\t  command               Command or command file to execute\n\n\toptional arguments:\n\t  -h, --help            show this help message and exit\n\t  -q, --quiet           Be quiet.\n\t  -v, --verbose         Be verbose.\n\t  -d DEPS, --deps DEPS  Declare dependencies for reproducible cmd.\n\t  -o OUTS, --outs OUTS  Declare output data file or data directory.\n\t  -O OUTS_NO_CACHE, --outs-no-cache OUTS_NO_CACHE\n\t                        Declare output regular file or directory (sync to Git,\n\t                        not DVC cache).\n\t  -f FILE, --file FILE  Specify name of the state file\n\t  -c CWD, --cwd CWD     Directory to run your command and place state file in\n\t  --no-exec             Only create stage file without actually running it\n\nExamples:\n\nExecute a Python script as the DVC pipeline step. Stage file was not specified, so a **model.p.dvc** stage file will be created::\n\n\t$ # Train ML model on the training dataset. 20180226 is a seed value.\n\t$ dvc run -d matrix-train.p -d train_model.py -o model.p python train_model.py matrix-train.p 20180226 model.p\n\n\nExecute an R script as the DVC pipeline step::\n\n\t$ dvc run -d parsingxml.R -d Posts.xml -o Posts.csv Rscript parsingxml.R Posts.xml Posts.csv\n\n\nExtract an XML file from an archive to the data/ subfolder::\n\n\t$ mkdir data\n\t$ dvc run -d Posts.xml.tgz -o data/Posts.xml tar zxf Posts.xml.tgz -C data/\n\n\npush\n====\n\nThis command pushes all data file caches related to the current Git branch to cloud storage.\nCloud storage settings need to be configured.\nSee cloud storage configuration for more details on how to set up cloud storage.\n\n.. code-block:: shell\n   :linenos:\n\n\tusage: dvc push [-h] [-q] [-v] [-j JOBS]\n\n\toptional arguments:\n\t  -h, --help            show this help message and exit\n\t  -q, --quiet           Be quiet.\n\t  -v, --verbose         Be verbose.\n\t  -j JOBS, --jobs JOBS  Number of jobs to run simultaneously.\n\nExamples:\n\nPush all data file caches from the current Git branch to cloud::\n\n\t$ dvc push\n\t(1/8): [########################################] 100% 72271bebdf053178a5cce48b4\n\t(2/8): [########################################] 100% d7208b910d1a40fedc2da5a44\n\t(3/8): [########################################] 100% 7f6ed2919af9c9e94c32ea13d\n\t(4/8): [########################################] 100% 5988519f8465218abb23ce0e0\n\t(5/8): [########################################] 100% 11de13709a78379d253a3d0f5\n\t(6/8): [########################################] 100% 3f9c7c3ae51db2eed7ba99e6e\n\t(7/8): [########################################] 100% cfdaa4bba57fa07d81ff96685\n\t(8/8): [#######################                 ] 57% 1de6178a9dd844e249ba05414\n\n\npull\n====\n\nThis command pulls all data file caches from cloud storage.\nCloud storage settings need to be configured.\n\n.. code-block:: shell\n   :linenos:\n\n\tusage: dvc pull [-h] [-q] [-v] [-j JOBS]\n\n\toptional arguments:\n\t  -h, --help            show this help message and exit\n\t  -q, --quiet           Be quiet.\n\t  -v, --verbose         Be verbose.\n\t  -j JOBS, --jobs JOBS  Number of jobs to run simultaneously.\n\nExamples:\n\nPull all files from the current Git branch::\n\n\t$ dvc pull\n\t(1/8): [########################################] 100% 54a6f1787490ba13fb811a46b\n\t(2/8): [########################################] 100% 5806dc797c08fb6ddd5d97d46\n\t(3/8): [########################################] 100% 5988519f8465218abb23ce0e0\n\t(4/8): [########################################] 100% 7f6ed2919af9c9e94c32ea13d\n\t(5/8): [########################################] 100% 11de13709a78379d253a3d0f5\n\t(6/8): [########################################] 100% c6f5a256d628e144db4181de8\n\t(7/8): [########################################] 100% 3f9c7c3ae51db2eed7ba99e6e\n\t(8/8): [########################################] 100% cfdaa4bba57fa07d81ff96685\n\nstatus\n======\n\nShow mismatches between local cache and cloud cache.\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc status [-h] [-q] [-v] [-j JOBS]\n\n\toptional arguments:\n\t  -h, --help            show this help message and exit\n\t  -q, --quiet           Be quiet.\n\t  -v, --verbose         Be verbose.\n\t  -j JOBS, --jobs JOBS  Number of jobs to run simultaneously.\n\nExamples:\n\nShow statuses::\n\n\t$ dvc status\n\t        new file:   /Users/dmitry/src/myrepo_1/.dvc/cache/62f8c2ba93cfe5a6501136078f0336f9\n\nrepro\n=====\n\nReproduce DVC file and all stages the file depends on (recursively).\nDefault file name is **Dvcfile**.\nHowever, DVC files can have any name followed by the **.dvc** suffix.\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc repro [-h] [-q] [-v] [-f] [-s] [targets [targets ...]]\n\n\tpositional arguments:\n\t\ttarget                DVC file to reproduce.\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\t\t-f, --force           Reproduce even if dependencies were not changed.\n\t\t-s, --single-item     Reproduce only single data item without recursive dependencies check.\n\nExamples:\n\nReproduce default stage file::\n\n\t$ dvc repro\n\tVerifying data sources in 'data/Posts.xml.tgz.dvc'\n\tReproducing 'Posts.xml.dvc':\n\t        tar zxf data/Posts.xml.tgz -C data/\n\tReproducing 'Posts.tsv.dvc':\n\t        python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python\n\tReproducing 'Posts-train.tsv.dvc':\n\t        python code/split_train_test.py data/Posts.tsv 0.33 20170426 data/Posts-train.tsv data/Posts-test.tsv\n\tReproducing 'matrix-train.p.dvc':\n\t        python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p\n\tReproducing 'model.p.dvc':\n\t        python code/train_model.py data/matrix-train.p 20170426 data/model.p\n\nReproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file::\n\n\t$ dvc repro Posts.tsv.dvc\n\tReproducing 'Posts.xml.dvc':\n\t        tar zxf data/Posts.xml.tgz -C data/\n\tReproducing 'Posts.tsv.dvc':\n\t        python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python\n\n\nremove\n======\n\nRemove data file or data directory.\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc remove [-h] [-q] [-v] targets [targets ...]\n\n\tpositional arguments:\n\t\ttargets               Target to remove - file or directory.\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\nExamples:\n\n\nRemove *matrix-train.p* data file::\n\n\t$ dvc remove matrix-train.p\n\n\n\ngc\n===\n\nThis command collects the garbage, removing unused cache files based on the current Git branch.\nIf a data file was created in a different branch, then it will be removed by gc.\nIf a data file has a few versions (and, of course. corresponding caches) - all caches except the current one will be removed.\n\n.. code-block:: shell\n\t:linenos:\n\n\tage: dvc gc [-h] [-q] [-v]\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\nClean up example::\n\n\t$ du -sh .dvc/cache/\n\t7.4G    .dvc/cache/\n\t$ dvc gc\n\t'.dvc/cache/27e30965256ed4d3e71c2bf0c4caad2e' was removed\n\t'.dvc/cache/2e006be822767e8ba5d73ebad49ef082' was removed\n\t'.dvc/cache/2f412200dc53fb97dcac0353b609d199' was removed\n\t'.dvc/cache/541025db4da02fcab715ca2c2c8f4c19' was removed\n\t'.dvc/cache/62f8c2ba93cfe5a6501136078f0336f9' was removed\n\t'.dvc/cache/7c4521365288d69a03fa22ad3d399f32' was removed\n\t'.dvc/cache/9ff7365a8256766be8c363fac47fc0d4' was removed\n\t'.dvc/cache/a86ca87250ed8e54a9e2e8d6d34c252e' was removed\n\t'.dvc/cache/f64d65d4ccef9ff9d37ea4cf70b18700' was removed\n\t$ du -sh .dvc/cache/\n\t3.1G    .dvc/cache/\n\n\nconfig\n======\n\nGet or set config options. This command reads and overwrites the DVC config file *.dvc/config*.\n\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc config [-h] [-q] [-v] [-u] name [value]\n\n\tpositional arguments:\n\t\tname                  Option name\n\t\tvalue                 Option value\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\t\t-u, --unset           Unset option\n\nExamples:\n\nSpecify an option name to get the option's value from config file::\n\t$ dvc config config Global.Cloud\n\tAWS\n\nOverwrite the value::\n\n\t$ dvc config Global.Cloud GCP\n\t$ git add .dvc/config\n\t$ git commit -m 'Change cloud to GCP'\n\t[input_100K a4c985f] Change cloud to GCP\n\t 1 file changed, 1 insertion(+), 1 deletion(-)\n\nshow\n====\n\nGenerate pipeline image for your current project.\n\n.. code-block:: shell\n\t:linenos:\n\n\tusage: dvc show [-h] [-q] [-v] {pipeline} ...\n\n\tpositional arguments:\n\t\t{pipeline}     Use `dvc show CMD` --help for command-specific help\n\t\tpipeline              Show pipeline image\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\nExamples:\n\nShow the pipeline image::\n\n\t$ dvc show pipeline\n\nfsck\n====\n\nData file consistency check.\nBy default the commands outputs statuses of all corrupted data files (if any).\nUse *--all* option to see statuses of all data files.\n\nThe command checks:\n1. Cache file name which is equal to the file content checksum when DVC created the file.\n2. Checksum from local state file.\n3. Checksum regarding DVC files.\n4. The actual recomputed checksum. This is a computation heavy command for large data files. Enabled only by *--physical* option.\n\nData file is considered to be corrupted if one of the checksums does not match all others.\n\n\n.. code-block:: shell\n\t:linenos:\n\n\tdvc fsck [-h] [-q] [-v] [-p] [-a] [targets [targets ...]]\n\n\tpositional arguments:\n\t\ttargets               Data files to check\n\n\toptional arguments:\n\t\t-h, --help            show this help message and exit\n\t\t-q, --quiet           Be quiet.\n\t\t-v, --verbose         Be verbose.\n\t\t-p, --physical        Compute actual md5\n\t\t-a, --all             Show all data files including correct ones\n\nExamples.\n\n\nCheck list of corrupted data files::\n\n\t$ dvc fsck --physical\n\tFile data/matrix-test.p:\n\t    Error status:           Checksum missmatch!!!\n\t    Actual checksum:        7c4521365288d69a03fa22ad3d399f32\n\t    Cache file name:        7c4521365288d69a03fa22ad3d399f32\n\t    Local state checksum:   7c4521365288d69a03fa22ad3d399f32\n\t    Local state mtime:      1517048086.0\n\t    Actual mtime:           1517048086.0\n\t    Stage file: eval_auc.txt.dvc\n\t        Checksum:           7c4521365288d69a03fa22ad3d399f32\n\t        Type:               Dependency\n\t    Stage file: matrix-train.p.dvc\n\t        Checksum:           7c4521365288d69a03fa22ad3d399f32\n\t        Type:               Output\n\t        Use cache:          true\n\nCommon Arguments\n===========================================\n\nCommon Options\n--------------\n\nAs you can see, there are four optional arguments that are applicable to any DVC command. They are\n\n.. code-block:: shell\n\t:linenos:\n\n\t-h, --help            show this help message and exit\n\t-q, --quiet           Be quiet.\n\t-v, --verbose         Be verbose.\n\nAlthough these optional arguments are pretty self-explanatory, there is a note for DVC and Git commands that are used together.\n\n* To see Git commands in DVC, you can set logging level to *Debug* (in **dvc.conf**) or run dvc with option *--verbose*\n\nNumber of DVC Jobs\n------------------\n\nDVC can benefit from parallel processing and multiple processors/cores when performing cache push/pull operations.\n\nBy default, the number of DVC jobs is set to the number of available CPU cores. If you would like to change it to any other reasonable value, you could use *-j (--jobs)* option in DVC commands where applicable.",
+        "type": "MarkdownRemark",
+        "contentDigest": "6319d5c37923bb71b4d56e8534506b4c",
+        "owner": "gatsby-transformer-remark"
+      },
+      "frontmatter": {
+        "title": "Intro?",
+        "path": "/docs",
+        "_PARENT": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file",
+        "parent": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md absPath of file"
+      },
+      "excerpt": "",
+      "fileAbsolutePath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/documentation/index.md"
+    },
+    "SitePage /404/": {
+      "layout": "index",
+      "jsonName": "404.json",
+      "internalComponentName": "Component404",
+      "path": "/404/",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/404.js",
+      "id": "SitePage /404/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "4904b064573573973853bd052c4736b4",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /docs/": {
+      "layout": "index",
+      "jsonName": "docs.json",
+      "internalComponentName": "ComponentDocs",
+      "path": "/docs/",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/docs.js",
+      "componentChunkName": "component---src-pages-docs-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/docs.js",
+      "id": "SitePage /docs/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "4c8b70a856174f48b4bf08fc0cefdacc",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /download/": {
+      "layout": "index",
+      "jsonName": "download.json",
+      "internalComponentName": "ComponentDownload",
+      "path": "/download/",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/download.js",
+      "componentChunkName": "component---src-pages-download-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/download.js",
+      "id": "SitePage /download/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "8e2c83275d9ef8c49dde819777b738ad",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "layout": "index",
+      "jsonName": "index.json",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "71e079d81f969a755aaec231fd948baf",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /support/": {
+      "layout": "index",
+      "jsonName": "support.json",
+      "internalComponentName": "ComponentSupport",
+      "path": "/support/",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/support.js",
+      "componentChunkName": "component---src-pages-support-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin component-page-creator",
+      "pluginCreatorId": "Plugin component-page-creator",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/support.js",
+      "id": "SitePage /support/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "adbe490af3336f6955b4c025e473d097",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404.html": {
+      "layout": "index",
+      "jsonName": "404-html.json",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "context": {},
+      "pluginCreator___NODE": "Plugin prod-404",
+      "pluginCreatorId": "Plugin prod-404",
+      "componentPath": "/Users/gleblozhkovoy/Work/dataversioncontrol.github.io/src/pages/404.js",
+      "id": "SitePage /404.html",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b9ab184045beb8d65e4a62b6f635df2a",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "e8441710c7c0d7b2f23bb65d6e4cfecc"
+  },
+  "componentDataDependencies": {
+    "nodes": {
+      "Site": [
+        "/download/",
+        "/docs/",
+        "/",
+        "/support/"
+      ]
+    },
+    "connections": {}
+  }
+}
