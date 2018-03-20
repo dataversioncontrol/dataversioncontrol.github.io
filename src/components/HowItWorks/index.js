@@ -21,7 +21,7 @@ const Item = ({ title, command, index = 0, lines = [] }) => (
 
 export default ({ title, children }) => (
   <Wrapper>
-    <Section title={`How DVC works?`}>
+    <Section title={`Get Started?`}>
       <Item
         title={`Track large data file, outside of in Git repository`}
         index={1}
