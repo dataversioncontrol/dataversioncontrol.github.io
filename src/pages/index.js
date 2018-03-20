@@ -78,7 +78,7 @@ const VideoWave = styled.div`
   margin-top: 64px;
   background: url(/video_bg.png) top center no-repeat;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding-top: 62px;
     padding-bottom: 34px;
     background-size: cover;
@@ -90,7 +90,7 @@ const Dots = styled.div`
   padding-top: 96px;
   background: url(/dots_bg.png) top center no-repeat;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding-top: 26px;
   }
 `
@@ -101,7 +101,7 @@ const FlowWave = styled.div`
   padding-bottom: 148px;
   background: url(/flow_bg.png) top center no-repeat;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 32px;
     padding-top: 32px;
 
@@ -115,7 +115,7 @@ const Hills = styled.div`
   padding-bottom: 50px;
   background: url(/hills.png) top center no-repeat;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 0px;
     padding-top: 0px;
     background-size: contain;

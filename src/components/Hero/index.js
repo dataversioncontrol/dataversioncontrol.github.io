@@ -83,7 +83,7 @@ const Wrapper = styled.div`
   background: #e93c23 url('/hero.png') center center no-repeat;
   background-size: cover;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding-top: 15px;
     height: 90vh;
     min-height: 600px;
@@ -109,7 +109,7 @@ const Heading = styled.h1`
   font-size: 60px;
   font-weight: bold;
   color: #fff;
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     line-height: 64px;
   }
 `
@@ -120,7 +120,7 @@ const SubHeading = styled.h2`
   font-weight: normal;
   color: #fff;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-top: 25px;
     margin-bottom: 4px;
   }
@@ -131,7 +131,7 @@ const Buttons = styled.div`
   display: flex;
   flex-direction: row;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
@@ -156,7 +156,7 @@ const Button = styled.button`
     background-color: #003965;
   `};
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `
@@ -179,7 +179,7 @@ const GithubButton = Button.extend`
   background: transparent;
   margin-left: 30px;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-left: 0px;
     margin-top: 15px;
   }

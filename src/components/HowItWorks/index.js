@@ -69,7 +69,7 @@ const Title = styled.div`
   width: 290px;
   font-weight: bold;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: auto;
     padding-right: 0px;
     padding-left: 0px;
@@ -84,7 +84,7 @@ const Commands = styled.div`
 
   background: url('/flow_arrow.png') left center no-repeat transparent;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding-left: 0px;
     background: transparent;
   }
@@ -106,7 +106,7 @@ const Index = styled.div`
     color: #e5f1ff;
   `};
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -123,7 +123,7 @@ const Step = styled.div`
   min-height: 100px;
   border-radius: 8px;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     padding-left: 84px;
     position: relative;
@@ -147,7 +147,7 @@ const In = styled.div`
   flex-grow: 1;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `

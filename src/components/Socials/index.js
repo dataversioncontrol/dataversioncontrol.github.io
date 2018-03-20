@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     ${container};
     margin-top: 40px;
     justify-content: space-evenly;

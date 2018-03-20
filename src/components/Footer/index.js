@@ -65,7 +65,7 @@ const Inner = styled.div`
   ${container} display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `
@@ -80,7 +80,7 @@ const Copyright = styled.div`
   ${verticalCentered} flex-basis: 370px;
   text-align: center;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     align-items: flex-start;
     text-align: left;
     flex-basis: auto;
@@ -91,7 +91,7 @@ const Links = styled.div`
   ${verticalCentered} flex-basis: 170px;
   align-items: flex-end;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     align-items: flex-start;
     flex-basis: auto;
   }

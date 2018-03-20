@@ -42,7 +42,7 @@ const Wrapper = styled.div`
   ${MenuWrapper} {
   }
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     padding-top: 10px;
   }
 `
@@ -55,7 +55,7 @@ const Inner = styled.div`
 
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     justify-content: space-between;
   }
 `

@@ -38,7 +38,7 @@ const Video = styled.div`
   height: 561px;
   background: #000;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 384px;
     height: 320px;
   }
