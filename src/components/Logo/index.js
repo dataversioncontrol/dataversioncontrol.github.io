@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export default () => (
   <Logo to={'/'}>
-    <img src="/logo.png" height="85"/>
+    <img src="/logo.png" height="85" />
   </Logo>
 )
 
