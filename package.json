@@ -30,13 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dataversioncontrol/website-dvc.git"
+    "url": "git+https://github.com/dataversioncontrol/dataversioncontrol.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dataversioncontrol/website-dvc/issues"
+    "url": "https://github.com/dataversioncontrol/dataversioncontrol.github.io/issues"
   },
-  "homepage": "https://github.com/dataversioncontrol/website-dvc#readme"
+  "homepage": "https://github.com/dataversioncontrol/dataversioncontrol.github.io#readme"
 }
