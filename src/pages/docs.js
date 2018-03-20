@@ -42,153 +42,120 @@ export default ({
       <Wrapper>
         <Sections>
           <SubHeading>Notes</SubHeading>
-          <Sticky>
-            <div style={{
-	            height: '100vh',
-	            overflow: 'scroll'
-            }}>
-              <SectionLinks>
-                <SectionLink level={1} href={'#collaboration'}>
-                  Collaboration issues in data science
-                </SectionLink>
-                <SectionLink level={1} href={'#tools'}>
-                  Tools for data scientists
-                </SectionLink>
-                <SectionLink level={2} href={'#tools_existing'}>
-                  Existing engineering tools
-                </SectionLink>
-                <SectionLink level={2} href={'#tools_expirimental'}>
-                  Experiment management software
-                </SectionLink>
-                <SectionLink level={1} href={'#what_is_dvc'}>
-                  What is DVC?
-                </SectionLink>
-                <SectionLink level={1} href={'#core_features'}>
-                  Core features
-                </SectionLink>
-                <SectionLink level={1} href={'#related'}>
-                  Related technologies
-                </SectionLink>
-                <SectionLink level={1} href={'#how_does_it_work'}>
-                  How does it work?
-                </SectionLink>
-                <SectionLink level={1} href={'#installation'}>
-                  Installation
-                </SectionLink>
-                <SectionLink level={2} href={'#installation_os_packages'}>
-                  OS packages
-                </SectionLink>
-                <SectionLink level={2} href={'#installation_pip'}>
-                  Python pip
-                </SectionLink>
-                <SectionLink level={2} href={'#installation_homebrew'}>
-                  Homebrew Cask
-                </SectionLink>
-                <SectionLink level={2} href={'#installation_dev'}>
-                  Development Version
-                </SectionLink>
-                <SectionLink level={1} href={'#configuration'}>
-                  Configuration
-                </SectionLink>
-                <SectionLink level={2} href={'#configuration_structure'}>
-                  DVC Files and Directories
-                </SectionLink>
-                <SectionLink level={1} href={'#configuration_cloud'}>
-                  Working with Cloud Data Storages
-                </SectionLink>
-                <SectionLink level={1} href={'#commands'}>
-                  Using DVC Commands
-                </SectionLink>
-                <SectionLink level={2} href={'#commands_cheat_sheet'}>
-                  DVC Commands Cheat Sheet
-                </SectionLink>
-                <SectionLink level={1} href={'#commands_command_reference'}>
-                  DVC Command Reference
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_init'}
-                >
-                  init
-                </SectionLink>
-                <SectionLink level={2} href={'#commands_command_reference_add'}>
-                  add
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_checkout'}
-                >
-                  checkout
-                </SectionLink>
-                <SectionLink level={2} href={'#commands_command_reference_run'}>
-                  run
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_push'}
-                >
-                  push
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_pull'}
-                >
-                  pull
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_status'}
-                >
-                  status
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_repro'}
-                >
-                  repro
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_remove'}
-                >
-                  remove
-                </SectionLink>
-                <SectionLink level={2} href={'#commands_command_reference_gc'}>
-                  gc
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_config'}
-                >
-                  config
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_show'}
-                >
-                  show
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#commands_command_reference_fsck'}
-                >
-                  fsck
-                </SectionLink>
-                <SectionLink level={1} href={'#common_arguments'}>
-                  Common Arguments
-                </SectionLink>
-                <SectionLink level={2} href={'#common_arguments_options'}>
-                  Common Options
-                </SectionLink>
-                <SectionLink
-                  level={2}
-                  href={'#common_arguments_number_of_dvc_jobs'}
-                >
-                  Number of DVC Jobs
-                </SectionLink>
-              </SectionLinks>
-            </div>
-          </Sticky>
+
+          <SectionLinks>
+            <SectionLink level={1} href={'#collaboration'}>
+              Collaboration issues in data science
+            </SectionLink>
+            <SectionLink level={1} href={'#tools'}>
+              Tools for data scientists
+            </SectionLink>
+            <SectionLink level={2} href={'#tools_existing'}>
+              Existing engineering tools
+            </SectionLink>
+            <SectionLink level={2} href={'#tools_expirimental'}>
+              Experiment management software
+            </SectionLink>
+            <SectionLink level={1} href={'#what_is_dvc'}>
+              What is DVC?
+            </SectionLink>
+            <SectionLink level={1} href={'#core_features'}>
+              Core features
+            </SectionLink>
+            <SectionLink level={1} href={'#related'}>
+              Related technologies
+            </SectionLink>
+            <SectionLink level={1} href={'#how_does_it_work'}>
+              How does it work?
+            </SectionLink>
+            <SectionLink level={1} href={'#installation'}>
+              Installation
+            </SectionLink>
+            <SectionLink level={2} href={'#installation_os_packages'}>
+              OS packages
+            </SectionLink>
+            <SectionLink level={2} href={'#installation_pip'}>
+              Python pip
+            </SectionLink>
+            <SectionLink level={2} href={'#installation_homebrew'}>
+              Homebrew Cask
+            </SectionLink>
+            <SectionLink level={2} href={'#installation_dev'}>
+              Development Version
+            </SectionLink>
+            <SectionLink level={1} href={'#configuration'}>
+              Configuration
+            </SectionLink>
+            <SectionLink level={2} href={'#configuration_structure'}>
+              DVC Files and Directories
+            </SectionLink>
+            <SectionLink level={1} href={'#configuration_cloud'}>
+              Working with Cloud Data Storages
+            </SectionLink>
+            <SectionLink level={1} href={'#commands'}>
+              Using DVC Commands
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_cheat_sheet'}>
+              DVC Commands Cheat Sheet
+            </SectionLink>
+            <SectionLink level={1} href={'#commands_command_reference'}>
+              DVC Command Reference
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_init'}>
+              init
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_add'}>
+              add
+            </SectionLink>
+            <SectionLink
+              level={2}
+              href={'#commands_command_reference_checkout'}
+            >
+              checkout
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_run'}>
+              run
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_push'}>
+              push
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_pull'}>
+              pull
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_status'}>
+              status
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_repro'}>
+              repro
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_remove'}>
+              remove
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_gc'}>
+              gc
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_config'}>
+              config
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_show'}>
+              show
+            </SectionLink>
+            <SectionLink level={2} href={'#commands_command_reference_fsck'}>
+              fsck
+            </SectionLink>
+            <SectionLink level={1} href={'#common_arguments'}>
+              Common Arguments
+            </SectionLink>
+            <SectionLink level={2} href={'#common_arguments_options'}>
+              Common Options
+            </SectionLink>
+            <SectionLink
+              level={2}
+              href={'#common_arguments_number_of_dvc_jobs'}
+            >
+              Number of DVC Jobs
+            </SectionLink>
+          </SectionLinks>
         </Sections>
         <Content>
           <Parts>
@@ -1719,10 +1686,11 @@ const Page = styled.div`
 `
 
 const Hills = styled.div`
+  z-index: 888;
   margin-top: -72px;
   padding-top: 132px;
   padding-bottom: 50px;
-  background: url(/hills.png) top center no-repeat;
+  background: #fff url(/hills.png) top center no-repeat;
 
   @media (max-width: 768px) {
     background-size: cover;
