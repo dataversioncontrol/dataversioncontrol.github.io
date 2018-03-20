@@ -41,7 +41,7 @@ export default ({
             <SectionLink
               level={1}
               underlined
-              href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}
+              href={'#getting_started'}
             >
               Getting Started with DVC
             </SectionLink>
@@ -160,6 +160,121 @@ export default ({
         </Sections>
         <Content>
           <Parts>
+	          <PartTitle name="getting_started">
+		          <a href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}>
+                Getting Started with DVC <i
+			          className="fas fa-share-square"/>
+              </a>
+	          </PartTitle>
+	          <Paragraph>
+		          To show DVC in action, let's play with an actual machine learning
+		          scenario. Let's explore the natural language processing (NLP)
+		          problem of predicting tags for a given StackOverflow question. For
+		          example, we want one classifier which can predict a post that is
+		          about the Java language by tagging it "Java".
+	          </Paragraph>
+	          <Paragraph>
+		          First, let's download the model code and set up the Git
+		          repository::
+	          </Paragraph>
+	          <Code
+		          source={`
+	$ mkdir myrepo
+	$ cd myrepo
+	$ mkdir code
+	$ wget -nv -P code/ https://s3-us-west-2.amazonaws.com/dvc-share/so/code/featurization.py \
+        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/evaluate.py \
+        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/train_model.py \
+        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/split_train_test.py \
+        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/xml_to_tsv.py \
+        https://s3-us-west-2.amazonaws.com/dvc-share/so/code/requirements.txt
+	$ pip install -U -r code/requirements.txt
+	$ git init
+	$ git add code/
+	$ git commit -m 'Download code'
+`}
+	          />
+	          <Paragraph>
+		          The full pipeline can be built by running the code below::
+	          </Paragraph>
+	          <Code
+		          source={`
+	$ # Initialize DVC repository (in your Git repository)
+	$ dvc init
+
+	$ # Download a file and put it into the data/ directory.
+	$ dvc import https://s3-us-west-2.amazonaws.com/dvc-share/so/25K/Posts.xml.tgz data/
+
+	$ # Extract XML from the archive.
+	$ dvc run tar zxf data/Posts.xml.tgz -C data/
+
+	$ # Prepare the data.
+	$ dvc run python code/xml_to_tsv.py data/Posts.xml data/Posts.tsv python
+
+	$ # Split training and testing dataset. Two output files.
+	$ # 0.33 is the test dataset split ratio. 20170426 is a seed for randomization.
+	$ dvc run python code/split_train_test.py data/Posts.tsv 0.33 20170426 data/Posts-train.tsv data/Posts-test.tsv
+
+	$ # Extract features from the data. Two TSV as inputs with two pickle matrices as outputs.
+	$ dvc run python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p
+
+	$ # Train ML model on the training dataset. 20170426 is another seed value.
+	$ dvc run python code/train_model.py data/matrix-train.p 20170426 data/model.p
+
+	# Evaluate the model on the test dataset.
+	$ dvc run python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt
+
+	$ # The result.
+	$ cat data/evaluation.txt
+	AUC: 0.596182
+`}
+	          />
+	          <Paragraph>
+		          Your code can be easily reproduced after some minor modification::
+		          <Code
+			          source={`
+
+	$ # Improve feature extraction step.
+	$ vi code/featurization.py
+
+	$ # Commit all the changes.
+	$ git commit -am "Add bigram features"
+	[master 50b5a2a] Add bigram features
+	1 file changed, 5 insertion(+), 2 deletion(-)
+
+	$ # Reproduce all required steps to get our target metrics file.
+	$ dvc repro data/evaluation.txt
+	Reproducing run command for data item data/matrix-train.p. Args: python code/featurization.py data/Posts-train.tsv data/Posts-test.tsv data/matrix-train.p data/matrix-test.p
+	Reproducing run command for data item data/model.p. Args: python code/train_model.py data/matrix-train.p 20170426 data/model.p
+	Reproducing run command for data item data/evaluation.txt. Args: python code/evaluate.py data/model.p data/matrix-test.p data/evaluation.txt
+	Data item "data/evaluation.txt" was reproduced.
+
+	$ # Take a look at the target metric improvement.
+	$ cat data/evaluation.txt
+	AUC: 0.627196
+
+`}
+		          />
+	          </Paragraph>
+	          <Paragraph>
+		          It's easy to integrate DVC into your existing ML
+		          pipeline/processes without any significant effort to re-implement
+		          your code/application.
+	          </Paragraph>
+	          <Paragraph>
+		          The key step to note is that DVC automatically derives the
+		          dependencies between the experiment steps and builds the
+		          dependency graph (DAG) transparently.
+	          </Paragraph>
+	          <Paragraph>
+		          Not only can DVC streamline your work into a single, reproducible
+		          environment, it also makes it easy to share this environment by
+		          Git including the dependencies  —  an exciting collaboration
+		          feature which gives the ability to reproduce the research easily
+		          in a myriad of environments.
+	          </Paragraph>
+	          {/*
+            */}
             <PartTitle name="collaboration">
               Collaboration issues in data science
             </PartTitle>
@@ -1757,6 +1872,11 @@ const SubHeading = styled.h2`
     padding-bottom: 1em;
     font-size: 20px;
   `};
+  
+  a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+  }
 `
 
 const Wrapper = styled.div`
