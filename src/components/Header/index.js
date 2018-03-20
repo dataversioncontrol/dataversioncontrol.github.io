@@ -6,7 +6,7 @@ import { container } from '../../styles'
 
 const links = {
   getStarted:
-    'https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67',
+    'https://medium.com/m/global-identity?redirectUrl=https://blog.dataversioncontrol.com/data-version-control-tutorial-9146715eda46',
   blog: 'https://blog.dataversioncontrol.com/',
   support: '/support',
   docs: '/docs',

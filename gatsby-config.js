@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: `/`,
   siteMetadata: {
     title: `Data Version Control - Make your data science projects reproducible and shareable.`,
     description: `Read more about dataversioncontrol. Git for data science projects.`,

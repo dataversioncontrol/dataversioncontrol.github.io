@@ -6,7 +6,7 @@ import Section, { Inner as SectionInner } from '../../components/Section'
 // TODO: svg
 export default ({ title, children }) => (
   <Wrapper>
-    <Section title={`DVC Data File Transport Commands`}>
+    <Section title={`How DVC works?`}>
       <Flow src="/flow.png" />
     </Section>
   </Wrapper>
