@@ -16,7 +16,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula.png`}
-        lines={[`dvc -d images \\`, `    python train.py`]}
+        lines={[`$ dvc -d images \\`, `    python train.py`]}
       />
       <Tool
         title={

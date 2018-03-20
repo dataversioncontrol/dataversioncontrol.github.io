@@ -41,8 +41,6 @@ export default ({
 
       <Wrapper>
         <Sections>
-          <SubHeading>Notes</SubHeading>
-
           <SectionLinks>
             <SectionLink level={1} href={'#collaboration'}>
               Collaboration issues in data science
@@ -160,12 +158,15 @@ export default ({
         <Content>
           <Parts>
             <PartTitle name="getting_started">
+              Getting Started with DVC <i className="fas fa-share-square" />
+            </PartTitle>
+            <Paragraph>
               <a
                 href={`https://blog.dataversioncontrol.com/data-version-control-beta-release-iterative-machine-learning-a7faf7c8be67`}
               >
-                Getting Started with DVC <i className="fas fa-share-square" />
+                DVC Tutorial
               </a>
-            </PartTitle>
+            </Paragraph>
             {/*
             */}
             <PartTitle name="collaboration">
@@ -1753,8 +1754,6 @@ const Content = styled.div`
 `
 
 const SectionLinks = styled.div`
-  margin-top: 46px;
-
   @media (max-width: 768px) {
     position: relative;
   }
