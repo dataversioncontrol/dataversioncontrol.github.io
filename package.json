@@ -8,7 +8,7 @@
     "prebuild": "npm run clean",
     "build": "gatsby build",
     "postbuild": "mv ./public/* ./docs",
-    "start": "cd ./docs && python -m SimpleHTTPServer 4000",
+    "start": "cd ./docs && sudo python -m SimpleHTTPServer 80",
     "prettier": "prettier --no-semi --write './src/**/*.{js,jsx}'",
     "clean": "rm -rf ./docs/*",
     "precommit": "npm run prettier"
