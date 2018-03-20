@@ -816,15 +816,15 @@ export default ({
               />
             </Paragraph>
             <Note>
-              **Note:** if you use *Anaconda*, it will work in *Anaconda’s*
+              Note: if you use <Definition>Anaconda</Definition>, it will work in <Definition>Anaconda’s</Definition>
               command prompt tool. At the moment, DVC does not provide a special
-              installation package for the native *Anaconda* package manager
-              *conda*.
+              installation package for the native <Definition>Anaconda</Definition> package manager
+              <Definition>conda</Definition>.
             </Note>
             <PartTitle name="installation_homebrew" small>
               Homebrew Cask
             </PartTitle>
-            Mac OS users can install DVC by using the **brew** command::
+            Mac OS users can install DVC by using the <Definition>brew</Definition> command::
             <Code
               source={`
 
@@ -1304,8 +1304,8 @@ export default ({
             <Paragraph>
               Generate a stage file from a given command and execute the
               command. The command dependencies and outputs should be specified.
-              By default, stage file name is {'**<file>.dvc**'} where{' '}
-              {'**<file>**'} is file name of the first output. For example,
+              By default, stage file name is <Definition>{'<file>.dvc'}</Definition> where{' '}
+              <Definition>{'<file>'}</Definition> is file name of the first output. For example,
               launch Python with a given python script and arguments. Or R
               script by Rscript command.
             </Paragraph>
