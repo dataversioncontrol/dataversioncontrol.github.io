@@ -68,6 +68,18 @@ export default class HTML extends React.Component {
             href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
             rel="stylesheet"
           />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
+            integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
+            integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+            crossOrigin="anonymous"
+          />
           {css}
         </head>
         <body>
