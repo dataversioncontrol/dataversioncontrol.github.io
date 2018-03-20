@@ -1769,6 +1769,7 @@ const Wrapper = styled.div`
 const Sections = styled.div`
   flex-basis: 400px;
   @media (max-width: 768px) {
+    display: none;
     order: 2;
   }
 `
