@@ -14,7 +14,7 @@ const opts = {
 
 export default ({ id }) => (
   <Wrapper>
-    <Section title={`Please watch the video about the process`}>
+    <Section>
       <Video>
         <YouTube videoId={id} opts={opts} />
       </Video>

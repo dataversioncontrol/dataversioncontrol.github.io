@@ -25,14 +25,14 @@ export default ({ title, children }) => (
       <Item
         title={`Track large data file, outside of in Git repository`}
         index={1}
-        lines={[`add images.zip`]}
+        lines={[`dvc add images.zip`]}
       />
       <Item
         title={`Define ML steps`}
         index={2}
         lines={[
           `dvc run -d images.zip -o images/ unzip -q images.zip`,
-          `dvc run -d images/ -o model.p python train.py`
+          `dvc run -d images/ -d train.py -o model.p python train.py`
         ]}
       />
       <Item

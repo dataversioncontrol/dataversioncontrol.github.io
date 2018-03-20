@@ -12,11 +12,11 @@ export default ({ title, children }) => (
       <Tool
         title={
           <div>
-            Define<br /> ML steps
+            Define<br />ML steps
           </div>
         }
         icon={`formula.png`}
-        lines={[`$ dvc run -d images\\`, `          python train.py`]}
+        lines={[`dvc -d images \\`,`    python train.py`]}
       />
       <Tool
         title={
