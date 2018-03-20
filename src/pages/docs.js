@@ -5,9 +5,11 @@ import { container } from '../styles'
 import Subscribe from '../components/Subscribe'
 import Socials from '../components/Socials'
 
-import SyntaxHighlighter from 'react-syntax-highlighter/light'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { style as codeStyle } from 'react-syntax-highlighter/styles/prism'
+import { docco } from 'react-syntax-highlighter/styles/hljs';
 
-const Code = ({ source }) => <CodeBlock language="bash">{source}</CodeBlock>
+const Code = ({ source }) => <CodeBlock language="bash" style={codeStyle}>{source}</CodeBlock>
 
 const PartTitle = ({ name, children, small }) => (
   <PartTitleLink id={name} href={`#${name}`}>
