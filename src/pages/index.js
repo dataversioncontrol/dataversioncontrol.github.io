@@ -73,9 +73,8 @@ export const query = graphql`
 const Page = styled.div``
 
 const VideoWave = styled.div`
-  padding-top: 76px;
-  padding-bottom: 134px;
-  margin-top: 64px;
+  padding-top: 190px;
+  padding-bottom: 140px;
   background: url(/video_bg.png) top center no-repeat;
 
   @media (max-width: 768px) {

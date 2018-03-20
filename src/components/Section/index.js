@@ -5,7 +5,7 @@ import { container } from '../../styles'
 
 export default ({ title, children }) => (
   <Wrapper>
-    <Title>{title}</Title>
+    {title && <Title>{title}</Title>}
     <Inner>{children}</Inner>
   </Wrapper>
 )
