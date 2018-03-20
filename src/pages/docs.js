@@ -7,9 +7,13 @@ import Socials from '../components/Socials'
 
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { style as codeStyle } from 'react-syntax-highlighter/styles/prism'
-import { docco } from 'react-syntax-highlighter/styles/hljs';
+import Sticky from 'react-sticky-el'
 
-const Code = ({ source }) => <CodeBlock language="bash" style={codeStyle}>{source}</CodeBlock>
+const Code = ({ source }) => (
+  <CodeBlock language="bash" style={codeStyle}>
+    {source}
+  </CodeBlock>
+)
 
 const PartTitle = ({ name, children, small }) => (
   <PartTitleLink id={name} href={`#${name}`}>
@@ -38,120 +42,153 @@ export default ({
       <Wrapper>
         <Sections>
           <SubHeading>Notes</SubHeading>
-
-          <SectionLinks>
-            <SectionLink level={1} href={'#collaboration'}>
-              Collaboration issues in data science
-            </SectionLink>
-            <SectionLink level={1} href={'#tools'}>
-              Tools for data scientists
-            </SectionLink>
-            <SectionLink level={2} href={'#tools_existing'}>
-              Existing engineering tools
-            </SectionLink>
-            <SectionLink level={2} href={'#tools_expirimental'}>
-              Experiment management software
-            </SectionLink>
-            <SectionLink level={1} href={'#what_is_dvc'}>
-              What is DVC?
-            </SectionLink>
-            <SectionLink level={1} href={'#core_features'}>
-              Core features
-            </SectionLink>
-            <SectionLink level={1} href={'#related'}>
-              Related technologies
-            </SectionLink>
-            <SectionLink level={1} href={'#how_does_it_work'}>
-              How does it work?
-            </SectionLink>
-            <SectionLink level={1} href={'#installation'}>
-              Installation
-            </SectionLink>
-            <SectionLink level={2} href={'#installation_os_packages'}>
-              OS packages
-            </SectionLink>
-            <SectionLink level={2} href={'#installation_pip'}>
-              Python pip
-            </SectionLink>
-            <SectionLink level={2} href={'#installation_homebrew'}>
-              Homebrew Cask
-            </SectionLink>
-            <SectionLink level={2} href={'#installation_dev'}>
-              Development Version
-            </SectionLink>
-            <SectionLink level={1} href={'#configuration'}>
-              Configuration
-            </SectionLink>
-            <SectionLink level={2} href={'#configuration_structure'}>
-              DVC Files and Directories
-            </SectionLink>
-            <SectionLink level={1} href={'#configuration_cloud'}>
-              Working with Cloud Data Storages
-            </SectionLink>
-            <SectionLink level={1} href={'#commands'}>
-              Using DVC Commands
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_cheat_sheet'}>
-              DVC Commands Cheat Sheet
-            </SectionLink>
-            <SectionLink level={1} href={'#commands_command_reference'}>
-              DVC Command Reference
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_init'}>
-              init
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_add'}>
-              add
-            </SectionLink>
-            <SectionLink
-              level={2}
-              href={'#commands_command_reference_checkout'}
-            >
-              checkout
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_run'}>
-              run
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_push'}>
-              push
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_pull'}>
-              pull
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_status'}>
-              status
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_repro'}>
-              repro
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_remove'}>
-              remove
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_gc'}>
-              gc
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_config'}>
-              config
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_show'}>
-              show
-            </SectionLink>
-            <SectionLink level={2} href={'#commands_command_reference_fsck'}>
-              fsck
-            </SectionLink>
-            <SectionLink level={1} href={'#common_arguments'}>
-              Common Arguments
-            </SectionLink>
-            <SectionLink level={2} href={'#common_arguments_options'}>
-              Common Options
-            </SectionLink>
-            <SectionLink
-              level={2}
-              href={'#common_arguments_number_of_dvc_jobs'}
-            >
-              Number of DVC Jobs
-            </SectionLink>
-          </SectionLinks>
+          <Sticky>
+            <div style={{
+	            height: '100vh',
+	            overflow: 'scroll'
+            }}>
+              <SectionLinks>
+                <SectionLink level={1} href={'#collaboration'}>
+                  Collaboration issues in data science
+                </SectionLink>
+                <SectionLink level={1} href={'#tools'}>
+                  Tools for data scientists
+                </SectionLink>
+                <SectionLink level={2} href={'#tools_existing'}>
+                  Existing engineering tools
+                </SectionLink>
+                <SectionLink level={2} href={'#tools_expirimental'}>
+                  Experiment management software
+                </SectionLink>
+                <SectionLink level={1} href={'#what_is_dvc'}>
+                  What is DVC?
+                </SectionLink>
+                <SectionLink level={1} href={'#core_features'}>
+                  Core features
+                </SectionLink>
+                <SectionLink level={1} href={'#related'}>
+                  Related technologies
+                </SectionLink>
+                <SectionLink level={1} href={'#how_does_it_work'}>
+                  How does it work?
+                </SectionLink>
+                <SectionLink level={1} href={'#installation'}>
+                  Installation
+                </SectionLink>
+                <SectionLink level={2} href={'#installation_os_packages'}>
+                  OS packages
+                </SectionLink>
+                <SectionLink level={2} href={'#installation_pip'}>
+                  Python pip
+                </SectionLink>
+                <SectionLink level={2} href={'#installation_homebrew'}>
+                  Homebrew Cask
+                </SectionLink>
+                <SectionLink level={2} href={'#installation_dev'}>
+                  Development Version
+                </SectionLink>
+                <SectionLink level={1} href={'#configuration'}>
+                  Configuration
+                </SectionLink>
+                <SectionLink level={2} href={'#configuration_structure'}>
+                  DVC Files and Directories
+                </SectionLink>
+                <SectionLink level={1} href={'#configuration_cloud'}>
+                  Working with Cloud Data Storages
+                </SectionLink>
+                <SectionLink level={1} href={'#commands'}>
+                  Using DVC Commands
+                </SectionLink>
+                <SectionLink level={2} href={'#commands_cheat_sheet'}>
+                  DVC Commands Cheat Sheet
+                </SectionLink>
+                <SectionLink level={1} href={'#commands_command_reference'}>
+                  DVC Command Reference
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_init'}
+                >
+                  init
+                </SectionLink>
+                <SectionLink level={2} href={'#commands_command_reference_add'}>
+                  add
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_checkout'}
+                >
+                  checkout
+                </SectionLink>
+                <SectionLink level={2} href={'#commands_command_reference_run'}>
+                  run
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_push'}
+                >
+                  push
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_pull'}
+                >
+                  pull
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_status'}
+                >
+                  status
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_repro'}
+                >
+                  repro
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_remove'}
+                >
+                  remove
+                </SectionLink>
+                <SectionLink level={2} href={'#commands_command_reference_gc'}>
+                  gc
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_config'}
+                >
+                  config
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_show'}
+                >
+                  show
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#commands_command_reference_fsck'}
+                >
+                  fsck
+                </SectionLink>
+                <SectionLink level={1} href={'#common_arguments'}>
+                  Common Arguments
+                </SectionLink>
+                <SectionLink level={2} href={'#common_arguments_options'}>
+                  Common Options
+                </SectionLink>
+                <SectionLink
+                  level={2}
+                  href={'#common_arguments_number_of_dvc_jobs'}
+                >
+                  Number of DVC Jobs
+                </SectionLink>
+              </SectionLinks>
+            </div>
+          </Sticky>
         </Sections>
         <Content>
           <Parts>
@@ -568,55 +605,66 @@ export default ({
               </ol>
             </Paragraph>
             <PartTitle name="how_does_it_work">How does it work?</PartTitle>
-	          <Paragraph>1. DVC is a command line tool that works on top of Git::
-            <Code
-              source={`	$ cd my_git_repo
+            <Paragraph>
+              1. DVC is a command line tool that works on top of Git::
+              <Code
+                source={`	$ cd my_git_repo
 	$ dvc init
 `}
-            /></Paragraph>
-	          <Paragraph>2. DVC helps define pipelines of your commands, and keeps all the
-            commands and dependencies in a Git repository::
-            <Code
-              source={`	$ dvc run -d input.csv -o results.csv python cnn_train.py --seed 20180227 --epoch 20 input.csv result.csv
+              />
+            </Paragraph>
+            <Paragraph>
+              2. DVC helps define pipelines of your commands, and keeps all the
+              commands and dependencies in a Git repository::
+              <Code
+                source={`	$ dvc run -d input.csv -o results.csv python cnn_train.py --seed 20180227 --epoch 20 input.csv result.csv
 	$ git add results.csv.dvc
 	$ git commit -m 'Train CNN. 20 epochs.'
 `}
-            /></Paragraph>
-	          <Paragraph>3. DVC is programming language agnostic. R command example::
-            <Code
-              source={`	$ dvc run -d result.csv -o plots.jpg Rscript plot.R result.csv plots.jpg
+              />
+            </Paragraph>
+            <Paragraph>
+              3. DVC is programming language agnostic. R command example::
+              <Code
+                source={`	$ dvc run -d result.csv -o plots.jpg Rscript plot.R result.csv plots.jpg
 	$ git add plots.jpg.dvc
 	$ git commit -m 'CNN plots'
 `}
-            /></Paragraph>
-	          <Paragraph>4. DVC can reproduce a pipeline with respect to the pipeline's
-            dependencies::
-            <Code
-              source={`	# The input dataset was changed
+              />
+            </Paragraph>
+            <Paragraph>
+              4. DVC can reproduce a pipeline with respect to the pipeline's
+              dependencies::
+              <Code
+                source={`	# The input dataset was changed
 	$ dvc repro plots.jpg.dvc
 	Reproducing 'output.p':
 	    python cnn_train.py --seed 20180227 --epoch 20 input.csv output.p
 	Reproducing 'plots.jpg':
 	    Rscript plot.R result.csv plots.jpg
 `}
-            /></Paragraph>
-	          <Paragraph>5. DVC introduces the concept of data files to Git repositories. DVC
-            keeps data files outside of the repository but retains the metadata
-            in Git::
-            <Code
-              source={`	$ git checkout a03_normbatch_vgg16 # checkout code and DVC meta data
+              />
+            </Paragraph>
+            <Paragraph>
+              5. DVC introduces the concept of data files to Git repositories.
+              DVC keeps data files outside of the repository but retains the
+              metadata in Git::
+              <Code
+                source={`	$ git checkout a03_normbatch_vgg16 # checkout code and DVC meta data
 	$ dvc checkout # checkout data files from the local cache (not Git)
 	$ ls -l data/ # These LARGE files were copied from DVC cache, not from Git
 	total 1017488
 	-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv
 	-r--------  2 501  staff    12G Jan 27 03:48 Posts-train.tsv
 `}
-            /></Paragraph>
-	          <Paragraph>6. DVC makes repositories reproducible. DVC metadata can be easily
-            shared through any Git server, and allows for experiments to be
-            easily reproduced::
-            <Code
-              source={`	$ git clone https://github.com/dataversioncontrol/myrepo.git
+              />
+            </Paragraph>
+            <Paragraph>
+              6. DVC makes repositories reproducible. DVC metadata can be easily
+              shared through any Git server, and allows for experiments to be
+              easily reproduced::
+              <Code
+                source={`	$ git clone https://github.com/dataversioncontrol/myrepo.git
 	$ cd myrepo
 	# Reproduce data files
 	$ dvc repro
@@ -625,11 +673,13 @@ export default ({
 	Reproducing 'plots.jpg':
 	    Rscript plot.R result.csv plots.jpg
 `}
-            /></Paragraph>
-	          <Paragraph>7. DVC's local cache can be transferred to your colleagues and
-            partners through AWS S3 or GCP Storage::
-            <Code
-              source={`	$ git push
+              />
+            </Paragraph>
+            <Paragraph>
+              7. DVC's local cache can be transferred to your colleagues and
+              partners through AWS S3 or GCP Storage::
+              <Code
+                source={`	$ git push
 	$ dvc push # push the data cache to your cloud bucket
 
 	# On a colleague machine:
@@ -641,17 +691,18 @@ export default ({
 	total 1017488
 	-r--------  2 501  staff   273M Jan 27 03:48 Posts-test.tsv
 `}
-            /></Paragraph>
-
-            <Paragraph>8. DVC works on Mac, Linux ,and Windows. A Windows example::
-            <Code
-              source={`	$ dir
+              />
+            </Paragraph>
+            <Paragraph>
+              8. DVC works on Mac, Linux ,and Windows. A Windows example::
+              <Code
+                source={`	$ dir
 	?????
 	????
 `}
-            /></Paragraph>
-
-	          <br/>
+              />
+            </Paragraph>
+            <br />
             <PartTitle name="installation">Installation</PartTitle>
             <Paragraph>
               Operating system dependent packages are the recommended way to
@@ -713,7 +764,8 @@ export default ({
             <PartTitle name="configuration">Configuration</PartTitle>
             ParagraphOnce you install DVC, you will be able to start using it
             (in its local setup) immediately. However, you can proceed to
-            configure DVC (especially if you intend to use it in a <Definition>cloud-based</Definition>
+            configure DVC (especially if you intend to use it in a{' '}
+            <Definition>cloud-based</Definition>
             scenario).
             <PartTitle name="configuration_structure" small>
               DVC Files and Directories
@@ -1011,9 +1063,10 @@ export default ({
 	  -v, --verbose  Be verbose.
 `}
             />
-            <Paragraph>Example. Creating a new DVC repository:
-            <Code
-              source={`	$ mkdir tag_classifier
+            <Paragraph>
+              Example. Creating a new DVC repository:
+              <Code
+                source={`	$ mkdir tag_classifier
 	$ cd tag_classifier
 
 	$ git init
@@ -1038,7 +1091,8 @@ export default ({
 	 create mode 100644 .dvc/.gitignore
 	 create mode 100644 .dvc/config
 `}
-            /></Paragraph>
+              />
+            </Paragraph>
             <PartTitle name="commands_command_reference_add" small>
               add
             </PartTitle>
@@ -1392,10 +1446,11 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 		-v, --verbose         Be verbose.
 `}
             />
-            <Paragraph>Examples: Remove <Definition>matrix-train.p</Definition> data file::</Paragraph>
-            <Code
-              source={`	$ dvc remove matrix-train.p`}
-            />
+            <Paragraph>
+              Examples: Remove <Definition>matrix-train.p</Definition> data
+              file::
+            </Paragraph>
+            <Code source={`	$ dvc remove matrix-train.p`} />
             {/*
 
             */}
@@ -1787,12 +1842,10 @@ const SectionLink = styled.a`
 `
 
 const Parts = styled.article`
-
-  >ul, 
-  >ol {
+  > ul,
+  > ol {
     padding-left: 1em;
   }
-  
 `
 
 const SubSectionTitle = styled.h4`
@@ -1800,7 +1853,7 @@ const SubSectionTitle = styled.h4`
 `
 
 const CodeBlock = styled(SyntaxHighlighter)`
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
   background: #fcf6f0 !important;
