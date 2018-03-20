@@ -747,26 +747,26 @@ export default ({
               <ul>
                 <li>
                   {' '}
-                  * **.dvc/config** - This is a configuration file. The config
-                  file can be edited directly using command **dvc config NAME
-                  VALUE**.{' '}
+                  <Definition>.dvc/config</Definition> - This is a configuration file. The config
+                  file can be edited directly using command <Definition>dvc config NAME
+                  VALUE</Definition>.{' '}
                 </li>
 
                 <li>
-                  * **.dvc/cache** - the cache directory will contain your data
+                  <Definition>.dvc/cache</Definition> - the cache directory will contain your data
                   files (the data directories of DVC repositories will only
                   contain hardlinks to the data files in the global cache).
                 </li>
 
                 <li>
-                  **Note:** DVC includes the cache directory to **.gitignore**
+                  <Note>Note: DVC includes the cache directory to <Definition>.gitignore</Definition>
                   file during the initialization. And no data files (with actual
                   content) will ever be pushed to Git repository, only dvc-files
-                  are needed to reproduce them.
+                    are needed to reproduce them.</Note>
                 </li>
 
                 <li>
-                  * **.dvc/state** - this file is created for optimization. The
+                  <Definition>.dvc/state</Definition> - this file is created for optimization. The
                   file contains data files checksum, timestamps, inodes, etc.
                 </li>
               </ul>
