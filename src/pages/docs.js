@@ -181,7 +181,7 @@ export default ({
             <Paragraph inline>
               <ol>
                 <li>
-                  Source code and data versioning.
+                  <Definition>Source code and data versioning.</Definition>
                   <p>
                     How do you avoid any discrepancies between versions of the
                     source code and versions of the data files when the data
@@ -189,7 +189,7 @@ export default ({
                   </p>
                 </li>
                 <li>
-                  Experiment time log.
+                  <Definition>Experiment time log.</Definition>
                   <p>
                     How do you track which of the hyperparameter changes
                     contributed the most to producing your target metric? How do
@@ -197,7 +197,7 @@ export default ({
                   </p>
                 </li>
                 <li>
-                  Navigating through experiments.
+                  <Definition>Navigating through experiments.</Definition>
                   <p>
                     How do you recover a model from last week without wasting
                     time waiting for the model to re-train?
@@ -209,14 +209,14 @@ export default ({
                 </li>
 
                 <li>
-                  Reproducibility
+                  <Definition>Reproducibility</Definition>
                   <p>
                     How do you rerun a model's evaluation without re-training
                     the model and preprocessing a raw dataset?{' '}
                   </p>
                 </li>
                 <li>
-                  Managing and sharing large data files
+                  <Definition>Managing and sharing large data files</Definition>
                   <p>
                     How do you share models trained in a GPU environment with
                     colleagues who do not have access to a GPU?
@@ -233,7 +233,7 @@ export default ({
               scientist, engineer, or manager knows or could easily find answers
               to some of them. However, the variety of answers and approaches
               makes data science collaboration a nightmare.
-              <Defenition>A systematic approach is required.</Defenition>
+              <Definition>A systematic approach is required.</Definition>
             </Paragraph>
             <PartTitle name="tools">Tools for data scientists</PartTitle>
             <PartTitle name="tools_existing" small>
@@ -259,17 +259,17 @@ export default ({
             <Paragraph>
               To solve data scientists collaboration issues a new type of
               software was created -{' '}
-              <Defenition>experiment management software</Defenition>. This
+              <Definition>experiment management software</Definition>. This
               software aims to cover the gap between data scientist needs and
               the existing toolset.
             </Paragraph>
             <Paragraph>
               The experimentation software is usually{' '}
-              <Defenition>
+              <Definition>
                 user interface (UI) based in contrast to the existing command
                 line engineering tools
-              </Defenition>. The UI is a bridge to a{' '}
-              <Defenition>separate cloud based environment</Defenition>. The
+              </Definition>. The UI is a bridge to a{' '}
+              <Definition>separate cloud based environment</Definition>. The
               cloud environment is usually not so fixible as local data
               scientists environement. And the cloud environment is not fully
               integrated with the local environment.
@@ -287,33 +287,33 @@ export default ({
             <PartTitle name="what_is_dvc">What is DVC?</PartTitle>
             <Paragraph>
               Data Version Control, or DVC, is{' '}
-              <Defenition>
+              <Definition>
                 a new type of experiment management software
-              </Defenition>{' '}
+              </Definition>{' '}
               that has been built{' '}
-              <Defenition>
+              <Definition>
                 on top of the existing engineering toolset
-              </Defenition>{' '}
+              </Definition>{' '}
               and particularly on a source code version control system
               (currently - Git). DVC reduces the gap between the existing tools
               and the data scientist needs. This gives an ability to{' '}
-              <Defenition>
+              <Definition>
                 use the advantages of the experimentation software while reusing
                 existing skills and intuition
-              </Defenition>.
+              </Definition>.
             </Paragraph>
             <Paragraph>
               The underlying source code control system{' '}
-              <Defenition>
+              <Definition>
                 eliminates the need to use external services
-              </Defenition>. Data science experiment sharing and data scientist
+              </Definition>. Data science experiment sharing and data scientist
               collaboration can be done through regular Git tools (commit
               messages, merges, pull requests, code comments), the same way it
               works for software engineers.
             </Paragraph>
             <Paragraph>
               DVC implements a{' '}
-              <Defenition>Git experimentation methodology</Defenition> where
+              <Definition>Git experimentation methodology</Definition> where
               each experiment exists with its code as well as data, and can be
               represented as a separate Git branch or commit.
             </Paragraph>
@@ -321,7 +321,7 @@ export default ({
               DVC uses a few core concepts:
               <ol>
                 <li>
-                  <Defenition>Experiment</Defenition> is equivalent to a Git
+                  <Definition>Experiment</Definition> is equivalent to a Git
                   branch. Each experiment (extract new features, change model
                   hyperparameters, data cleaning, add a new data source) should
                   be performed in a separate branch and then merged into the
@@ -330,45 +330,45 @@ export default ({
                   NEVER needs to recompute the results after a successful merge.
                 </li>
                 <li>
-                  <Defenition>Experiment state</Defenition> or state is
+                  <Definition>Experiment state</Definition> or state is
                   equivalent to a Git snapshot (all committed files). Git
                   checksum, branch name, or tag can be used as a reference to a
                   experiment state.
                 </li>
 
                 <li>
-                  <Defenition>Reproducibility</Defenition> - an action to
+                  <Definition>Reproducibility</Definition> - an action to
                   reproduce an experiment state. This action generates output
                   files based on a set of input files and source code. This
                   action usually changes experiment state.
                 </li>
                 <li>
-                  <Defenition>Pipeline</Defenition> - directed acyclic graph
+                  <Definition>Pipeline</Definition> - directed acyclic graph
                   (DAG) of commands to reproduce an experiment state. The
                   commands are connected by input and output files. Pipeline is
                   defined by special
-                  <Defenition>dvc-files</Defenition> (which act like Makefiles).
+                  <Definition>dvc-files</Definition> (which act like Makefiles).
                 </li>
                 <li>
                   {' '}
-                  <Defenition>Workflow</Defenition> - set of experiments and
+                  <Definition>Workflow</Definition> - set of experiments and
                   relationships among them. Workflow corresponds to the entire
                   Git repository. -
                 </li>
                 <li>
-                  <Defenition>Data files</Defenition> - cached files (for large
+                  <Definition>Data files</Definition> - cached files (for large
                   files). For data files the file content is stored outside of
                   the Git repository on a local hard drive, but data file
                   metadata is stored in Git for DVC needs (to maintain pipelines
                   and reproducibility).
                 </li>
                 <li>
-                  <Defenition>Data cache</Defenition>
+                  <Definition>Data cache</Definition>
                   directory with all data files on a local hard drive or in
                   cloud storage, but not in the Git repository.
                 </li>
                 <li>
-                  <Defenition>Cloud storage</Defenition> support is a compliment
+                  <Definition>Cloud storage</Definition> support is a compliment
                   to the core DVC features. This is how a data scientist
                   transfers large data files or shares a trained on GPU model to
                   whom who does not have GPU.
@@ -379,37 +379,37 @@ export default ({
             <Paragraph>
               <ol>
                 <li>
-                  DVC works <Defenition>on top of Git repositories</Defenition>{' '}
+                  DVC works <Definition>on top of Git repositories</Definition>{' '}
                   and has a similar command line interface and Git workflow.
                 </li>
                 <li>
                   It makes data science projects{' '}
-                  <Defenition>reproducible</Defenition> by creating lightweight
+                  <Definition>reproducible</Definition> by creating lightweight
                   pipelines of DAGs.
                 </li>
                 <li>
-                  <Defenition>Large data file versioning</Defenition> works by
+                  <Definition>Large data file versioning</Definition> works by
                   creating pointers in your Git repository to the data cache on
                   a local hard drive.{' '}
                 </li>
                 <li>
                   {' '}
-                  <Defenition>Programming language agnostic</Defenition>:
+                  <Definition>Programming language agnostic</Definition>:
                   Python, R, Julia, shell scripts, etc. ML library agnostic:
                   Keras, Tensorflow, PyTorch, scipy, etc.{' '}
                 </li>
 
                 <li>
-                  <Defenition>Open-sourced</Defenition> and{' '}
-                  <Defenition>Self-served</Defenition>. DVC is free and does not
+                  <Definition>Open-sourced</Definition> and{' '}
+                  <Definition>Self-served</Definition>. DVC is free and does not
                   require any additional services.{' '}
                 </li>
 
                 <li>
                   DVC supports cloud storage (AWS S3 and GCP storage) for{' '}
-                  <Defenition>
+                  <Definition>
                     data sources and pre-trained models sharing
-                  </Defenition>.
+                  </Definition>.
                 </li>
               </ol>
             </Paragraph>
@@ -424,16 +424,16 @@ export default ({
             <Paragraph inline>
               <ol>
                 <li>
-                  <Defenition>Git</Defenition>. The difference is: -
+                  <Definition>Git</Definition>. The difference is: -
                   <p>
                     DVC extends Git by introducing the concept of{' '}
-                    <Defenition>data files</Defenition> - large files that
+                    <Definition>data files</Definition> - large files that
                     should NOT be stored in a Git repository but still need to
                     be tracked and versioned.
                   </p>
                 </li>
                 <li>
-                  <Defenition>Workflow management tools</Defenition> (pipelines
+                  <Definition>Workflow management tools</Definition> (pipelines
                   and DAGs): Apache Airflow, Luigi and etc. The differences are:
                   <p>
                     DVC is focused on data science and modeling. As a result,
@@ -451,7 +451,7 @@ export default ({
                 </li>
 
                 <li>
-                  <Defenition>Experiment management</Defenition> software today
+                  <Definition>Experiment management</Definition> software today
                   is mostly designed for enterprise usage. An open-sourced
                   experimentation tool example:{' '}
                   <a href="http://studio.ml/">http://studio.ml/</a>. The
@@ -471,7 +471,7 @@ export default ({
                 </li>
 
                 <li>
-                  <Defenition>Git workflows</Defenition> and Git usage
+                  <Definition>Git workflows</Definition> and Git usage
                   methodologies such as Gitflow. The differences are:
                   <p>
                     DVC supports a new experimentation methodology that
@@ -486,7 +486,7 @@ export default ({
                   </p>
                 </li>
                 <li>
-                  <Defenition>Makefile</Defenition> (and it's analogues). The
+                  <Definition>Makefile</Definition> (and it's analogues). The
                   differences are: - DVC utilizes a DAG:
                   <p>
                     The DAG is defined by dvc-files with filenames *Dvcfile* or{' '}
@@ -520,7 +520,7 @@ export default ({
                 </li>
 
                 <li>
-                  <Defenition>Git-annex</Defenition>. The differences are:
+                  <Definition>Git-annex</Definition>. The differences are:
                   <p>
                     DVC uses the idea of storing the content of large files
                     (that you don't want to see in your Git repository) in a
@@ -540,7 +540,7 @@ export default ({
                 </li>
 
                 <li>
-                  <Defenition>Git-LFS</Defenition> (Large File Storage). The
+                  <Definition>Git-LFS</Definition> (Large File Storage). The
                   differences are:
                   <p>
                     DVC is fully compatible with Git. It does not require
@@ -548,15 +548,15 @@ export default ({
                   </p>
                   <p>
                     DVC does not add any hooks to Git by default. To checkout
-                    data files, the <Defenition>dvc checkout</Defenition>
+                    data files, the <Definition>dvc checkout</Definition>
                     command has to be run after each{' '}
-                    <Defenition>git checkout</Defenition> and{' '}
-                    <Defenition>git clone</Defenition> command.
+                    <Definition>git checkout</Definition> and{' '}
+                    <Definition>git clone</Definition> command.
                   </p>
                   <p>
                     DVC creates hardlinks instead and changes data file
                     permissions to read only. The{' '}
-                    <Defenition>dvc checkout</Defenition> command does not
+                    <Definition>dvc checkout</Definition> command does not
                     actually copy data files from cache to the working tree, as
                     copying files is a heavy operation for large files (30Gb+).
                   </p>
@@ -784,32 +784,44 @@ export default ({
               to re-build models and re-process data files. As of this version,
               DVC supports two types of cloud-based storage providers:
               <ul>
-                <li>* **AWS** - Amazon Web Services</li>
                 <li>
-                  * **GCP** - Google Cloud Platform The subsections below
-                  explain how to configure DVC to use each of them. Using AWS
+                  <Definition>AWS</Definition> - Amazon Web Services
+                </li>
+                <li>
+                  <Definition>GCP</Definition> - Google Cloud Platform The
+                  subsections below explain how to configure DVC to use each of
+                  them. Using AWS
                 </li>
               </ul>
             </Paragraph>
             <Paragraph>
               To use AWS as cloud storage for your DVC repositories, you should
-              update these **.dvc/config** options
+              update these <Definition>.dvc/config</Definition> options
               <ul>
-                <li>* **Cloud = AWS** in *Global* section.</li>
+                <li>
+                  <Definition>Cloud = AWS</Definition> in{' '}
+                  <Definition>Global</Definition> section.
+                </li>
 
                 <li>
-                  * **StoragePath = /mybucket/dvc/tag_classifier** in **AWS**
+                  <Definition>
+                    StoragePath = /mybucket/dvc/tag_classifier
+                  </Definition>{' '}
+                  in <Definition>AWS</Definition>
                   section - path to a cloud storage bucket and directory in the
                   bucket.
                 </li>
 
                 <li>
-                  * **CredentialPath = ~/aws/credentials** in **AWS** section -
-                  path to AWS credentials in your local machine (AWS cli command
-                  line tools creates this directory). In Mac, default value is
-                  *~/.aws/credentials*, and it is *%USERPATH%/.aws/credentials*
-                  in Windows **Important:** do not forget to commit the config
-                  file change to Git: **git commit -am "Change cloud to AWS"**
+                  <Definition>CredentialPath = ~/aws/credentials</Definition> in{' '}
+                  <Definition>AWS</Definition> section - path to AWS credentials
+                  in your local machine (AWS cli command line tools creates this
+                  directory). In Mac, default value is
+                  <Definition>~/.aws/credentials</Definition>, and it is{' '}
+                  <Definition>%USERPATH%/.aws/credentials</Definition>
+                  in Windows <Definition>Important:</Definition> do not forget
+                  to commit the config file change to Git:{' '}
+                  <Definition>git commit -am "Change cloud to AWS"</Definition>
                   Instead of manual file modification, we recommend you run the
                   following commands::
                 </li>
@@ -829,20 +841,31 @@ export default ({
             <Paragraph>
               <h4>Using Google Cloud </h4>
               For using GCP (Google Cloud Platform) as cloud storage for your
-              DVC repositories, you should update these **.dvc/config** options
+              DVC repositories, you should update these{' '}
+              <Definition>.dvc/config</Definition> options
               <ul>
                 <li>
-                  {' '}
-                  * **Cloud = GCP** in *Global* section. * **StoragePath =
-                  /mybucket/dvc/tag_classifier** in GCP section - Run **dvc
-                  config GCP.StoragePath /my/path/to/a/bucket**
+                  <Definition>Cloud = GCP</Definition> in{' '}
+                  <Definition>Global</Definition> section.
+                </li>
+
+                <li>
+                  <Definition>
+                    StoragePath = /mybucket/dvc/tag_classifier
+                  </Definition>{' '}
+                  in GCP section - Run{' '}
+                  <Definition>
+                    dvc config GCP.StoragePath /my/path/to/a/bucket
+                  </Definition>
                 </li>
                 <li>
-                  * **ProjectName = MyCloud** - a GCP specific project name.
-                  **Important:** do not forget to commit the config file change
-                  to Git: **git commit -am "Change cloud to GCP"** Instead of
-                  manual file modification, we recommend you run the following
-                  commands::{' '}
+                  <Definition>ProjectName = MyCloud</Definition> - a GCP
+                  specific project name.
+                  <Definition>Important:</Definition> do not forget to commit
+                  the config file change to Git:{' '}
+                  <Definition>git commit -am "Change cloud to GCP"</Definition>{' '}
+                  Instead of manual file modification, we recommend you run the
+                  following commands::
                 </li>
               </ul>
               <Code
@@ -867,38 +890,38 @@ export default ({
                 <li>
                   {' '}
                   In an existing Git repository, initialize a DVC repository
-                  with <Defenition>dvc init</Defenition>.{' '}
+                  with <Definition>dvc init</Definition>.{' '}
                 </li>
                 <li>
                   Copy source files for modeling into the repository and convert
                   the files into DVC data files with{' '}
-                  <Defenition>dvc add </Defenition>
+                  <Definition>dvc add </Definition>
                   command.
                 </li>
 
                 <li>
                   {' '}
                   Process source data files through your data processing and
-                  modeling code using the <Defenition>dvc run</Defenition>{' '}
+                  modeling code using the <Definition>dvc run</Definition>{' '}
                   command.{' '}
                 </li>
 
                 <li>
                   {' '}
-                  Use <Defenition>--outs</Defenition> option to specify{' '}
-                  <Defenition>dvc run</Defenition> command outputs which will be
+                  Use <Definition>--outs</Definition> option to specify{' '}
+                  <Definition>dvc run</Definition> command outputs which will be
                   converted to DVC data files after the code runs.{' '}
                 </li>
 
                 <li>
                   Clone a git repo with the code of your ML application
                   pipeline. However, this will not copy your DVC cache. Use
-                  cloud storage settings and <Defenition>dvc push</Defenition>{' '}
+                  cloud storage settings and <Definition>dvc push</Definition>{' '}
                   to share the cache (data).
                 </li>
 
                 <li>
-                  Use <Defenition>dvc repro</Defenition> to quickly reproduce
+                  Use <Definition>dvc repro</Definition> to quickly reproduce
                   your pipeline on a new iteration, after your data item files
                   or source code of your ML application are modified.
                 </li>
@@ -911,82 +934,82 @@ export default ({
               Below is the quick summary of the most important commands
               <ul>
                 <li>
-                  <Defenition>dvc -h</Defenition> - Show how to use DVC and show
+                  <Definition>dvc -h</Definition> - Show how to use DVC and show
                   the list of commands.{' '}
                 </li>
 
                 <li>
-                  <Defenition>dvc CMD -h</Defenition> - Display help to use a
+                  <Definition>dvc CMD -h</Definition> - Display help to use a
                   specific DVC command (CMD).{' '}
                 </li>
 
                 <li>
-                  <Defenition>dvc init</Defenition> - Initialize a new DVC
+                  <Definition>dvc init</Definition> - Initialize a new DVC
                   repository.{' '}
                 </li>
 
                 <li>
-                  <Defenition>dvc add</Defenition> - Add data file or data
+                  <Definition>dvc add</Definition> - Add data file or data
                   directory. The command converts regular files to DVC data
                   files.
                 </li>
 
                 <li>
-                  <Defenition>dvc checkout</Defenition> - Checkout data files
+                  <Definition>dvc checkout</Definition> - Checkout data files
                   and dirs into the working tree. The command should be executed
-                  after <Defenition>git checkout</Defenition> or cloning a
+                  after <Definition>git checkout</Definition> or cloning a
                   repository.
                 </li>
 
                 <li>
-                  <Defenition>dvc run</Defenition> - Generate a DVC file from a
+                  <Definition>dvc run</Definition> - Generate a DVC file from a
                   given command and execute the command. The command
                   dependencies and outputs should be specified.
                 </li>
 
                 <li>
-                  <Defenition>dvc pull</Defenition> - Pull data files from the
+                  <Definition>dvc pull</Definition> - Pull data files from the
                   cloud. Cloud settings for your DVC environment should be
                   already configured prior to using this command.
                 </li>
 
                 <li>
-                  <Defenition>dvc push</Defenition> - Push data files to the
+                  <Definition>dvc push</Definition> - Push data files to the
                   cloud. Cloud settings should be already configured.
                 </li>
 
                 <li>
-                  <Defenition>dvc status</Defenition> - Show status of a data
+                  <Definition>dvc status</Definition> - Show status of a data
                   file in the DVC repository.
                 </li>
 
                 <li>
-                  <Defenition>dvc repro</Defenition> - Reproduce a stage of
+                  <Definition>dvc repro</Definition> - Reproduce a stage of
                   pipeline. Default stage file is{' '}
-                  <Defenition>Dvcfile</Defenition>.
+                  <Definition>Dvcfile</Definition>.
                 </li>
 
                 <li>
-                  <Defenition>dvc remove</Defenition> - Remove data file (files
+                  <Definition>dvc remove</Definition> - Remove data file (files
                   or/and folders).
                 </li>
 
                 <li>
-                  <Defenition>dvc gc</Defenition> - Collect garbage by cleaning
+                  <Definition>dvc gc</Definition> - Collect garbage by cleaning
                   DVC cache.
                 </li>
 
                 <li>
-                  <Defenition>dvc config</Defenition> - Get or set configuration
+                  <Definition>dvc config</Definition> - Get or set configuration
                   settings (as specified in dvc.conf).
                 </li>
 
                 <li>
-                  <Defenition>dvc show</Defenition> - Show graphs.
+                  <Definition>dvc show</Definition> - Show graphs.
                 </li>
 
                 <li>
-                  <Defenition>dvc fsck</Defenition>- Data file consistency
+                  <Definition>dvc fsck</Definition>- Data file consistency
                   check.
                 </li>
               </ul>
@@ -1042,23 +1065,34 @@ export default ({
 	 create mode 100644 .dvc/config
 `}
             />
-            <PartTitle name="commands_command_reference_add">add</PartTitle>
+            <PartTitle name="commands_command_reference_add" small>add</PartTitle>
             <Paragraph>
               Converts files and directories to DVC data files. The command does
-              the conversion from a *regular file* to *DVC data file* in a few
-              steps: 1. Calculate the file checksum. 2. Create a cache file in
-              the cache dir *.dvc/cache*. 3. Create a corresponding DVC file. 4.
-              Replace the file with a hardlink to the cache file. DVC stores the
-              file's last modification timestamp, inode, and the checksum into a
-              global state file *.dvc/state* to reduce time recomputing
-              checksums later. Note, this command does NOT copy any file
-              contents and will run quickly even for a large files. Step (2)
-              from the above is also made by hardlinks movement, not file
-              content. The only heavy step is (1), which requires checksum
-              calculation. For directories, the command does the same steps for
-              each file recursively. To retain information about the directory
-              structure, a corresponding directory will be created in
-              *.dvc/cache*.
+              the conversion from a <Definition>regular file</Definition> to{' '}
+              <Definition>DVC data file</Definition>Definition> in a few steps:
+              <ol>
+                <li>Calculate the file checksum.</li>
+                <li>
+                  Create a cache file in the cache dir{' '}
+                  <Definition>.dvc/cache</Definition>.
+                </li>
+                <li>Create a corresponding DVC file.</li>
+                <li>
+                  Replace the file with a hardlink to the cache file. DVC stores
+                  the file's last modification timestamp, inode, and the
+                  checksum into a global state file{' '}
+                  <Definition>.dvc/state</Definition> to reduce time recomputing
+                  checksums later. Note, this command does NOT copy any file
+                  contents and will run quickly even for a large files. Step (2)
+                  from the above is also made by hardlinks movement, not file
+                  content. The only heavy step is (1), which requires checksum
+                  calculation. For directories, the command does the same steps
+                  for each file recursively. To retain information about the
+                  directory structure, a corresponding directory will be created
+                  in
+                  <Definition>.dvc/cache</Definition>.
+                </li>
+              </ol>
             </Paragraph>
             <Code
               source={`
@@ -1092,12 +1126,12 @@ export default ({
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_checkout">
+            <PartTitle name="commands_command_reference_checkout" small>
               checkout
             </PartTitle>
             <Paragraph>
               Checkout data files from cache. This command has to be called
-              after <Defenition>git checkout</Defenition> since Git does not
+              after <Definition>git checkout</Definition> since Git does not
               handle DVC data files. The command restores data files from cache
               to the working tree and removes data files that are no longer on
               the working tree. Note, this command does NOT copy any files
@@ -1137,7 +1171,7 @@ export default ({
               restore due to missing cache. To restore a file with a missing
               cache, the reproduction command should be called or the cache can
               be pulled from the cloud. It might be convenient to assign Git
-              hook to <Defenition>git checkout</Defenition>::
+              hook to <Definition>git checkout</Definition>::
             </Paragraph>
             <Code
               source={`
@@ -1151,7 +1185,7 @@ export default ({
             />
             {/*
             */}
-            <PartTitle name="commands_command_reference_run">run</PartTitle>
+            <PartTitle name="commands_command_reference_run" small>run</PartTitle>
             <Paragraph>
               Generate a stage file from a given command and execute the
               command. The command dependencies and outputs should be specified.
@@ -1188,7 +1222,7 @@ export default ({
             />
             <Paragraph>
               Examples: Execute a Python script as the DVC pipeline step. Stage
-              file was not specified, so a <Defenition>model.p.dvc</Defenition>{' '}
+              file was not specified, so a <Definition>model.p.dvc</Definition>{' '}
               stage file will be created::
             </Paragraph>
             <Code
@@ -1214,7 +1248,7 @@ export default ({
 	$ dvc run -d Posts.xml.tgz -o data/Posts.xml tar zxf Posts.xml.tgz -C data/
 `}
             />
-            <PartTitle name="commands_command_reference_push">push</PartTitle>
+            <PartTitle name="commands_command_reference_push" small>push</PartTitle>
             <Paragraph>
               This command pushes all data file caches related to the current
               Git branch to cloud storage. Cloud storage settings need to be
@@ -1255,7 +1289,7 @@ export default ({
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_pull">pull</PartTitle>
+            <PartTitle name="commands_command_reference_pull" small>pull</PartTitle>
             <Paragraph>
               This command pulls all data file caches from cloud storage. Cloud
               storage settings need to be configured.
@@ -1290,7 +1324,7 @@ export default ({
 	(8/8): [########################################] 100% cfdaa4bba57fa07d81ff96685
 `}
             />
-            <PartTitle name="commands_command_reference_status">
+            <PartTitle name="commands_command_reference_status" small>
               status
             </PartTitle>
             <Paragraph>
@@ -1321,12 +1355,12 @@ export default ({
 
 `}
             />
-            <PartTitle name="commands_command_reference_repro">repro</PartTitle>
+            <PartTitle name="commands_command_reference_repro" small>repro</PartTitle>
             <Paragraph>
               Reproduce DVC file and all stages the file depends on
               (recursively). Default file name is{' '}
-              <Defenition>Dvcfile</Defenition>. However, DVC files can have any
-              name followed by the <Defenition>.dvc</Defenition> suffix.
+              <Definition>Dvcfile</Definition>. However, DVC files can have any
+              name followed by the <Definition>.dvc</Definition> suffix.
             </Paragraph>
             <Code
               source={`
@@ -1379,7 +1413,7 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 
 
             */}
-            <PartTitle name="commands_command_reference_remove">
+            <PartTitle name="commands_command_reference_remove" small>
               remove
             </PartTitle>
             <Paragraph>Remove data file or data directory.</Paragraph>
@@ -1411,7 +1445,7 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_gc">gc</PartTitle>
+            <PartTitle name="commands_command_reference_gc" small>gc</PartTitle>
             <Paragraph>
               This command collects the garbage, removing unused cache files
               based on the current Git branch. If a data file was created in a
@@ -1460,7 +1494,7 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
             {/*
 
             */}
-            <PartTitle name="commands_command_reference_config">
+            <PartTitle name="commands_command_reference_config" small>
               config
             </PartTitle>
             <Paragraph>
@@ -1513,7 +1547,7 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
 `}
             />
             {/**/}
-            <PartTitle name="commands_command_reference_show">show</PartTitle>
+            <PartTitle name="commands_command_reference_show" small>show</PartTitle>
             <Paragraph>
               Generate pipeline image for your current project.
               <Code
@@ -1546,25 +1580,25 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               />
             </Paragraph>
             {/**/}
-            <PartTitle name="commands_command_reference_fsck">fsck</PartTitle>
+            <PartTitle name="commands_command_reference_fsck" small>fsck</PartTitle>
             <Paragraph>
               Data file consistency check. By default the commands outputs
               statuses of all corrupted data files (if any). Use{' '}
-              <Defenition>--all</Defenition> option to see statuses of all data
+              <Definition>--all</Definition> option to see statuses of all data
               files. The command checks:
               <ol>
                 <li>
-                  1. Cache file name which is equal to the file content checksum
+                  Cache file name which is equal to the file content checksum
                   when DVC created the file.
                 </li>
 
-                <li>2. Checksum from local state file.</li>
+                <li>Checksum from local state file.</li>
 
-                <li>3. Checksum regarding DVC files.</li>
+                <li>Checksum regarding DVC files.</li>
 
                 <li>
-                  4. The actual recomputed checksum. This is a computation heavy
-                  command for large data files. Enabled only by *--physical*
+                  The actual recomputed checksum. This is a computation heavy
+                  command for large data files. Enabled only by <Definition>--physical</Definition>
                   option. Data file is considered to be corrupted if one of the
                   checksums does not match all others.
                 </li>
@@ -1637,9 +1671,9 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               <ul>
                 <li>
                   To see Git commands in DVC, you can set logging level to{' '}
-                  <Defenition>Debug</Defenition>
-                  (in <Defenition>dvc.conf</Defenition>) or run dvc with option{' '}
-                  <Defenition>--verbose</Defenition>
+                  <Definition>Debug</Definition>
+                  (in <Definition>dvc.conf</Definition>) or run dvc with option{' '}
+                  <Definition>--verbose</Definition>
                 </li>
               </ul>
             </Paragraph>
@@ -1656,7 +1690,7 @@ Reproduce the part of the pipeline where *Posts.tsv.dvc* is the target DVC file:
               By default, the number of DVC jobs is set to the number of
               available CPU cores. If you would like to change it to any other
               reasonable value, you could use{' '}
-              <Defenition>-j (--jobs)</Defenition> option in DVC commands where
+              <Definition>-j (--jobs)</Definition> option in DVC commands where
               applicable.
             </Paragraph>
           </Parts>
@@ -1821,10 +1855,16 @@ const CodeBlock = styled(SyntaxHighlighter)`
   word-wrap: break-word;
 `
 
-const Defenition = styled.b``
+const Definition = styled.b`
+  background: rgba(202, 224, 250, 0.25);
+`
 
 const Paragraph = styled.p`
   margin: 46px 0px;
+
+  a {
+    color: #1b72df;
+  }
 
   ${props =>
     props.inline &&
