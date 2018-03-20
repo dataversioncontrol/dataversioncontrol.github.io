@@ -6,7 +6,7 @@ module.exports = {
     preview: `https://dataversioncontrol.com/preview.jpg`,
     siteUrl: `https://dataversioncontrol.com/`,
     author: `Dmitry Petrov`,
-    videoId: `X8oEcNhKrZM`,
+    videoId: `4h6I9_xeYA4`,
     githubUrl: 'https://github.com/dataversioncontrol/dvc',
     downloadUrl: '/',
     facebook: 'dataversioncontrol',
