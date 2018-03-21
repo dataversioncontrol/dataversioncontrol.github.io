@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: `Git for data scientists - manage your code and data together"`,
-    description: `Data Version Control - Make your data science and machine learning projects reproducible and shareable.`,
+    title: `Data Version Control – Git for data scientists - manage your code and data together"`,
+    description: `Make your data science and machine learning projects reproducible and shareable.`,
     keywords: `DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL`,
     preview: `https://dataversioncontrol.com/preview.jpg`,
     siteUrl: `https://dataversioncontrol.com/`,
