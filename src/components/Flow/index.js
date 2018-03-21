@@ -1,13 +1,11 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import styled from 'styled-components'
 import Section, { Inner as SectionInner } from '../../components/Section'
 
-// TODO: svg
-export default ({ title, children }) => (
+export default ({ }) => (
   <Wrapper>
     <Section title={`How DVC works?`}>
-      <Flow src="/flow.png" />
+      <Flow src="/flow.svg" />
     </Section>
   </Wrapper>
 )
