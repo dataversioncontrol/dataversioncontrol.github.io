@@ -1,8 +1,8 @@
 module.exports = {
-	pathPrefix: `/`,
+  pathPrefix: `/`,
   siteMetadata: {
-    title: `Data Version Control - Make your data science projects reproducible and shareable.`,
-    description: `Read more about dataversioncontrol. Git for data science projects.`,
+    title: `Git for data scientists - manage your code and data together"`,
+    description: `Data Version Control - Make your data science and machine learning projects reproducible and shareable.`,
     keywords: `DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL`,
     preview: `https://dataversioncontrol.com/preview.jpg`,
     siteUrl: `https://dataversioncontrol.com/`,
@@ -14,10 +14,14 @@ module.exports = {
     linkedin: 'dataversioncontrol',
     twitter: 'dataversioncontrol',
     email: 'info@dataversioncontrol.com',
-    downloadOSX: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.pkg',
-    downloadLinux: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc_0.9.0_amd64.deb',
-    downloadLinuxRPM: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0-1.x86_64.rpm',
-    downloadWin: 'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.exe'
+    downloadOSX:
+      'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.pkg',
+    downloadLinux:
+      'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc_0.9.0_amd64.deb',
+    downloadLinuxRPM:
+      'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0-1.x86_64.rpm',
+    downloadWin:
+      'https://github.com/dataversioncontrol/dvc/releases/download/0.9.0/dvc-0.9.0.exe'
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -29,17 +33,17 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
-	  {
-		  resolve: `gatsby-plugin-google-analytics`,
-		  options: {
-			  trackingId: "UA-97468780-1",
-			  // Puts tracking script in the head instead of the body
-			  head: false,
-			  // Setting this parameter is optional
-			  anonymize: true,
-			  // Setting this parameter is also optional
-			  respectDNT: true,
-		  },
-	  }
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-97468780-1',
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true
+      }
+    }
   ]
 }

@@ -5,7 +5,7 @@ import Section, { Inner as SectionInner } from '../../components/Section'
 export default ({ }) => (
   <Wrapper>
     <Section title={`How DVC works?`}>
-      <Flow src="/flow.svg" />
+      <Flow src="/flow.png" />
     </Section>
   </Wrapper>
 )
