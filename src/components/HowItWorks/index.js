@@ -23,12 +23,12 @@ export default ({ title, children }) => (
   <Wrapper>
     <Section title={`Get Started`}>
       <Item
-        title={`1. Track code and data`}
+        title={`Track code and data`}
         index={1}
         lines={[`git add train.py `, `dvc add images.zip`]}
       />
       <Item
-        title={`2. Connect code and data by commands	`}
+        title={`Connect code and data by commands	`}
         index={2}
         lines={[
           `dvc run -d images.zip -o images/ unzip -q images.zip`,
@@ -43,7 +43,7 @@ export default ({ title, children }) => (
       <Item
         title={`Share code`}
         index={4}
-        lines={[`git commit -m 'The baseline model`, `git push`]}
+        lines={[`git commit -m 'The baseline model'`, `git push`]}
       />
       <Item
         title={`Share data and ML models`}
