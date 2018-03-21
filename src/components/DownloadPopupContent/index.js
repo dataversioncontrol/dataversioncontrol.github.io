@@ -21,7 +21,12 @@ const Item = ({ id, link, icon, renderDownload, text, onClick }) => (
   <Os
     href={link}
     target="_blank"
-    onClick={e => onClick() && link === '#' && e.preventDefault()}
+    onClick={e => {
+      if (link === '#') {
+        e.preventDefault()
+      }
+      onClick()
+    }}
   >
     <Icon src={`/icons/${icon}.png`} type={id} />
     <Download>

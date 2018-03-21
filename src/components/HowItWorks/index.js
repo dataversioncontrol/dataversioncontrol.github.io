@@ -23,12 +23,12 @@ export default ({ title, children }) => (
   <Wrapper>
     <Section title={`Get Started`}>
       <Item
-        title={`Track large data file, outside of in Git repository`}
+        title={`1. Track code and data`}
         index={1}
-        lines={[`dvc add images.zip`]}
+        lines={[`git add train.py `, `dvc add images.zip`]}
       />
       <Item
-        title={`Define ML steps`}
+        title={`2. Connect code and data by commands	`}
         index={2}
         lines={[
           `dvc run -d images.zip -o images/ unzip -q images.zip`,
@@ -36,17 +36,17 @@ export default ({ title, children }) => (
         ]}
       />
       <Item
-        title={`Make changes and regenerate affected steps`}
+        title={`Make changes and reproduce`}
         index={3}
         lines={[`vi train.py`, `dvc repro`]}
       />
       <Item
-        title={`Share code and DVC metadata`}
+        title={`Share code`}
         index={4}
-        lines={[`git add .`, `git commit -m 'The baseline model'`, `git push`]}
+        lines={[`git commit -m 'The baseline model`, `git push`]}
       />
       <Item
-        title={`Share data and models`}
+        title={`Share data and ML models`}
         index={5}
         lines={[`dvc config AWS.StoragePath mybucket/image_cnn`, `dvc push`]}
       />

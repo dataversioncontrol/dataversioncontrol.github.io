@@ -42,7 +42,7 @@ export default class Hero extends Component {
         <Inner>
           <Heading>Data Version Control</Heading>
           <SubHeading>
-            Best engineering practices for data scientists
+	          Git for data scientists – manage your code and data together
           </SubHeading>
           <Buttons>
             <DownloadButton onClick={this.download} primary>
