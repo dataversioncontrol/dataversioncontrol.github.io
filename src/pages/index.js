@@ -35,10 +35,10 @@ export default ({
       downloadLinuxRPM={downloadLinuxRPM}
       downloadWin={downloadWin}
     />
+    <Tools />
     <VideoWave>
       <Video id={videoId} />
     </VideoWave>
-    <Tools />
     <Dots>
       <HowItWorks />
     </Dots>

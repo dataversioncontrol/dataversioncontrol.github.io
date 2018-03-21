@@ -14,6 +14,7 @@ const {
 } = require('../gatsby-config')
 
 export default class HTML extends React.Component {
+
   render() {
     let css
     if (process.env.NODE_ENV === `production`) {
@@ -24,6 +25,7 @@ export default class HTML extends React.Component {
         />
       )
     }
+
 
     return (
       <html lang="en">

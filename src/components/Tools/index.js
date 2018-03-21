@@ -44,7 +44,7 @@ export default ({ title, children }) => (
 
 const Wrapper = styled.div`
  @media (max-width : 736px) {
- display: none;
+    display: none;
  }
 
   ${SectionWrapper} {

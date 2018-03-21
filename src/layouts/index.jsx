@@ -1,11 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import normalize from 'styled-normalize'
+import ReactGA from 'react-ga'
 
 import { injectGlobal } from 'styled-components'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+
+ReactGA.initialize('UA-97468780-1')
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname })
+  ReactGA.pageview(window.location.pathname)
+}
 
 injectGlobal`
   ${normalize}
@@ -31,6 +39,14 @@ injectGlobal`
 `
 
 class Template extends React.Component {
+  componentDidMount() {
+    logPageView()
+  }
+
+  componentWillUpdate() {
+    logPageView()
+  }
+
   render() {
     const { location, children } = this.props
     let header

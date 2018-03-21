@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-97468780-1')
 
 const WIN = 'win'
 const OSX = 'osx'
@@ -7,10 +10,19 @@ const LINUX_RPM = 'linux_rpm'
 const LINUX = 'linux'
 const PIP = 'pip'
 
-const handleClick = () => {}
+const handleClick = id => {
+  ReactGA.event({
+    category: 'Landing//Download',
+    action: id
+  })
+}
 
 const Item = ({ id, link, icon, renderDownload, text, onClick }) => (
-  <Os href={link} target="_blank" onClick={(e) => link === '#' && e.preventDefault()}>
+  <Os
+    href={link}
+    target="_blank"
+    onClick={e => onClick() && link === '#' && e.preventDefault()}
+  >
     <Icon src={`/icons/${icon}.png`} type={id} />
     <Download>
       {renderDownload ? (
@@ -33,35 +45,35 @@ export default ({
 
     <Oss>
       <Item
-        onClick={handleClick}
+        onClick={() => handleClick('osx')}
         id={OSX}
         link={downloadOSX}
         icon={'osx'}
         text={`OS X`}
       />
       <Item
-        onClick={handleClick}
+        onClick={() => handleClick('linux')}
         id={LINUX}
         link={downloadLinux}
         icon={'linux'}
         text={`Linux DEB`}
       />
       <Item
-        onClick={handleClick}
+        onClick={() => handleClick('linux_rpm')}
         id={LINUX_RPM}
         link={downloadLinuxRPM}
         icon={'linux_rpm'}
         text={`Linux RPM`}
       />
       <Item
-        onClick={handleClick}
+        onClick={() => handleClick('windows')}
         id={WIN}
         link={downloadWin}
         icon={'windows'}
         text={`Windows`}
       />
       <Item
-        onClick={handleClick}
+        onClick={() => handleClick('pip')}
         id={PIP}
         link={'#'}
         icon={'pip'}
