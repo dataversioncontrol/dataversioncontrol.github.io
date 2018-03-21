@@ -16,7 +16,7 @@ export default ({ title, children }) => (
           </div>
         }
         icon={`formula.png`}
-        lines={[`$ dvc -d images \\`,`    python train.py`]}
+        lines={[`$ dvc -d images \\`, `    python train.py`]}
       />
       <Tool
         title={
@@ -43,9 +43,12 @@ export default ({ title, children }) => (
 )
 
 const Wrapper = styled.div`
+ @media (max-width : 736px) {
+ display: none;
+ }
+
   ${SectionWrapper} {
     padding-top: 100px;
-   
   }
   
   ${SectionInner} {
@@ -55,6 +58,7 @@ const Wrapper = styled.div`
     
     @media (max-width : 736px) {
       flex-direction: column;
+     
     }
   }
   

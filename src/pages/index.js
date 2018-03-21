@@ -35,10 +35,10 @@ export default ({
       downloadLinuxRPM={downloadLinuxRPM}
       downloadWin={downloadWin}
     />
-    <Tools />
     <VideoWave>
       <Video id={videoId} />
     </VideoWave>
+    <Tools />
     <Dots>
       <HowItWorks />
     </Dots>
@@ -78,7 +78,7 @@ const VideoWave = styled.div`
   background: url(/video_bg.png) top center no-repeat;
 
   @media (max-width: 768px) {
-    padding-top: 62px;
+    padding-top: 112px;
     padding-bottom: 34px;
     background-size: cover;
     margin-top: -60px;
