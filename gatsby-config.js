@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: `Data Version Control. Git extension for data scientists – manage your code and data together"`,
+    title: `Data Version Control. Git extension for data scientists – manage your code and data together`,
     description: `Make your data science and machine learning projects reproducible and shareable.`,
     keywords: `DATA SCIENCE, MACHINE LEARNING, DEVTOOLS, DATA VERSION CONTROL`,
     preview: `https://dataversioncontrol.com/preview.jpg`,
