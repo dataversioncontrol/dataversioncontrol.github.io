@@ -8,7 +8,7 @@ import Tool, { Wrapper as ToolWrapper } from '../../components/Tool'
 
 export default ({ title, children }) => (
   <Wrapper>
-    <Section title={`Open source tool for machine learning`}>
+    <Section>
       <Tool
         title={
           <div>
