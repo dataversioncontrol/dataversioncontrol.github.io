@@ -29,7 +29,7 @@ export default ({
         </P>
         <P>
           <StyledLink href={formatTwitter(twitter)}>
-            <TwitterIcon src="twitter.png" />@FullStackML
+            <TwitterIcon src="/twitter.png" />@FullStackML
           </StyledLink>
         </P>
       </Links>

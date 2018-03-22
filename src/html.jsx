@@ -77,6 +77,7 @@ export default class HTML extends React.Component {
             integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
             crossOrigin="anonymous"
           />
+          <script src="/js/main.js" />
         </head>
         <body>
           <div
