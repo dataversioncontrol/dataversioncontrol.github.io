@@ -44,6 +44,12 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat\:300,400, 600, 800`]
+      }
     }
   ]
 }

@@ -14,7 +14,6 @@ const {
 } = require('../gatsby-config')
 
 export default class HTML extends React.Component {
-
   render() {
     let css
     if (process.env.NODE_ENV === `production`) {
@@ -25,7 +24,6 @@ export default class HTML extends React.Component {
         />
       )
     }
-
 
     return (
       <html lang="en">
@@ -66,22 +64,6 @@ export default class HTML extends React.Component {
           <meta property="og:image:width" content="1900" />
           <meta property="og:image:height" content="885" />
           {this.props.headComponents}
-          <link
-            href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700"
-            rel="stylesheet"
-          />
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
-            integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
-            crossOrigin="anonymous"
-          />
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
-            integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
-            crossOrigin="anonymous"
-          />
           {css}
         </head>
         <body>
@@ -90,6 +72,20 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+          <noscript id="deferred-styles">
+            <link
+              rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
+              integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="stylesheet"
+              href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css"
+              integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P"
+              crossOrigin="anonymous"
+            />
+          </noscript>
         </body>
       </html>
     )

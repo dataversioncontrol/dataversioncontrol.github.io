@@ -21,6 +21,7 @@
     "gatsby": "^1.9.235",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-google-analytics": "^1.0.24",
+    "gatsby-plugin-google-fonts": "0.0.4",
     "gatsby-plugin-styled-components": "^2.0.9",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-remark": "^1.7.37",
