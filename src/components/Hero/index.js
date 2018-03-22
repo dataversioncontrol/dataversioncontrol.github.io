@@ -95,7 +95,7 @@ const Container = styled.div`
     #922175 90%,
     #922175 100%
   );
-  background-image: url('/hero.png');
+  background-image: url('/img/hero.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
